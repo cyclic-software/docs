@@ -44,7 +44,6 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Cyclic',
         logo: {
           alt: 'Cyclic Logo',
           src: 'img/logo.png',
