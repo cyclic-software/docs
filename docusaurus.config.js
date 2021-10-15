@@ -8,13 +8,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Cyclic Documentation',
   tagline: 'Apps in seconds',
-  url: 'https://docs.cyclic.sh',
-  baseUrl: '/docs/',
+  url: 'https://cyclic-software.github.io', // 'https://docs.cyclic.sh',
+  baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'cyclic-software', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
+  trailingSlash: false, // https://docusaurus.io/docs/deployment#deploying-to-github-pages
 
   presets: [
     [
