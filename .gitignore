@@ -106,3 +106,5 @@ dist
 #docusaurus
 .docusaurus
 build/
+
+.DS_Store
