@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Cyclic Documentation',
   tagline: 'Apps in seconds',
-  url: 'https://cyclic-software.github.io', // 'https://docs.cyclic.sh',
+  url: 'https://docs.cyclic.sh',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -27,12 +27,12 @@ const config = {
           // Please change this to your repo.
           editUrl: 'https://github.com/cyclic-software/docs/edit/main/website/',
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/cyclic-software/docs/edit/main/website/blog/',
-        },
+        // blog: {
+        //   showReadingTime: true,
+        //   // Please change this to your repo.
+        //   editUrl:
+        //     'https://github.com/cyclic-software/docs/edit/main/website/blog/',
+        // },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -43,6 +43,9 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         logo: {
           alt: 'Cyclic Logo',
@@ -53,7 +56,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Docs',
           },
           {
             href: 'https://github.com/cyclic-software/docs',
@@ -97,7 +100,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Cyclic, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Cyclic Software, Inc.`,
       },
       prism: {
         theme: lightCodeTheme,
