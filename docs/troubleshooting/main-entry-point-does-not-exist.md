@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Main Entry Point Does Not Exist
+# Main entry point does not exist
 
 If you get an error in the deploy log that says that your `package.json` points to a file that does not exist, here is how to fix.
 

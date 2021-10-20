@@ -6,9 +6,7 @@ sidebar_position: 1
 
 Cyclic will let you deploy your code into the cloud in seconds. We have read all the best practices pdfs so you don't have to.
 
-
-
-## Quick Start
+## Quick start
 
 Launch a pre-baked expressjs starter:
 
