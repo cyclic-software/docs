@@ -2,9 +2,11 @@
 sidebar_position: 1
 ---
 
-# Intro to cyclic.sh
+# Intro
 
-Cyclic will let you deploy your code into the cloud in seconds.
+Cyclic will let you deploy your code into the cloud in seconds. We have read all the best practices pdfs so you don't have to.
+
+
 
 ## Quick Start
 
