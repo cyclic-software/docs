@@ -6,7 +6,7 @@ sidebar_position: 2
 
 If you get an error in the deploy log that says that your `package.json` points to a file that does not exist, here is how to fix.
 
-**Error Message**:
+## Error message
 
 ```code
 ERROR: The main entry point defined in package.json 'index.js' does not exist.

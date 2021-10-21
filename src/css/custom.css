@@ -14,8 +14,12 @@
   --ifm-color-primary-lighter: #98B1EF;
   --ifm-color-primary-lightest: #98B1EF;
   --ifm-code-font-size: 95%;
+  --ifm-toc-border-color: none;
 }
 
+header h1 {
+  font-size: 2.75rem;
+}
 
 .navbar__logo {
   height: 55px
