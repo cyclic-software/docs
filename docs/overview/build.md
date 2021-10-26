@@ -6,7 +6,7 @@ sidebar_position: 2
 
 Cyclic apps are built and deployed into AWS from code that originates in Github.
 
-To trigger a build and deployment, install the [Cyclic Github app](https://github.com/apps/cyclic-app) on any public repo. On first installation we will assign you repo to an app and give it a public url such as `your-app.cyclic.app`. We will then build and deploy your app as described below. On future commits to the default branch (for example: merges of PRs or pushes) Github will send a webhook api call to us. We will then perform the same build and deploy steps.
+To trigger a build and deployment, install the [Cyclic Github app](https://github.com/apps/cyclic-preview) on any public repo. On first installation we will assign you repo to an app and give it a public url such as `your-app.cyclic.app`. We will then build and deploy your app as described below. On future commits to the default branch (for example: merges of PRs or pushes) Github will send a webhook api call to us. We will then perform the same build and deploy steps.
 
 The input of the **build** step is a single commit in a git repo and the output is a zip archive that can be deployed and run inside of an AWS lambda with the Cyclic lambda runtime.
 
