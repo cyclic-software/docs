@@ -10,7 +10,7 @@ Cyclic will let you deploy your code into the cloud in seconds. We have read all
 
 Launch a pre-baked expressjs starter:
 
-[![Deploy Expressjs Starter on Cyclic](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/fork/cyclic-software/express-hello-world)
+[![Deploy Expressjs Starter on Cyclic](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/express-hello-world)
 
 ## DIY
 
