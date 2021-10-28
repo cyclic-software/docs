@@ -26,6 +26,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/cyclic-software/docs/edit/main/website/',
+          // routeBasePath: '/', // If we want to drop straight into docs uncomment and delete index.js files
         },
         // blog: {
         //   showReadingTime: true,
@@ -69,11 +70,15 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Cyclic',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Home - www.cyclic.sh',
+                href: 'https://www.cyclic.sh/',
+              },
+              {
+                label: 'App - app.cyclic.sh',
+                href: 'https://app.cyclic.sh/',
               },
             ],
           },

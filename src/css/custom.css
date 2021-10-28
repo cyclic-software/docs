@@ -5,6 +5,8 @@
  */
 
 /* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap');
+
 :root {
   --ifm-color-primary: #3868E3;
   --ifm-color-primary-dark: #000D64;
@@ -21,8 +23,25 @@ header h1 {
   font-size: 2.75rem;
 }
 
-.navbar__logo {
-  height: 55px
+.navbar {
+  height: 75px;
+}
+
+.navbar__inner{
+  background-color:transparent !important;
+  max-width: 1230px;
+  margin:0px auto;
+  left:0;
+  right:0;
+  padding:5px 40px;
+  font-family: 'Titillium Web', sans-serif;
+  font-size: 19px;
+  line-height: 20px;
+}
+
+.navbar__brand {
+  margin-left: 16px;
+  height: 55px;
 }
 
 .docusaurus-highlight-code-line {
