@@ -1,12 +1,11 @@
 ---
 sidebar_position: 2
+id: Build
 ---
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 </head>
-
-# Build
 
 Cyclic apps are built and deployed into AWS from code that originates in Github.
 
