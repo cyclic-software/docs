@@ -2,6 +2,10 @@
 sidebar_position: 2
 ---
 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
+
 # Build
 
 Cyclic apps are built and deployed into AWS from code that originates in Github.
@@ -36,4 +40,4 @@ NPM executes several [lifecycle scripts](https://docs.npmjs.com/cli/v7/using-npm
 - `prepare`
 - `postprepare`
 
-If you have particular needs try putting it into the appropriate lifecycle script. If you have needs beyond what these lifecycle scripts can provide or they don't solve for your use case send us an email: <hello@cyclic.sh> or join us on [Discord](https://discord.gg/huhcqxXCbE)
+If you have particular needs try putting it into the appropriate lifecycle script. If you have needs beyond what these lifecycle scripts can provide or they don't solve for your use case send us an email: <i className="far fa-envelope"></i> hello@cyclic.sh or join us on [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE)
