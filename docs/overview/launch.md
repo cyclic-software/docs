@@ -4,13 +4,19 @@ sidebar_position: 4
 
 # Launch
 
-Cyclic apps are hosted on AWS serverless infrastructure. This means any lambda constraints are inherited.
+Cyclic apps are hosted on AWS serverless infrastructure. This means any lambda constraints are inherited. This also means there are no servers to manage, no OS patches to apply, no maintenance windows to schedule and no networking headaches.
+
+## Hard limits
 
 - 30s Maximum request time
 - 6MB Maximum HTTP POST payload size
 
+
+## Soft limits
+
 - Runtime Nodejs 14.x
-- 5 API requests per second
+- 5 API requests per second steady state
+- 10 API requests per second in a burst
 
 ## Start
 

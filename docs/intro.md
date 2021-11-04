@@ -30,4 +30,4 @@ You can always link your own repository from github.
 
 ## Language and runtime support
 
-We currently only support nodejs-14. Let us know if you are looking for another language or version let us know: [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE) 
+The runtime is nodejs-14. Let us know if you are looking for another language or version: [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE) 
