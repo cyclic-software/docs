@@ -3,8 +3,11 @@
 sidebar_position: 1
 ---
 
-
 # Intro
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
 
 Cyclic will let you deploy your code into the cloud in seconds. We have read all the best practices pdfs so you don't have to.
 
@@ -24,3 +27,7 @@ You can always link your own repository from github.
 - Click deploy
 - Approve "Cyclic - Preview" app in github
 - Watch the terminal for your deployment logs
+
+## Language and runtime support
+
+The runtime is nodejs-14. Let us know if you are looking for another language or version: [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE) 

@@ -1,7 +1,8 @@
 ---
 sidebar_position: 2
-id: Build
 ---
+
+# Build
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
@@ -23,11 +24,17 @@ The input of the **build** step is a single commit in a git repo and the output 
 
 The following is a close approximation of the code we use to take your code repo and turn it into an artifact that can be run inside of AWS Lambda with the Cyclic lambda runtime.
 
-- Install your code's dependencies `npm install`
-- Zip of your code and installed dependencies (for example `node_modules`) recursively
+**Note**: we us `npm` version 6.x throughout.
+
+- Install your code's dependencies (including `devDependencies`) `npm install`
+- Build your app if you have a `build` script defined in `package.json` aka `npm run build`
+- Prune any `devDependencies` to minimize the size of the output zip
+- Zip all of your code and installed dependencies (for example `node_modules`) recursively
 - Stage the zip into AWS in preparation of the **deploy** step
 
-## Lifecycle scripts
+**Note**: we have limits on the maximum amount of disk space used for code + dependencies while building and on the final bundle size. See [limits page](/docs/overview/limits) for more details.
+
+## Customize the build process
 
 NPM executes several [lifecycle scripts](https://docs.npmjs.com/cli/v7/using-npm/scripts#npm-ci) as part of the `npm install`. According to the documentation these are run in the following order:
 
