@@ -3,6 +3,9 @@
 sidebar_position: 1
 ---
 
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
 
 # Intro
 
@@ -24,3 +27,7 @@ You can always link your own repository from github.
 - Click deploy
 - Approve "Cyclic - Preview" app in github
 - Watch the terminal for your deployment logs
+
+## Language and runtime support
+
+We currently only support nodejs-14. Let us know if you are looking for another language or version let us know: [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE) 
