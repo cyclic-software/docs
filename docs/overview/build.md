@@ -32,7 +32,7 @@ The following is a close approximation of the code we use to take your code repo
 - Zip all of your code and installed dependencies (for example `node_modules`) recursively
 - Stage the zip into AWS in preparation of the **deploy** step
 
-**Note**: we have limits on the maximum amount of disk spaced used for code + dependencies while building and on the final bundle size. See [limits page](/docs/overview/limits) for more details.
+**Note**: we have limits on the maximum amount of disk space used for code + dependencies while building and on the final bundle size. See [limits page](/docs/overview/limits) for more details.
 
 ## Customize the build process
 
