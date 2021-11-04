@@ -24,6 +24,8 @@ The input of the **build** step is a single commit in a git repo and the output 
 
 The following is a close approximation of the code we use to take your code repo and turn it into an artifact that can be run inside of AWS Lambda with the Cyclic lambda runtime.
 
+**Note**: we us `npm` version 6.x throughout.
+
 - Install your code's dependencies (including `devDependencies`) `npm install`
 - Build your app if you have a `build` script defined in `package.json` aka `npm run build`
 - Prune any `devDependencies` to minimize the size of the output zip
