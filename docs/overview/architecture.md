@@ -28,14 +28,15 @@ For subsequent launches we update the lambda to use your latest code.
 
 In designing and building Cyclic we must make decisions and trade offs. Here is a statement of the principle that guide our decisions in priority order.
 
-1. Work vs "Right"
+1. Working vs "Correct"
 2. Fail fast vs "Later"
 3. Fail predictably
 4. Tell the user
+5. Right to repair
 
-### Work
+### Working
 
-The first priority is for the system to work in the way the user expects. This may mean more complexity or difficulty for Cyclic. The elegance or simplicity of system code comes after it working for the user. If forced to chose we will follow common usage over compliance with a technical spec.
+The first priority is for the system to work in the way the user expects. This may mean more complexity or difficulty for Cyclic. The elegance or simplicity of system code comes after it working for the user. If forced to chose we will follow common usage over compliance with a technical spec. Said another way, your happiness and code elegance over our happiness and code elegance.
 
 ### Fail fast
 
@@ -50,3 +51,7 @@ Failure will happen. When it does we should make it repeatable. The same inputs 
 ### Tell the user
 
 When errors happen we should be transparent with the error message, stack trace, or known bug. This could mean we need to email the user or tell the world on twitter.
+
+### Right to repair
+
+Open source is statement about if the software system is even available for inspection. We wish to go a step further. Right to repair means you can take a Cyclic app and poke around inside. You can "eject" at anytime and the app will keep running in your account.
