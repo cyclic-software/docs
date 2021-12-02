@@ -44,7 +44,7 @@ Similarly, the details of the response are viewable as:
   ![Transaction Response](/img/transactions/response.png "Transaction Response")
 ### Timeline
 On the back end, we had a single api handler at the root `/` route implemented as:
-  ```
+  ```js
     app.get('/',async (req, res) => {
       console.log(req.headers['user-agent'])
       console.log(Date.now())
