@@ -48,8 +48,8 @@ On the back end, we had a single api handler at the root `/` route implemented a
     app.get('/',async (req, res) => {
       console.log(req.headers['user-agent'])
       console.log(Date.now())
-      console.error('this is an error')
       console.log(req.query)
+      console.error('this is an error')
       res.send('ok);
     })
   ```
