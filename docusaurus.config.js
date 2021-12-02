@@ -62,10 +62,16 @@ const config = {
             label: 'Docs',
           },
           {
+            href: 'https://app.cyclic.sh/api/login',
+            label: 'Your Apps',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/cyclic-software/docs',
             label: 'GitHub',
             position: 'right',
           },
+          
         ],
       },
       footer: {
