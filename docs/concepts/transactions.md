@@ -50,7 +50,7 @@ On the back end, we had a single api handler at the root `/` route implemented a
       console.log(Date.now())
       console.log(req.query)
       console.error('this is an error')
-      res.send('ok);
+      res.send('ok')
     })
   ```
 Cyclic presents the timeline of the logs, errors and exceptions in context of the request and response in an easy to read, syntax highlighted timeline as:
