@@ -24,6 +24,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          sidebarCollapsed: false,
           // Please change this to your repo.
           editUrl: 'https://github.com/cyclic-software/docs/edit/main/website/',
           // routeBasePath: '/', // If we want to drop straight into docs uncomment and delete index.js files
@@ -48,9 +49,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
+        style: 'dark',
         logo: {
           alt: 'Cyclic Logo',
-          src: 'img/logo.png',
+          src: 'img/logo-light.png',
         },
         items: [
           {

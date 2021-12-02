@@ -3,6 +3,30 @@
  * and scoped locally.
  */
 
+ .textButton {
+  text-align: left;
+  max-width: 475px;
+  color: white;
+  text-decoration: none;
+}
+.textButton:hover {
+  color: white;
+}
+.textButtonHead{
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.textButtonDesc{
+  color:var(--lightgray);
+}
+html[data-theme='light']  .textButton {
+  border-color: #ffffff62;;
+}
+html[data-theme='light']  .textButton:hover {
+  border-color: white;;
+}
+
+
 .heroBanner {
   padding: 4rem 0;
   text-align: center;
@@ -21,3 +45,4 @@
   align-items: center;
   justify-content: center;
 }
+
