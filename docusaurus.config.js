@@ -48,9 +48,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
+        style: 'dark',
         logo: {
           alt: 'Cyclic Logo',
-          src: 'img/logo.png',
+          src: 'img/logo-light.png',
         },
         items: [
           {
