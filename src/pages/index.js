@@ -5,18 +5,19 @@ import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import styles from "./index.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
-var host = window.location.hostname;
-if (host !== "localhost") {
-  var script = document.createElement('script'); 
-  script.src = 'https://cdn.lr-in.com/LogRocket.min.js';
-  script.crossOrigin = 'anonymous';
-  script.onload = ()=>{
-    let init_lr = window.LogRocket && window.LogRocket.init('sprnyp/docscyclicsh')
-    console.log('init lr', init_lr)
+if (typeof window !== "undefined") {
+  let host = window.location.hostname;
+  if (host !== "localhost") {
+    var script = document.createElement('script'); 
+    script.src = 'https://cdn.lr-in.com/LogRocket.min.js';
+    script.crossOrigin = 'anonymous';
+    script.onload = ()=>{
+      let init_lr = window.LogRocket && window.LogRocket.init('sprnyp/docscyclicsh')
+      console.log('init lr', init_lr)
+    }
+    document.head.appendChild(script);
   }
-  document.head.appendChild(script);
 }
-
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
