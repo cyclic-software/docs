@@ -58,7 +58,7 @@ Cyclic presents the timeline of the logs, errors and exceptions in context of th
   
 
 ## Limitations
-- Cyclic currently allows viewing transactions from the last 15 minutes.
+- Cyclic currently allows viewing transactions from the last 15 minutes
 - Keyword and date filters are not yet available
 
 
