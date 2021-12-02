@@ -48,9 +48,9 @@ On the back end, we had a single api handler at the root `/` route implemented a
     app.get('/',async (req, res) => {
       console.log(req.headers['user-agent'])
       console.log(Date.now())
-      console.error('this is an error')
       console.log(req.query)
-      res.send('ok);
+      console.error('this is an error')
+      return res.send('ok')
     })
   ```
 Cyclic presents the timeline of the logs, errors and exceptions in context of the request and response in an easy to read, syntax highlighted timeline as:
