@@ -6,7 +6,7 @@ sidebar_position: 1
 
 We think of a *transaction* as an encapsulation of events that compose a single unit of service for a web application. 
 
-These events consist of an entire end-to-end lifecycle of single request handled by an app. The cyclic runtime instruments your application with tooling that captures, measures and aggregates network requests, responses, application logs, errors and exceptions to provide full visibility for each call. 
+These events consist of an entire end-to-end lifecycle of a single request handled by an app. The cyclic runtime instruments applications with tooling that captures, measures and aggregates network requests, responses, application logs, errors and exceptions to provide full visibility for each call. 
 
 ## Transaction components
 Each transaction is composed of:
@@ -19,7 +19,7 @@ Each transaction is composed of:
     - source ip
     - user agent
   - App initialization output
-  - App logs to console or from any loggers:
+  - App logging output to console or from any loggers:
     - log payload
     - type of io `stdout`,`stderr`
   - Exceptions and runtime errors
