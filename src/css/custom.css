@@ -43,10 +43,14 @@
 
     
 }
+.hero__title{
+  font-size: 2.85em;
+}
 .hero__title, .hero__subtitle{
   font-weight: 300;
   letter-spacing: 2px;
   font-family: 'Titillium Web', sans-serif;
+  word-wrap: normal;
 }
 
 h1, h2, h3, h4, h5, h6{
