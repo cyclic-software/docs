@@ -17,7 +17,7 @@
   --ifm-color-primary-lightest: #98B1EF;
   --ifm-code-font-size: 95%;
   --ifm-toc-border-color: none;
-
+  --ifm-menu-color-active: white;
     --darkblue: #000D64;
     --blue: #2E59C7;
     --primary-blue: #3868E3;
@@ -108,8 +108,14 @@ html[data-theme='dark'] .featureSvg_src-components-HomepageFeatures-module {
 .navbar__link:hover{
   color: hsla(0,0%,100%,.75)
 }
+.menu__link--active{
+  font-weight: bold;;
+}
 .navbar__link--active {
   color: white;
+}
+.navbar-sidebar__back{
+  color: var(--gray)
 }
 html[data-theme='light'] .hero--primary {
   --ifm-hero-text-color: white;;
