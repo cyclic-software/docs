@@ -17,7 +17,6 @@
   --ifm-color-primary-lightest: #98B1EF;
   --ifm-code-font-size: 95%;
   --ifm-toc-border-color: none;
-  --ifm-menu-color-active: white;
     --darkblue: #000D64;
     --blue: #2E59C7;
     --primary-blue: #3868E3;
@@ -95,9 +94,6 @@ header h1 {
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
-html[data-theme='dark'] .featureSvg_src-components-HomepageFeatures-module {
-  filter: invert(1) hue-rotate(167deg);
-}
 
 .navbar--dark {
   --ifm-navbar-background-color: var(--blue);
@@ -141,7 +137,16 @@ html[data-theme='dark'] .footer{
   --ifm-footer-title-color: var(--darkgray);
 }
 
+
+
+@media screen and (max-width: 966px) {
+  :root {
+    --ifm-menu-color-active: white;
+  }
+}
+
 html[data-theme='dark'] {
+  --ifm-menu-color-active: white;
   --ifm-footer-link-color: black;
   --ifm-color-scheme: dark;
   --ifm-color-emphasis-300: var(--pink); 

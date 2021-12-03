@@ -9,3 +9,8 @@
   height: 150px;
   width: 200px;
 }
+
+
+html[data-theme='dark'] .featureSvg {
+  filter: invert(1) hue-rotate(167deg);
+}
