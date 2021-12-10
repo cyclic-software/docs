@@ -20,6 +20,6 @@ The only resolution at this time is to trim your dependencies or devDependencies
 
 ## Why does this happen?
 
-Cyclic builds and deploys apps using serverless technologies. AWS provides only 256MB of disk space for each lambda function.
+Cyclic builds and deploys apps using serverless technologies. We have 512MB of space to use to install your `dependencies` and `devDependencies`, then build your code bundle. The bundle may not exceed 250MB as we need some space to bundle some Cyclic code as well.
 
-If your dependencies exceed 256 MB, while running the install step you will see a `No space left on device` error.
+If your space requirements exceed these amounts, while running the install step you will see a `No space left on device` error.
