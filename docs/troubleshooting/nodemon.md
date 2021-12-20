@@ -35,8 +35,8 @@ Require stack:
 
 ## Solution
 This is happening because your `package.json` is using nodemon in its start script definition:
-```
-...json
+```json
+...
 "scripts": {
   "test": "mocha tests/unit/",
   "start": "nodemon server.js"
@@ -46,8 +46,8 @@ This is happening because your `package.json` is using nodemon in its start scri
 Nodemon is an excellent tool for local development of node applications. On your local, nodemon watches for file changes at the path it is monitoring and restarts the local server. In production mode, both for serverless or not - restarting the server on file changes is usually not a desired behavior. 
 
 The above `package.json` should be changed to:
-```
-...json
+```json
+...
 "scripts": {
   "test": "mocha tests/unit/",
   "dev": "nodemon server.js"
