@@ -56,4 +56,4 @@ The above `package.json` should be changed to:
 ...
 ```
 
-While the `"start"` script may differ for various node frameworks, it should be defined for the purpose of starting the application in production mode with the appropriate flags and parameters.
+While the `"start"` script may differ for various node frameworks, it should be defined for the purpose of starting the application in production mode with the appropriate flags and parameters. By convention the `"dev"` script is used to start the application in development mode primarily for running on local installations.
