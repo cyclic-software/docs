@@ -43,6 +43,17 @@ This is happening because your `package.json` is using nodemon in its start scri
 }
 ...
 ```
+Nodemon is an excellent tool for local development of node applications. On your local, nodemon watches for file changes at the path it is monitoring and restarts the local server. In production mode, both for serverless or not - restarting the server on file changes is usually not a desired behavior. 
 
+The above `package.json` should be changed to:
+```
+...
+"scripts": {
+  "test": "mocha tests/unit/",
+  "dev": "nodemon server.js"
+  "start": "node server.js"
+}
+...
+```
 
-Nodemon is an excellent tool for local development of node applications. 
+While the `"start"` script may differ for various node frameworks, it should be defined for the purpose of starting the application in production mode with the appropriate flags and parameters.
