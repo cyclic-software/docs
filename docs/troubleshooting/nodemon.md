@@ -36,7 +36,7 @@ Require stack:
 ## Solution
 This is happening because your `package.json` is using nodemon in its start script definition:
 ```
-...
+...json
 "scripts": {
   "test": "mocha tests/unit/",
   "start": "nodemon server.js"
@@ -47,7 +47,7 @@ Nodemon is an excellent tool for local development of node applications. On your
 
 The above `package.json` should be changed to:
 ```
-...
+...json
 "scripts": {
   "test": "mocha tests/unit/",
   "dev": "nodemon server.js"
