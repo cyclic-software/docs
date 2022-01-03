@@ -14,7 +14,7 @@ When deployed, they service requests from browsers, servers, other apps, or anyt
 ## Infrastructure
 
 Cyclic manages the provisioning, upgrades, instrumentation, configuration and cloud best practices to set your code up with scalible, fault tolerant, serverless infrastructure.
-- **AWS Cloud**: App infrastructure is provisioned and managed as infrastructure as code (IAC) in <a href="https://aws.amazon.com/cloudformation/" target="_blank">AWS CloudFormation</a>
+- **AWS Cloud**: App infrastructure is provisioned and managed as infrastructure as code (IaC) in <a href="https://aws.amazon.com/cloudformation/" target="_blank">AWS CloudFormation</a>
 - **Serverless**: a cloud execution model that enables your apps to be highly scalable, they can process single requests or millions of requests on demand without having to change logic, managing clusters, tuning parameters or deploying anything.
 - **Fault Tolerant**: Apps have the capability to be provisioned with <a href="https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-iv-multi-site-active-active/" target="_blank">active-active disaster recovery strategy</a> in all AWS regions. This means that applications can be made resilient to severe outages, limiting impact to end-users with zero downtime.
 ### Hosting
