@@ -15,15 +15,10 @@ Cyclic manages the provisioning, upgrades, instrumentation, configuration and cl
 ### Hosting
 App infrastructure is provisioned in Cyclic managed AWS cloud by default but can be configured to be provisioned in your own AWS account. 
 - **Cyclic hosted**: cyclic manages limits, constraints as well as the access boundaries and permissions to cloud resources external to the application to maintain logical isolation of your apps. 
-- **Self-hosted**: While cyclic still helps you manage deployments, config and features of the runtume, you have full control of the app infrastructure with access to customize, take apart and tinker. This enable possible use-cases like: 
-  - integration with other aws infrastructure in your own accounts
-  - define and enforce your own limits and constraints
-  - include cyclic apps in your existing log aggregation solutions
-  - bring cyclic apps under your security and service control policies
-
+- **Self-hosted**: While cyclic still helps you manage deployments, config and features of the runtume, you have **full control** of the app infrastructure with access to customize, take apart and tinker. 
 
 ## Runtime
-asdfsadf
+The runtime is the cyclic process that manages the execution of your code
 
 ## Code
 
