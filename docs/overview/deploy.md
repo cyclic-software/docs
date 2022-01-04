@@ -11,4 +11,4 @@ For deployments that take place into Cyclic managed accounts this means there is
 ## Triggering a Deployment
 Code is deployed as soon as it's GitHub repository has been connected to Cyclic. Cyclic will use the GitHub default branch to pull the repo contents. On GitHub the default branch is usually  `main` or `master`. 
 
-Every `git push` or change to the default branch will trigger a cyclic deployment. This includes direct pushes as well as pull request merges. 
+Every `git push` or change to the default branch will trigger a Cyclic deployment. This includes direct pushes as well as pull request merges. 

@@ -6,7 +6,7 @@ sidebar_position: 3
 
 We think of a *transaction* as an encapsulation of events that compose a single unit of service for a web application. 
 
-These events consist of an entire end-to-end lifecycle of a single request handled by an app. The cyclic runtime instruments applications with tooling that captures, measures and aggregates network requests, responses, application logs, errors and exceptions to provide full visibility for each call. 
+These events consist of an entire end-to-end lifecycle of a single request handled by an app. The Cyclic runtime instruments applications with tooling that captures, measures and aggregates network requests, responses, application logs, errors and exceptions to provide full visibility for each call. 
 
 ## Transaction components
 Each transaction is composed of:
@@ -29,8 +29,8 @@ Each transaction is composed of:
     - payload body
 
 ## Using transactions for analysis and debugging
-In a addition to the cyclic realtime log stream, transactions are a great way to understand what is happening in your application.
-Transactions are available as a tab on an application view, each request to an app is presented as a request-response pair.
+In addition to the Cyclic realtime log stream, transactions are a great way to understand what is happening in your application.
+Transactions are available as a tab on an application view; each request to an app is presented as a request-response pair.
 ### Request
 Given a sample request made via `curl`
   ```
