@@ -34,7 +34,7 @@ Either you can define a `main` entry that points to your entry point - for examp
 }
 ```
 
-Or, you can ensure the entrance point to your Express application is a `server.js` file in the root directory.
+Or, you can ensure the entry point to your Express application is a `server.js` file in the root directory.
 
 ## Why does this happen?
 
