@@ -25,7 +25,7 @@ To fix do the following:
 
 Cyclic launches your code by running `node .`. By default this will look for a `main` entry in your `package.json`. If that entry does not exist it will then default to `server.js`.
 
-Either you can define a `main` entry that points to your entry point for example:
+Either you can define a `main` entry that points to your entry point - for example:
 
 ```json
 {
@@ -33,6 +33,8 @@ Either you can define a `main` entry that points to your entry point for example
   ...
 }
 ```
+
+Or, you can ensure the entry point to your Express application is a `server.js` file in the root directory.
 
 ## Why does this happen?
 
