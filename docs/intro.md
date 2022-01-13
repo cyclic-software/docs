@@ -38,7 +38,7 @@ Given a role, **Cyclic can deploy apps into your own AWS account**. This allows 
 :::
 
 ### CI/CD
-A pipeline is built into every app and integrated with GitHub. Changes are live in a few seconds with every `git push`. Each deployment is registered, along with build/deploy logs pointing to the specific git change set so you know exactly what changes went out and when. 
+A pipeline is built into every app and integrated with GitHub. Changes are live in a few seconds with every `git push`. Each deployment is registered, along with build/deploy logs pointing to the specific git change set. You will know exactly what changes went out and when. 
 
 
 
