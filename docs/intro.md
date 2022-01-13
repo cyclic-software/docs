@@ -12,11 +12,11 @@ sidebar_position: 1
 :::tip  Cyclic is **serverless**
 There are **no servers, no containers, no images, no hours to count.** Each app is deployed entirely on serverless cloud infrastructure.
 :::
-### No cold containers.
+### No cold containers
 
 Even with free tier. Apps do not have to sleep, wake up, spin up or recycle. All front-ends and back-ends are ready on-demand, immediately and at all times. 
 
-### Un-overload-able.
+### Un-overload-able
 
 Containers make traffic a constant concern because resources are shared across concurrent requests. 
 
