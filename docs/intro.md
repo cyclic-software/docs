@@ -10,7 +10,7 @@ sidebar_position: 1
 </head>
 
 :::tip  Cyclic is **serverless**
-**There are no servers, no containers and no images.** Each app is deployed entirely on serverless cloud infrastructure.
+There are **no servers, no containers and no images.** Each app is deployed entirely on serverless cloud infrastructure.
 :::
 ### No cold containers.
 
@@ -18,7 +18,9 @@ Even with free tier. Apps do not have to sleep, wake up, spin up or recycle. All
 
 ### Un-overload-able.
 
-With containers, resources are shared across any concurrent requests and traffic becomes a constant concern. Serverless functions are allocated to each individual request on demand, making it possible for your apps to hyper scale.
+Containers make traffic a constant concern because resources are shared across concurrent requests. 
+
+On Cyclic, serverless functions are allocated to each individual request on demand, making it possible for your apps to hyper scale.
 
 
 :::danger **Hyper** scale
