@@ -9,10 +9,6 @@ sidebar_position: 1
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
 </head>
 
-<!-- Cyclic will let you deploy your code into the cloud in seconds. We have read all the best practices pdfs so you don't have to. -->
-
-<!-- ## What's different about cyclic? -->
-
 :::tip  Cyclic is **serverless**
 **There are no servers, no containers and no images.** Each app is deployed entirely on serverless cloud infrastructure.
 :::
