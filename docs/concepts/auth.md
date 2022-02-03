@@ -9,12 +9,12 @@ Cyclic allows you to add authentication to secure parts of your api with a simpl
 This feature is available on all apps configuration pages in the `Auth` tab
 :::
 
-Authentication and authorization can be very complex. At some point applications may require role and resource based access control, groups and groups of groups, etc. Cyclic's auth intends to cover applications in earlier stages of development to enable you to gradually build more complex mechanisms while the app stays secure. 
+Authentication and authorization can be very complex. At some point applications may require role and resource based access control, groups and groups of groups, etc. Cyclic's auth intends to cover applications with less complex access control scenarios to enable you to gradually build more complex mechanisms while the app stays secure. 
 
 ## Use Cases
 Add API Auth to your endpoints to protect the entire app or individual paths or pages.
 - Password protect components such as admin pages in the browser
-- Microservice Backend-Backend authentication
+- Microservice backend-backend authentication
 
 ## Route Patterns
 Use express router path syntax to define path patterns for which to enable auth with corresponding authentication schemes. This includes wildcard characters like <code>*</code> and <code>?</code>. <a href="https://www.npmjs.com/package/path-to-regexp" target="_blank">Read more</a> to understand the syntax in detail.
