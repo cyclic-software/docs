@@ -28,7 +28,6 @@ When enabled, Auth is required on requests whenever a certain URL pattern is mat
 - pattern `/*` will enable auth for all routes
 
 ## Credentials  
-  Credentials can be added for auth schemes:
   ### Basic Auth Scheme
   Apps can be configured with basic username/password credentials. These credentials will be required for route patterns that specify the `Basic` auth scheme.
   - In the browser, users will be prompted to enter a username and password into a prompt popup.
@@ -52,9 +51,7 @@ When enabled, Auth is required on requests whenever a certain URL pattern is mat
       });
       
       ```
-
-
-  <a href="https://swagger.io/docs/specification/authentication/basic-authentication/" target="_blank">Read more</a> to understand basic auth in detail.
+  - <a href="https://swagger.io/docs/specification/authentication/basic-authentication/" target="_blank">Read more</a> to understand basic auth in detail.
   
 ## Limits
 - Currently only `Basic` auth scheme is available with others coming soon
