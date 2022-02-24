@@ -24,7 +24,7 @@ const port = process.env.PORT || 3000
 ```
 Cyclic supports but does not require setting a port via the environment variables.
 :::tip  Automatic Port Discovery
-The port that the application is listening to is identified automatically and requests.
+The port that the application is listening to is identified automatically.
 :::
 
 Port 9001 is reserved for the runtime, other than that any port can be used and will be automatically selected. 

@@ -21,14 +21,14 @@ Here is what you need to know:
 
 1. Cyclic supports **nodejs** apps that live in **github repos**
 2. A `package.json` must exist at the root of the repo
-3. On every deployment Cyclic will run `npm install` for production and will dev dependencies 
+3. On every deployment Cyclic will run `npm install` for production and will prune dev dependencies 
    - Cyclic will also run `npm run build` if a build script has been defined in the `package.json`
 4. The `package.json` should have a `scripts` property with a `start` command
 
    - **Cyclic will run your apps by calling** `npm run start`
 5. The start command must start a server on a port
 
-   - **Cyclic will figure out the port by itself** or you can configure it in environment variables
+   - **Cyclic will discover the port automatically** or you can configure it in environment variables
 6. **All apps are serverless**
 7. New deployments will be triggered automatically on code changes to the default branch of the repo
 
