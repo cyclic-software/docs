@@ -32,3 +32,6 @@ Here is what you need to know:
 6. **All apps are serverless**
 7. New deployments will be triggered automatically on code changes to the default branch of the repo
 
+## Next steps?
+
+You can try one of our other starters listed on the [starters page](/docs/overview/starters)
