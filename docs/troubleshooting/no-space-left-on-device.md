@@ -20,6 +20,8 @@ The only resolution at this time is to trim your dependencies or devDependencies
 
 ## Why does this happen?
 
-Cyclic builds and deploys apps using serverless technologies. We have 512MB of space to use to install your `dependencies` and `devDependencies`, then build your code bundle. The bundle may not exceed 250MB as we need some space to bundle some Cyclic code as well.
+Cyclic builds and deploys apps using serverless technologies. We have 10 GB of space to use to install your `dependencies` and `devDependencies`, then build your code bundle. The bundle may not exceed 250 MB as we need some space to bundle some Cyclic code as well.
 
 If your space requirements exceed these amounts, while running the install step you will see a `No space left on device` error.
+
+Several SPA frameworks (including React) by default include build time tools in standard generated `dependencies`. If you move these to `devDependencies` you will most likely resolve any space issues.

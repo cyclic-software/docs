@@ -34,4 +34,6 @@ You bring the code by connecting a git repository to Cyclic. Code is [built and 
 The repos must contain a `package.json` file to inform the build and runtime processes on how to build and start apps.  
 
 ### Build
-Cyclic follows the instructions provided in `package.json` scripts included in your code. The build environment is transient, all build files/memory is removed after the build. While built apps are [limited](../overview/limits.md) to 250mb, the build environment can support up to 500mb including dev dependencies. 
+Cyclic follows the instructions provided in `package.json` scripts included in your code. The build environment is transient, all build files/memory is removed after the build. While built apps are [limited](../overview/limits.md) to 250 MB, the build environment can support up to 10GB including dev dependencies.
+
+Cyclic will prune any devDependencies from the build directory before trying to package. Therefore move any frameworks or modules that are only needed at build time into the `devDependencies` section of your `package.json`.
