@@ -19,7 +19,7 @@ Hard limits cannot be changed. Soft limits may be changed but they require a con
 - Runtime Nodejs 14.x
 - 5 API requests per second steady state (for free tier)
 - 10 API requests per second in a burst (for free tier)
-- 256 MB code and dependencies file size while building
+- 10 GB code and dependencies file size while building
 - 240 MB final code bundle size per app
 
 ## AWS Regions

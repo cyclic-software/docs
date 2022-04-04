@@ -36,6 +36,13 @@ If you run into issues or have questions on the starters please ask in the suppo
 
 [![Deploy](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-react-app)
 
+## Vue Frontend
+
+- Vanilla Vue App. Created with `npx @vue/cli create starter-vue`
+- Source: https://github.com/cyclic-software/starter-vue
+
+[![Deploy](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-vue)
+
 ## NextJS Full Stack
 
 - A NextJS static site with a small Express API backend
