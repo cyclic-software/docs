@@ -53,6 +53,8 @@ const config = {
         logo: {
           alt: 'Cyclic Logo',
           src: 'img/logo-light.png',
+          href: 'https://app.cyclic.sh/',
+          target: '_self',
         },
         items: [
           {
