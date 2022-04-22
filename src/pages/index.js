@@ -31,11 +31,12 @@ if (typeof window !== "undefined") {
     document.head.appendChild(google_analytics_v4);
     
     let logrocket = document.createElement('script'); 
-    logrocket.src = 'https://cdn.lr-in.com/LogRocket.min.js';
+    logrocket.src = 'https://lr-cdn.cyclic.cloud/LogRocket.min.js';
     logrocket.crossOrigin = 'anonymous';
     logrocket.onload = ()=>{
-      let init_lr = window.LogRocket && window.LogRocket.init('sprnyp/docscyclicsh')
-      console.log('init lr', init_lr)
+      let init_lr = window.LogRocket && window.LogRocket.init('sprnyp/docscyclicsh',{
+        serverURL: "https://lr-data.cyclic.cloud/i",
+      })
     }
 
     document.head.appendChild(logrocket);
