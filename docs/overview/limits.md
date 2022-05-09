@@ -13,6 +13,8 @@ Hard limits cannot be changed. Soft limits may be changed but they require a con
 - 30s Maximum request time
 - 6MB Maximum HTTP POST payload size
 - No streaming of requests or responses
+- 512MB of ephemeral disk space mounted at `/tmp`
+  - the data will persist between invokes but there is no guarantee that any further invocations will use the same instance and thus can not be relied on to store persistent data.
 
 ## Soft limits
 
