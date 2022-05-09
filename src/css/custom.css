@@ -121,14 +121,14 @@ html[data-theme='light'] .hero--primary {
 html[data-theme='dark'] .hero--primary {
   --ifm-hero-text-color: white;;
   /* background: var(--background-pattern-dark)!important; */
-  background: linear-gradient(to bottom,rgba(255,255,255,0) 11%,var(--ifm-background-color)),var(--background-pattern-dark)!important;
+  background: linear-gradient(to bottom,rgba(0,0,0,0) 11%,var(--ifm-background-color)),var(--background-pattern-dark)!important;
 }
 html[data-theme='light'] .footer{
   background: linear-gradient(to top,rgba(255,255,255,0) 70%,#fff),var(--background-pattern-light);
 }
 
 html[data-theme='dark'] .footer{
-  background: linear-gradient(to top,rgba(255,255,255,0) -100%,var(--ifm-background-color)),var(--background-pattern-dark)!important;
+  background: linear-gradient(to top,rgba(0,0,0,0) -100%,var(--ifm-background-color)),var(--background-pattern-dark)!important;
 }
 
 .footer--dark {
