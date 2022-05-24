@@ -5,7 +5,7 @@ module.exports = function (context, options) {
     //   return 1 + Math.floor(Math.random() * 10);
     // },
     injectHtmlTags({content}) {
-      if(process.NODE_ENV =='development'){
+      if(process.env.NODE_ENV =='development'){
         return {}
       }
 
