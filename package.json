@@ -40,5 +40,20 @@
   },
   "devDependencies": {
     "ngrok": "^4.2.2"
-  }
+  },
+  "description": "This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.",
+  "main": "babel.config.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyclic-software/docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyclic-software/docs/issues"
+  },
+  "homepage": "https://github.com/cyclic-software/docs#readme"
 }
