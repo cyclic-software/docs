@@ -97,8 +97,7 @@ let mikes_work = await users.item('mike').fragment('work').get()
 ```
 ## Using DynamoDB Directly
 
-
-Apps have CRUD access to the table and can make use of it's generic raw schema directly or with the open source `cyclic-dynamodb` package. 
+If you choose not to use the open source `cyclic-dynamodb` package, apps have CRUD access to the table and can make use of the table's generic raw schema directly. 
 
 When using the table directly with AWS DynamoDB SDK or other third party SDK's, the following fields and indexes can be used:
 
