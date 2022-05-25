@@ -28,7 +28,7 @@ The credentials are temporary and expire after 60 minutes. New credentials can b
 
 [GitHub](https://github.com/cyclic-software/db-sdk) | [NPM](https://www.npmjs.com/package/cyclic-dynamodb)
 
-Together with the Cyclic.sh DynamoDB indexing strategy and data model, the sdk simplifies the DynamoDB interface and enables collection organization of records, queries and data scheme discovery among other features.
+The sdk simplifies the DynamoDB interface and enables collection organization of records, queries and data scheme discovery among other features.
 
 ### Collection Items
 The package organizes items into the following structure:
