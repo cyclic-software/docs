@@ -15,6 +15,7 @@ Hard limits cannot be changed. Soft limits may be changed but they require a con
 - No streaming of requests or responses
 - 512MB of ephemeral disk space mounted at `/tmp`
   - the data will persist between invokes but there is no guarantee that any further invocations will use the same instance and thus can not be relied on to store persistent data.
+- 5 TB single file size in S3 storage
 
 ## Soft limits
 
@@ -23,6 +24,8 @@ Hard limits cannot be changed. Soft limits may be changed but they require a con
 - 10 API requests per second in a burst (for free tier)
 - 10 GB code and dependencies file size while building
 - 240 MB final code bundle size per app
+- 1 GB of S3 storage (for free tier)
+- 10 GB of S3 transfer out to internet (for free tier)
 
 ## AWS Regions
 

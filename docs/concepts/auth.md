@@ -58,3 +58,12 @@ When enabled, Auth is required on requests whenever a certain URL pattern is mat
 - Currently only `Basic` auth scheme is available with others coming soon
 - The number of credentials is limited to `3` per app
 - The number of route patterns is limited to `3` per app
+
+## Example
+
+- Enable auth for your app as explained above.
+- Encode user name and password using online base64 encoder or bash: `echo -n 'username:password' | base64`
+- Use base64 encoded string in Authorization header:
+```shell
+curl -H "Authorization: Basic $(echo -n 'username:password' | base64)" https://app-url.cyclic.app
+```

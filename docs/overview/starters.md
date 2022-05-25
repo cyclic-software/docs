@@ -63,3 +63,10 @@ If you run into issues or have questions on the starters please ask in the suppo
 - Source: https://github.com/cyclic-software/starter-slack-boltjs
 
 [![Deploy](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-slack-boltjs)
+
+## S3 Storage
+
+- Use Cyclic Storage backed by AWS S3
+- Source: https://github.com/cyclic-software/starter-s3-storage
+
+[![Deploy](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-s3-storage)
