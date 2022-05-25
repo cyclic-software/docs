@@ -95,7 +95,7 @@ await users.item('mike')
 
 let mikes_work = await users.item('mike').fragment('work').get()
 ```
-### Using DynamoDB Directly
+## Using DynamoDB Directly
 
 
 Apps have CRUD access to the table and can make use of it's generic raw schema directly or with the open source `cyclic-dynamodb` package. 
