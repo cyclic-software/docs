@@ -10,10 +10,10 @@ Apps have access to a pre-configured AWS DynamoDB Table. External databases can 
 ## DynamoDB (Preview)
 An enhanced single-table database built on the fast and globally scalable DynamoDB.
 On top of DynamoDB NoSQL functionality and table there is a number of additional resources that enable experimental features include:
-Simple Key-Value inspired SDK
-Write-Time Indexing
-Flexible Queries
-JSON Schema Discovery
+- Simple Key-Value inspired SDK
+- Write-Time Indexing
+- Flexible Queries
+- JSON Schema Discovery
 
 :::tip  Local Dev & Using AWS Resources 
 When deployed Cyclic apps are directly integrated with AWS resources with no config.
