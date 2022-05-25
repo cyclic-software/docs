@@ -15,7 +15,7 @@ On top of DynamoDB NoSQL functionality and table there is a number of additional
 - Flexible Queries
 - JSON Schema Discovery
 
-:::tip  Local Dev & Using AWS Resources 
+:::tip  Local Dev 
 When deployed Cyclic apps are directly integrated with AWS resources with no need any additional config.
 When developing and interacting with AWS on local, use credentials provided on the `Data / Storage` tab of an app.
 
