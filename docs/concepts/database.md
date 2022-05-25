@@ -57,7 +57,7 @@ The `key` should be used to uniquely identify an item and it's set of child item
 process.env.CYCLIC_DB = 'your-url-subdomainCyclicDB'
 const db = require('cyclic-dynamodb')
 
-const run = async function(){s
+const run = async function(){
     let animals = db.collection('animals')
 
     // create an item in collection with key "leo"
