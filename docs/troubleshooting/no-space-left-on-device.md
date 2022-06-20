@@ -27,6 +27,9 @@ Currently the code size is limited to 240MB. Fortunately, most projects are can 
 - move any dev dependencies to `devDependencies`
 - add file patterns to an `.npmignore` file to exclude them from the build
 
+:::tip  `.npmignore` uses the same syntax as `.gitignore`
+Read more about <a href=" https://www.atlassian.com/git/tutorials/saving-changes/gitignore" target="_blank">ignoring path patterns</a>
+:::
 
 ## Build environment limit
 The build environment has 10 GB disk and 10 GB RAM available for temporary use to run installation and build `npm` scripts defined in the repos `package.json`.
@@ -38,5 +41,10 @@ fatal: cannot create directory at 'some_large_file.txt': No space left on device
 2021-12-06 10:49:49: [CYCLIC] Build Failed
 Push a new commit to start another.
 ```
+
+### Solution
+The only resolution at this time is to trim your dependencies or devDependencies.
+
+
 
 
