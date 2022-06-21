@@ -28,7 +28,7 @@ Currently the code size is limited to 240MB. Fortunately, most projects are can 
 - add file patterns to an `.npmignore` file to exclude them from the build
 
 :::tip  `.npmignore` uses the same syntax as `.gitignore`
-Read more about <a href=" https://www.atlassian.com/git/tutorials/saving-changes/gitignore" target="_blank">ignoring path patterns</a>
+Read more about <a href="https://www.atlassian.com/git/tutorials/saving-changes/gitignore" target="_blank">ignoring path patterns</a>
 :::
 
 ## Build environment limit
