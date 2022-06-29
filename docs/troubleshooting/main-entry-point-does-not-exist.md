@@ -11,7 +11,7 @@ If you get an error in the deploy log that says that your `package.json` points 
 ```code
 ERROR: The main entry point defined in package.json 'index.js' does not exist.
 
-https://docs.npmjs.com/cli/v7/configuring-npm/package-json#main
+https://docs.npmjs.com/cli/v8/configuring-npm/package-json#main
   
   "main": "index.js"
 

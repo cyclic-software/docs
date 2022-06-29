@@ -24,7 +24,7 @@ The input of the **build** step is a single commit in a git repo and the output 
 
 The following is a close approximation of the code we use to take your code repo and turn it into an artifact that can be run inside of AWS Lambda with the Cyclic lambda runtime.
 
-**Note**: we use `npm` version 6.x throughout.
+**Note**: we use `npm` version 8.13.1 throughout.
 
 - `npm install`: Install your code's dependencies (including `devDependencies`)
 - `npm run build`: Build your app if you have a `build` script defined in `package.json`
@@ -35,13 +35,16 @@ The following is a close approximation of the code we use to take your code repo
 
 ## Customize the build process
 
-NPM executes several [lifecycle scripts](https://docs.npmjs.com/cli/v6/using-npm/scripts#npm-install) as part of the `npm install` and `npm run build`. According to the documentation these are run in the following order:
+NPM executes several [lifecycle scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts#npm-install) as part of the `npm install` and `npm run build`. According to the documentation these are run in the following order:
 
 **`npm install`**
 - `preinstall`
 - `install`
 - `postinstall`
 - `prepublish`
+- `preprepare`
+- `prepare`
+- `postprepare`
 
 **`npm run build`**
 - `prebuild`
