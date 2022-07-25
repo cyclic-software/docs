@@ -9,15 +9,15 @@ Follow these steps to create a button that will allow users to fork your repo an
 
 ## Easy
 
-Just copy this markdown directly into your README.md file inside your repo on Github. The target `https://deploy.cyclic.app/` uses http referrer header to determine the source repo to use in targeting the `app.cyclic.sh` deploy path.
+Just copy this markdown directly into your README.md file inside your repo on Github. The target `https://deploy.cyclic.sh/` uses http referrer header to determine the source repo to use in targeting the `app.cyclic.sh` deploy path.
 
 ```markdown
-[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://deploy.cyclic.app/)
+[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/)
 ```
 
 Renders as:
 
-[![Deploy to Cyclic](https://deploy.cyclic.app/button.svg)](https://deploy.cyclic.app/)
+[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/)
 
 ## HTML
 
@@ -33,13 +33,13 @@ GH_REPO=express-hello-world
 ```
 
 ```html
-<a href="https://app.cyclic.sh/api/app/deploy/GH_LOGIN/GH_REPO">
-    <img src="https://deploy.cyclic.app/button.svg" />
+<a href="https://deploy.cyclic.sh/GH_LOGIN/GH_REPO">
+    <img src="https://deploy.cyclic.sh/button.svg" />
 </a>
 ```
 
 Renders as:
 
-<a href="https://app.cyclic.sh/api/app/deploy/GH_LOGIN/GH_REPO">
-    <img src="https://deploy.cyclic.app/button.svg" />
+<a href="https://deploy.cyclic.sh/GH_LOGIN/GH_REPO">
+    <img src="https://deploy.cyclic.sh/button.svg" />
 </a>
