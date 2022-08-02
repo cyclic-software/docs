@@ -3,7 +3,7 @@
 sidebar_position: 2
 ---
 
-# Add a custom domain to an app
+# Add custom domain
 
 Cyclic apps are given random subdomain names at first deployment. The general structure of a name is -
 
