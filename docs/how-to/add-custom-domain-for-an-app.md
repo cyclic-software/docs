@@ -13,7 +13,7 @@ You can customize this domain in two ways:
 
 ## Change the subdomain
 
-To change the subdomain to something like `myproject.cyclic.app` , navigate to `Environments` and use the form in the `Custom Subdomain` panel. You will be able to select a any custom domain that hasn't already been used.
+To change the subdomain to something like `myproject.cyclic.app`, navigate to `Environments` and use the form in the `Custom Subdomain` panel. You will be able to select a any custom domain that hasn't already been used.
 
 ## Add a domain you own to an app
 
