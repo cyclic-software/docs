@@ -44,7 +44,7 @@ Many registrars support forwarding. A common practice is to register a `www` sub
 
 ### Cloudflare
 
-Cloudflare is a popular free DNS service can be used directly to create a CNAME apex record with their rewriting feature.
+Cloudflare is a popular free DNS service that can be used to directly to create a CNAME apex record with their rewriting feature.
 
 Two things to keep in mind when if using Cloudflare:
 - The validation record **should not be proxied**
