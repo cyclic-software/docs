@@ -7,27 +7,27 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Cyclic Documentation',
-  tagline: 'Apps in seconds', 
-  url: 'https://docs.cyclic.sh',  
-  baseUrl: '/', 
-  onBrokenLinks: 'throw', 
+  tagline: 'Apps in seconds',
+  url: 'https://docs.cyclic.sh',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'cyclic-software', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   trailingSlash: false, // https://docusaurus.io/docs/deployment#deploying-to-github-pages
-  plugins: ['./src/plugins/analytics/index.js'], 
-      
-  presets: [  
+  plugins: ['./src/plugins/analytics/index.js'],
+
+  presets: [
     [
-      '@docusaurus/preset-classic', 
+      '@docusaurus/preset-classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: { 
+        docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           sidebarCollapsed: false,
           // Please change this to your repo.
-          editUrl: 'https://github.com/cyclic-software/docs/edit/main/website/',
+          editUrl: 'https://github.com/cyclic-software/docs/blob/main/',
           // routeBasePath: '/', // If we want to drop straight into docs uncomment and delete index.js files
         },
         // blog: {
@@ -39,7 +39,7 @@ const config = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      }), 
+      }),
     ],
   ],
 
@@ -74,7 +74,7 @@ const config = {
             label: 'GitHub',
             position: 'right',
           },
-          
+
         ],
       },
       footer: {
