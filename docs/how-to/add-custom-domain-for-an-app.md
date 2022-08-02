@@ -17,7 +17,7 @@ To change the subdomain to something like `myproject.cyclic.app`, navigate to `E
 
 ## Add a domain you own to an app
 
-You can attach a domain you own to a Cyclic app. This requires you to verify that you own you domain in order for Cyclic to request the issue of an SSL certificate. The certificates are signed by AWS and are auto-renewed as long as appropriate DNS records exist.
+You can attach a domain you own to a Cyclic app. This requires you to create two DNS records. The first record - to verify that you own the domain so that Cyclic can request the issue of an SSL certificate. The certificates are signed by AWS and are auto-renewed as long as appropriate DNS records exist. The second record, to route requests between your domain and cyclic app.
 
 1. Request a domain on the dashboard `Advanced` > `Custom Domains` panel.
 2. You will receive two DNS records to add to your registrar
@@ -26,7 +26,9 @@ You can attach a domain you own to a Cyclic app. This requires you to verify tha
    Record Name:  _xxxxxxxxxxx.your-domain.com
    Record Value: _yyyyyyyyyyy_.abcdef.acm-validations.aws
    ```
-   This record is used to verify domain ownership and issue an SSL certificate for `your-domain.com` 2. `CNAME` record to point your domain at your cyclic app, something like this:
+   This record is used to verify domain ownership and issue an SSL certificate for `www.your-domain.com` 
+   
+   2. `CNAME` record to point your domain at your cyclic app, something like this:
    ```
    Record Name: myproject.your-domain.com (the domain you requested) 
    Record Value: some-random-words.cyclic.app
