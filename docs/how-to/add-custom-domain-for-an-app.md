@@ -26,11 +26,11 @@ You can attach a domain you own to a Cyclic app. This requires you to create two
    Record Name:  _xxxxxxxxxxx.your-domain.com
    Record Value: _yyyyyyyyyyy_.abcdef.acm-validations.aws
    ```
-   This record is used to verify domain ownership and issue an SSL certificate for `www.your-domain.com` 
-   
+   This record is used to verify domain ownership and issue an SSL certificate for `myproject.your-domain.com` 
+
    2. `CNAME` record to point your domain at your cyclic app, something like this:
    ```
-   Record Name: myproject.your-domain.com (the domain you requested) 
+   Record Name:  myproject.your-domain.com (the domain you requested) 
    Record Value: some-random-words.cyclic.app
    ```
    This record will route traffic from your domain to your app.
