@@ -19,6 +19,13 @@ To change the subdomain to something like `myproject.cyclic.app`, navigate to `E
 
 You can attach a domain you own to a Cyclic app. This requires you to create two DNS records. The first record - to verify that you own the domain so that Cyclic can request the issue of an SSL certificate. The certificates are signed by AWS and are auto-renewed as long as appropriate DNS records exist. The second record, to route requests between your domain and cyclic app.
 
+:::caution CAA Record
+   Since Cyclic delegates the issue of issue of the SSL certificate to Amazon AWS, your DNS must allow AWS to create certs for your domain. A Certification Authority Authorization (CAA) record is used to specify which certificate authorities (CAs) are allowed to issue certificates for a domain. 
+   
+   For the validation to succeed, your DNS configuration must either not have CAA records specified (allows all CA's) or include a CAA record with a value `amazon.com` or `amazonaws.com`. Refer to [AWS docs for more info](https://docs.aws.amazon.com/acm/latest/userguide/troubleshooting-caa.html).
+:::
+
+
 1. Request a domain on the dashboard `Advanced` > `Custom Domains` panel.
 2. You will receive two DNS records to add to your registrar
    1. `CNAME` validation record that will look something like this:
@@ -27,7 +34,7 @@ You can attach a domain you own to a Cyclic app. This requires you to create two
    Record Value: _yyyyyyyyyyy_.abcdef.acm-validations.aws
    ```
    This record is used to verify domain ownership and issue an SSL certificate for `myproject.your-domain.com` 
-
+   
    2. `CNAME` record to point your domain at your cyclic app, something like this:
    ```
    Record Name:  myproject.your-domain.com (the domain you requested) 
