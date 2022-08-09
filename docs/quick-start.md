@@ -12,6 +12,10 @@ Launch a pre-baked expressjs starter:
 [![Deploy Expressjs Starter on Cyclic](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/express-hello-world)
 
 
+## Product tour
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iK3ael3pQw8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Launching your own app
 
 Go to the `Link Your Own` tab on the deployment page. This will let you chose a repo from one of your public GitHub repos.
