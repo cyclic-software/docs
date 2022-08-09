@@ -22,6 +22,15 @@ If you run into issues or have questions on the starters please ask in the suppo
 
 [![Deploy](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-express-api)
 
+## REST API
+
+- Fully functional REST API
+  - Create Read Update Delete, List
+  - Backed by integrated DynamoDB
+- https://github.com/cyclic-software/starter-rest-api
+
+[![Deploy](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-rest-api)
+
 ## HTML Full Stack
 
 - An express app serving a static html page with some cool css
