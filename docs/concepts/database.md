@@ -54,8 +54,8 @@ The `key` should be used to uniquely identify an item and it's set of child item
 ```js
 // example.js
 
-process.env.CYCLIC_DB = 'your-url-subdomainCyclicDB'
-const db = require('cyclic-dynamodb')
+const CyclicDB = require('cyclic-dynamodb')
+const db = CyclicDB(your-app-idCyclicDB) // find it on the Database/Storage tab
 
 const run = async function(){
     let animals = db.collection('animals')
@@ -71,7 +71,6 @@ const run = async function(){
     console.log(item)
 }
 run()
-
 ```
 ### Item Fragments
 With the cyclic data model, items can have fragments. These can be thought of as children or attachments to items.

@@ -12,11 +12,11 @@ sidebar_position: 1
 :::tip  Cyclic is **serverless**
 There are **no servers, no containers, no images, no hours to count.** Each app is deployed entirely on serverless cloud infrastructure.
 :::
-### No cold containers
+### No Sleep
 
 Even with free tier. Apps do not have to sleep, wake up, spin up or recycle. All front-ends and back-ends are ready on-demand, immediately and at all times. 
 
-### Un-overload-able
+### No Overload
 
 Containers make traffic a constant concern because resources are shared across concurrent requests. 
 
@@ -28,6 +28,10 @@ On Cyclic free tier, an individual `1GB RAM` compute instance handles each separ
 
 :::
 <!-- Since apps are only actually running for a This means there are no minutes or hours to measure -->
+
+### Cloud-scale Database and Storage
+Database and storage on free tier. **1GB of AWS S3 file object storage as well as a 1GB AWS DynamoDB NoSQL database** are available for all apps. Cyclic
+makes it simple to use the services without having to set up an AWS account. To make using the AWS database even easier, check out our open source [DynamoDB SDK](https://github.com/cyclic-software/db-sdk)
 
 ### Worldwide
 Apps can be launched around the world to make sure your users see the least latency. Apps can also be launched across the world to minimize downtime with default active-active failover strategy. 
@@ -66,7 +70,7 @@ You can always link your own repository from github.
 
 :::note Language and runtime support
 
-The runtime is nodejs-14. Let us know if you are looking for another language or version: [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE) 
+Cyclic supports Node.JS 16 and 14 runtimes for both building and running apps. Let us know if you are looking for another language or version: [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE) 
 
 
 :::

@@ -19,13 +19,14 @@ Hard limits cannot be changed. Soft limits may be changed but they require a con
 
 ## Soft limits
 
-- Runtime Nodejs 14.x
+- Runtime Node.JS 16.x or 14.x
 - 5 API requests per second steady state (for free tier)
 - 10 API requests per second in a burst (for free tier)
 - 10 GB code and dependencies file size while building
 - 240 MB final code bundle size per app
 - 1 GB of S3 storage (for free tier)
 - 10 GB of S3 transfer out to internet (for free tier)
+- 1 GB of DynamoDB storage (for free tier)
 
 ## AWS Regions
 
