@@ -55,7 +55,7 @@ The `key` should be used to uniquely identify an item and it's set of child item
 // example.js
 
 const CyclicDB = require('cyclic-dynamodb')
-const db = CyclicDB('your-app-idCyclicDB')
+const db = CyclicDB(your-app-idCyclicDB) // find it on the Database/Storage tab
 
 const run = async function(){
     let animals = db.collection('animals')
