@@ -6,7 +6,7 @@ sidebar_position: 3
 # Using MongoDB
 
 ## Atlas Configuration
-Cyclic apps do not have static IP's for white listing with Atlas and Cyclic does not offer private networking nn free tier.
+Cyclic apps do not have static IP's for white listing with Atlas and Cyclic does not offer private networking on free tier.
 
 Setting `0.0.0.0/0` will enable access to your service cluster from all IP's and make it possible for services to authenticate via connection string.
 
