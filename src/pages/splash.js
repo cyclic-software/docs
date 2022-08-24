@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import styles from "./index.module.css";
+import styles from "./splash.module.css";
 import HomepageFeatures from "../components/HomepageFeatures";
 
 function HomepageHeader() {
@@ -17,11 +17,11 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           {/* <Link
             className="button button--secondary button--lg"
-            to="/docs/intro"
+            to="/intro"
           >
             Get Started
           </Link> */}
-          <Link  href="/docs/intro" className={clsx("pagination-nav__link", styles.textButton)}>
+          <Link  href="/intro" className={clsx("pagination-nav__link", styles.textButton)}>
             <div className={styles.textButtonHead}><strong>Get Started »</strong></div>
             <div className={styles.textButtonDesc}>Build something cool, learn how to start fresh or deploy an existing project with Cyclic</div>
           </Link>

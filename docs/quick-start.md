@@ -38,4 +38,4 @@ Here is what you need to know:
 
 ## Next steps?
 
-You can try one of our other starters listed on the [starters page](/docs/overview/starters)
+You can try one of our other starters listed on the [starters page](/overview/starters)

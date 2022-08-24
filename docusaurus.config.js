@@ -28,8 +28,9 @@ const config = {
           sidebarCollapsed: false,
           // Please change this to your repo.
           editUrl: 'https://github.com/cyclic-software/docs/blob/main/',
-          // routeBasePath: '/', // If we want to drop straight into docs uncomment and delete index.js files
+          routeBasePath: '/', // If we want to drop straight into docs uncomment and delete index.js files
         },
+        blog: false,
         // blog: {
         //   showReadingTime: true,
         //   // Please change this to your repo.
@@ -60,9 +61,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'index',
             position: 'left',
-            label: 'Docs',
+            label: 'Home',
           },
           {
             href: 'https://app.cyclic.sh/api/login',

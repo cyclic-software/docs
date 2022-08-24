@@ -18,7 +18,7 @@ The free tier includes:
 - 1GB of storage per month. Additional storage is billed on a GB / month basis.
 - 10GB of data transfer to the internet per month. Additional data transfer is billed on a per GB basis.
 
-For a complete list of limits check out the [limits page](/docs/overview/limits)
+For a complete list of limits check out the [limits page](/overview/limits)
 
 # Example
 

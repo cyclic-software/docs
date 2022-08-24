@@ -1,5 +1,5 @@
 ---
-# slug: / # if you wanna drop straight into docs uncomment along with config change
+slug: / # if you wanna drop straight into docs uncomment along with config change
 sidebar_position: 1
 ---
 
