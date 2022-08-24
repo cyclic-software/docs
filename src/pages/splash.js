@@ -17,11 +17,11 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           {/* <Link
             className="button button--secondary button--lg"
-            to="/intro"
+            to="/"
           >
             Get Started
           </Link> */}
-          <Link  href="/intro" className={clsx("pagination-nav__link", styles.textButton)}>
+          <Link  href="/" className={clsx("pagination-nav__link", styles.textButton)}>
             <div className={styles.textButtonHead}><strong>Get Started »</strong></div>
             <div className={styles.textButtonDesc}>Build something cool, learn how to start fresh or deploy an existing project with Cyclic</div>
           </Link>
