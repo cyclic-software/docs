@@ -16,7 +16,24 @@ const config = {
   organizationName: 'cyclic-software', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   trailingSlash: false, // https://docusaurus.io/docs/deployment#deploying-to-github-pages
-  plugins: ['./src/plugins/analytics/index.js'],
+  plugins: [
+    './src/plugins/analytics/index.js',
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/',
+            from: '/docs/intro',
+          },
+        ],
+        createRedirects(existingPath) {
+          console.log(`Creating redirect to ${existingPath} from /docs${existingPath}`)
+          return [`/docs${existingPath}`]
+        },
+      }
+    ]
+  ],
 
   presets: [
     [
