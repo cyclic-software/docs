@@ -16,7 +16,24 @@ const config = {
   organizationName: 'cyclic-software', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   trailingSlash: false, // https://docusaurus.io/docs/deployment#deploying-to-github-pages
-  plugins: ['./src/plugins/analytics/index.js'],
+  plugins: [
+    './src/plugins/analytics/index.js',
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            to: '/',
+            from: '/docs/intro',
+          },
+        ],
+        createRedirects(existingPath) {
+          console.log(`Creating redirect to ${existingPath} from /docs${existingPath}`)
+          return [`/docs${existingPath}`]
+        },
+      }
+    ]
+  ],
 
   presets: [
     [
@@ -28,8 +45,9 @@ const config = {
           sidebarCollapsed: false,
           // Please change this to your repo.
           editUrl: 'https://github.com/cyclic-software/docs/blob/main/',
-          // routeBasePath: '/', // If we want to drop straight into docs uncomment and delete index.js files
+          routeBasePath: '/', // If we want to drop straight into docs uncomment and delete index.js files
         },
+        blog: false,
         // blog: {
         //   showReadingTime: true,
         //   // Please change this to your repo.
@@ -60,9 +78,9 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'index',
             position: 'left',
-            label: 'Docs',
+            label: 'Home',
           },
           {
             href: 'https://app.cyclic.sh/api/login',

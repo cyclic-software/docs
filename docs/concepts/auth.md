@@ -52,7 +52,7 @@ When enabled, Auth is required on requests whenever a certain URL pattern is mat
       });
       
       ```
-  - <a href="https://swagger.io/docs/specification/authentication/basic-authentication/" target="_blank">Read more</a> to understand basic auth in detail.
+  - <a href="https://swagger.io/specification/authentication/basic-authentication/" target="_blank">Read more</a> to understand basic auth in detail.
   
 ## Limits
 - Currently only `Basic` auth scheme is available with others coming soon

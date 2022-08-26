@@ -31,7 +31,7 @@ The following is a close approximation of the code we use to take your code repo
 - `npm prune`: Prune any `devDependencies` to minimize the size of the output zip
 - `zip`: Zip all of your code and installed dependencies (for example `node_modules`) recursively
 
-**Note**: we have limits on the maximum amount of disk space used for code + dependencies while building and on the final bundle size. See [limits page](/docs/overview/limits) for more details.
+**Note**: we have limits on the maximum amount of disk space used for code + dependencies while building and on the final bundle size. See [limits page](/overview/limits) for more details.
 
 ## Customize the build process
 
