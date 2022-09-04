@@ -331,7 +331,7 @@ import db from "cyclic-dynamodb";
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/index.js)
 
-![Copying database credentials to clipboard](./assets/screencast1.gif)
+![Copying database credentials to clipboard](../../static/img/tutorial/rest-api/screencast1.gif)
 
 And since we’re building our API around our a DynamoDB database, we need to make sure that we have read and write access to it by exporting the keys provided by Cyclic’s “**Data/Storage**” dashboard to our local machine. (do this every time you launch the terminal)
 
@@ -349,7 +349,7 @@ Everything’s going great, it’s time to get started building our database!
 
 First of all, every AWS DynamoDB instance has a specific name, also known as a *table name*. It’s given to us by Cyclic in its database dashboard page.
 
-![Copying table name to the clipboard.](./assets/screencast2.gif)
+![Copying table name to the clipboard.](../../static/img/tutorial/rest-api/screencast2.gif)
 
 Let’s copy that value into the `.env.sample` file and remove the `BUCKET` variable. Such a file contains environment variables that must be registered before running our server. It won’t work until we copy it into a `.env` file, however:
 
