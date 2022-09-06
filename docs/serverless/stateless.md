@@ -19,4 +19,21 @@ Check out the lined example for how it can be done with Cyclic's included databa
 :::
 
 ### File Upload
-Serverless apps run on read-only file systems.
+Serverless apps run on read-only file systems. This means it is impossible to persistently store files to disk. 
+
+:::tip AWS S3 and Uploading/Downloading Files 
+Cyclic exposes many features of AWS S3 directly to your apps. To handle uploads directly to the object store, S3 can be used to generate pre-signed GET, PUT and POST urls than can be used by a client to upload and download files over the 6MB api size limitation. 
+
+[Read more on presigned URL's](https://aws.amazon.com/blogs/developer/generate-presigned-url-modular-aws-sdk-javascript/)
+:::
+#### Processing and Uploading 
+While the `/tmp` directory can be written to, but should only be used for intermediary processing before upload to object store or download to client. An example use case for `/tmp` may be - create thumbnail image, store in /tmp, upload to S3.
+
+### db.json
+A popular pattern with many tutorials is to simulate by reading and writing records to and from a `db.json` file. In traditional server environments, this pattern may work for some *very* low volume of read's and write's, it will very quickly become vulnerable to race conditions and should be avoided even in those environments.
+
+While it is possible to write to the `/tmp` directory in a stateless runtime. The `/tmp` directory is not shared between multiple instances of the application and is wiped after a few minutes. This makes the same issues that arise in a stateful environment immediately apparent. 
+
+:::danger
+Do not make a `json` file your database. Cyclic [has a database](concepts/database) you can use for free. 
+:::
