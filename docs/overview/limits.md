@@ -19,7 +19,7 @@ Hard limits cannot be changed. Soft limits may be changed but they require a con
 
 ## Soft limits
 
-- Runtime Node.JS 16.x or 14.x
+- Runtime Node.js 16.x or 14.x
 - 5 API requests per second steady state (for free tier)
 - 10 API requests per second in a burst (for free tier)
 - 10 GB code and dependencies file size while building

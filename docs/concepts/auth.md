@@ -43,7 +43,7 @@ When enabled, Auth is required on requests whenever a certain URL pattern is mat
         "method": "GET"
       });
       ``` 
-    - Example node.js request:
+    - Example Node.js request:
       ```js
       axios.get('https://httpbin.org/get', {
         headers: {
