@@ -8,14 +8,14 @@ Cyclic apps are serverless, this gives apps the ability to scale up to handle a 
 
 Two important attributes of serverless that should be considered when developing or migrating applications for serverless environments:
 
-#### Compute is provisioned on-demand
-- runtime is started when it is needed
-- runtime suspended quickly after
+### Compute is provisioned on-demand
+- runtime is started when a request is received
+- runtime suspended after a response is sent
 - multiple runtimes can be active simultaneously
   
 [On-Demand Runtimes - Read More](/serverless/on-demand)
 
-#### Compute is stateless
+### Compute is stateless
 - runtimes do not retain memory after they are shut down
 - write access is only available to the `/tmp` directory
 - simultaneously active runtimes do not share memory or `/tmp` disk
