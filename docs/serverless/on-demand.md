@@ -3,7 +3,7 @@ sidebar_position: 2
 ---
 
 # On-Demand  
-Serverless means applications are only `on` for the time it takes to process individual requests. They are suspended immediately after the response is produced. 
+Serverless means applications are only `on` for the time it takes to process individual requests. They are suspended immediately after the response is sent. 
 ## Limitations and Solutions 
 This can limit some traditional server use cases:
 ### Sockets
