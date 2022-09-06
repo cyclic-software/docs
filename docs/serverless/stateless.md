@@ -15,7 +15,7 @@ Basic session implementation usually built with the assumption that the server p
 :::tip Database backed sessions
 Best practices for stateful environments will dictate that a sessions should be backed up in a database. With serverless, storing sessions in a database is a must. There are many libraries and sessions extensions that enable this for a variety of databases.
 
-Check out the lined example for how it can be done with Cyclic's included database >> [DynamoDB](https://github.com/seekayel/starter-user-app/blob/main/src/dynamodb-store/DynamoDBStore.js)
+Check out the linked example for how it can be done with Cyclic's included database >> [DynamoDB](https://github.com/seekayel/starter-user-app/blob/main/src/dynamodb-store/DynamoDBStore.js)
 :::
 
 ### File Upload
