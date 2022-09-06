@@ -12,10 +12,13 @@ Two important attributes of serverless that should be considered when developing
 - runtime is started when it is needed
 - runtime suspended quickly after
 - multiple runtimes can be active simultaneously
+  
+[On-Demand Runtimes - Read More](/serverless/on-demand)
 
 #### Compute is stateless
 - runtimes do not retain memory after they are shut down
 - write access is only available to the `/tmp` directory
 - simultaneously active runtimes do not share memory or `/tmp` disk
   
+[Stateless Runtimes - Read More](/serverless/stateless)
 
