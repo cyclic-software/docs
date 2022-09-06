@@ -37,7 +37,7 @@ In the following snippet, the `db.write` method takes some time. The database wi
     res.send('ok')
   })  
 ```
-Serverless environment are suspended as soon as `ok` is sent, and the write may fail without producing an error. 
+A serverless environment is suspended as soon as `ok` is sent, and the write may fail without producing an error. 
 
 To avoid these issues, make sure any promises are resolved before sending responses:
 ```javascript
