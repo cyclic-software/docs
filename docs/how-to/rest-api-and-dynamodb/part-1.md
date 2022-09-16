@@ -183,15 +183,13 @@ Developers use `cURL` to debug their APIs, a Linux command that comes pre-instal
 
 Let’s demonstrate it on the RESTful API that we’ll be making in this tutorial.
 
-![1.svg](../../../static/img/tutorial/rest-api/1.svg)
-
 For starters, it’s incredibly easy to make GET requests:
 
 ```bash
 curl https://bikes.cyclic.app/bikes/all
 ```
 
-![2.svg](../../../static/img/tutorial/rest-api/2.svg)
+![1.svg](../../../static/img/tutorial/rest-api/1.svg)
 
 It’s also more convenient to use `cURL` with another command-line utility called `jq`. After [installing it on your own machine](https://stedolan.github.io/jq/download/), run the following:
 
@@ -199,7 +197,7 @@ It’s also more convenient to use `cURL` with another command-line utility call
 curl https://bikes.cyclic.app/bikes/all | jq .
 ```
 
-![3.svg](../../../static/img/tutorial/rest-api/3.svg)
+![2.svg](../../../static/img/tutorial/rest-api/2.svg)
 
 Then, we can add **Query Strings** to our request to access the API’s search feature, which we’ll soon build ourselves:
 
@@ -207,7 +205,7 @@ Then, we can add **Query Strings** to our request to access the API’s search f
 curl "https://bikes.cyclic.app/bikes/search/by-title/?query=Mountain" | jq .
 ```
 
-![4.svg](../../../static/img/tutorial/rest-api/4.svg)
+![3.svg](../../../static/img/tutorial/rest-api/3.svg)
 
 We can also make make POST requests to our API using `cURL`; let’s create a new bike item.
 
@@ -238,11 +236,11 @@ We can also make make POST requests to our API using `cURL`; let’s create a ne
 curl -H "Content-Type: application/json" https://bikes.cyclic.app/bikes/ -d @request.json
 ```
 
+![4.svg](../../../static/img/tutorial/rest-api/4.svg)
+
 Uh-oh, we just got an HTTP `UNAUTHORIZED` error. After looking-up the meaning of [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), we see that  “UNAUTHORIZED” means that we do not have access to that particular route, yet. (and of course, we’ll be building this authentication system ourselves in this article)
 
 After looking up our [API’s documentation on GitHub](https://github.com/eludadev/bikes-api), we learn that a “Bearer token” is required to make POST requests.
-
-![5.svg](../../../static/img/tutorial/rest-api/5.svg)
 
 We also learn that in order to create a Bearer token, we must send a POST request to the following route. This one, however, does not require authentication.
 
@@ -250,7 +248,7 @@ We also learn that in order to create a Bearer token, we must send a POST reques
 curl -X POST https://bikes.cyclic.app/api/user | jq .token -r
 ```
 
-![6.svg](../../../static/img/tutorial/rest-api/6.svg)
+![5.svg](../../../static/img/tutorial/rest-api/5.svg)
 
 Let’s try making our request again. Bearer tokens go into the “Authorization” header of the HTTP request and must be formatted in this manner: “`Bearer <TOKEN>`”.
 
@@ -258,6 +256,8 @@ Let’s try making our request again. Bearer tokens go into the “Authorization
 export TOKEN=...
 curl -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" https://bikes.cyclic.app/bikes/ -d @request.json | jq .
 ```
+
+![6.svg](../../../static/img/tutorial/rest-api/6.svg)
 
 As you can see, `cURL` is pretty powerful and we’ll be using it time and again throughout this guide.
 
