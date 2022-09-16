@@ -3,7 +3,9 @@
 sidebar_position: 5
 ---
 
-# Securing our database with authentication
+# Securing our database with authentication and Deploying our API to the web
+
+## Securing our database with authentication
 
 ![Auth.png](../../../static/img/tutorial/rest-api/Auth.png)
 
