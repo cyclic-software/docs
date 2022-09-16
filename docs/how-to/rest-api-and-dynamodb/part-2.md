@@ -53,7 +53,7 @@ app.listen(port, () => {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/index.js)
 
-This implies that all URL paths that begin with `/bikes` will be handled by the router defined in the `router.js` script. (e.g `/bikes/all`, `/bikes/by-id`, …)
+This implies that all URL paths that begin with `/bikes` will be handled by the router defined in the `router.js` script. (e.g `/bikes/all`, `/bikes`, …)
 
 ## Fetching all bikes
 
@@ -197,7 +197,7 @@ router.get("/:id", async (req, res) => {
     const { props: bike } = await bikesCollection.get(id);
     res.send(bike);
   } catch (e) {
-    console.log(`GET /by-id/${id}`, e.message);
+    console.log(`GET /${id}`, e.message);
     res.sendStatus(404);
   }
 });
@@ -208,7 +208,7 @@ router.get("/:id", async (req, res) => {
 Let’s see if that works: 
 
 ```bash
-curl http://localhost:3000/bikes/by-id/blahblah
+curl http://localhost:3000/bikes/blahblah
 ```
 
 ## Fetching a bike by handle

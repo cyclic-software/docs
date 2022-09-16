@@ -143,7 +143,7 @@ Another common RESTful API endpoint that we must implement is PUT, whose purpose
 
 ```javascript
 // Update entire bike
-router.put("/by-id/:id", async (req, res) => {
+router.put("/:id", async (req, res) => {
   const bikeId = req.params.id;
   const bikeData = req.body;
 
@@ -169,7 +169,7 @@ router.put("/by-id/:id", async (req, res) => {
 
     res.send(bikeObject);
   } catch (e) {
-    console.log(`PUT bikes/by-id/${bikeId}`, e.message);
+    console.log(`PUT bikes/${bikeId}`, e.message);
     res.sendStatus(404);
   }
 });
@@ -205,7 +205,7 @@ What we’re doing here is first checking if the bike item exists by retrieving 
 ```
 
 ```bash
-curl -X PUT -H "Content-Type: application/json" http://localhost:3000/bikes/by-id/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
+curl -X PUT -H "Content-Type: application/json" http://localhost:3000/bikes/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
 ```
 
 In the [next part](./part-4) of this series, we'll build the functionality that allows our API to delete and update data in the bikes database.

@@ -17,7 +17,7 @@ As always, we’ll of course get started by extracting data from the HTTP reques
 
 ```javascript
 // Patch bike if it exists
-router.patch("/by-id/:id", async (req, res) => {
+router.patch("/:id", async (req, res) => {
   const bikeId = req.params.id;
   const newData = req.body || {};
 });
@@ -29,14 +29,14 @@ Next step is to check whether or not a bike item with this ID exists, before we 
 
 ```javascript
 // Patch bike if it exists
-router.patch("/by-id/:id", async (req, res) => {
+router.patch("/:id", async (req, res) => {
   const bikeId = req.params.id;
   const newData = req.body || {};
 
   try {
     const { props: oldBike } = await bikesCollection.get(bikeId);
   } catch (e) {
-    console.log(`PATH /bikes/by-id/${bikeId}`, e.message);
+    console.log(`PATH /bikes/${bikeId}`, e.message);
     res.sendStatus(404);
   }
 });
@@ -77,7 +77,7 @@ And again, let’s try it out:
 ```
 
 ```bash
-curl -X PATCH -H "Content-Type: application/json" http://localhost:3000/bikes/by-id/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
+curl -X PATCH -H "Content-Type: application/json" http://localhost:3000/bikes/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
 ```
 
 ## Deleting a bike item
@@ -88,7 +88,7 @@ First step is to get the ID from the route parameters:
 
 ```javascript
 // Delete bike if it exists
-router.delete("/by-id/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const bikeId = req.params.id;
 });
 ```
@@ -107,7 +107,7 @@ We’ll do some error handling too and return the deleted item’s ID back to th
 
 ```javascript
 // Delete bike if it exists
-router.delete("/by-id/:id", async (req, res) => {
+router.delete("/:id", async (req, res) => {
   const bikeId = req.params.id;
 
   try {
@@ -117,7 +117,7 @@ router.delete("/by-id/:id", async (req, res) => {
       id: bikeId,
     });
   } catch (e) {
-    console.log(`DELETE /bikes/by-id/${bikeId}`, e.message);
+    console.log(`DELETE /bikes/${bikeId}`, e.message);
     res.sendStatus(404);
   }
 });
@@ -128,7 +128,7 @@ router.delete("/by-id/:id", async (req, res) => {
 Let’s try deleting some data. Make sure to get the ID from your previous calls to `/bikes/all`:
 
 ```bash
-curl -X DELETE http://localhost:3000/bikes/by-id/<ID> | jq . # replace <ID> with an ID from the response to /all
+curl -X DELETE http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
 
 In the [final part](./part-5) of this series, we'll add authentication to our API to secure access to the bikes database.

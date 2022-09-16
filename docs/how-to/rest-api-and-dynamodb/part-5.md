@@ -83,9 +83,9 @@ Let’s go back into our router code and add this middleware to all our [unsafe 
 import { authenticateUser } from "./auth.js";
 
 router.post("/", authenticateUser, ... )
-router.put("/by-id/:id", authenticateUser, ... )
-router.patch("/by-id/:id", authenticateUser, ... )
-router.delete("/by-id/:id", authenticateUser, ... )
+router.put("/:id", authenticateUser, ... )
+router.patch("/:id", authenticateUser, ... )
+router.delete("/:id", authenticateUser, ... )
 ```
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
@@ -95,7 +95,7 @@ And yes, the second parameter just became the middlware function, while the rout
 Let’s try it out now:
 
 ```bash
-curl -X DELETE http://localhost:3000/bikes/by-id/<ID> # replace <ID> with an ID from the response to /all
+curl -X DELETE http://localhost:3000/bikes/<ID> # replace <ID> with an ID from the response to /all
 ```
 
 Unsurprisingly, we’re now getting the `401 UNAUTHORIZED` response that we previously programmed when there was no Bearer token in the request. Let’s go ahead and add one new route to generate Bearer tokens. This one will directly go into `index.js` as we don’t want it to be prefixed with the `bikes/` route.
@@ -150,7 +150,7 @@ Let’s add an “Authorization” header to our new request:
 
 ```bash
 export TOKEN=<TOKEN> # replace <TOKEN> with the token from /api/user
-curl -H "Authorization: Bearer $TOKEN" -X DELETE http://localhost:3000/bikes/by-id/<ID> | jq . # replace <ID> with an ID from the response to /all
+curl -H "Authorization: Bearer $TOKEN" -X DELETE http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
 
 ## Deploying our API to the web, with Cyclic
