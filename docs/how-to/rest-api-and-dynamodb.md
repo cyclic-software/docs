@@ -1342,7 +1342,7 @@ We just created a full-fledged RESTful API that could be used to build an e-comm
 
 Let’s commit all our new changes back into our code repository and let Cyclic automatically deploy these new changes to the web. We can track this process in Cylic’s Deployments dashboard.
 
-![app.cyclic.sh_ (1).png](../../static/img/tutorial/rest-api/app.cyclic.sh__(1).png)
+![app.cyclic.sh_ (1).png](../../static/img/tutorial/rest-api/ENV.png)
 
 And since `.env` files are not committed publicly to GitHub repositories (since they’re supposed to be secret), we must head back to the Cyclic dashboard and manually paste those values.
 
