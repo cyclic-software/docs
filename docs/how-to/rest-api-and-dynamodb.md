@@ -23,10 +23,9 @@ Before we delve deeper into RESTful APIs, let’s start from its origins and mak
 
 From a hardware point-of-view, a web **server** is a physical computer that stores and ***serves*** data over the Internet, and that includes everything from HTML documents, CSS stylesheets, images and video files.
 
-Furthermore, every web server must run an HTTP server. That’s a piece of software that takes-in URLs and processes them to deliver content back to the end-users, while using the HTTP protocol to facilitate the sharing of information over the Internet.
+Furthermore, every web server must run an **HTTP server**. That’s a piece of software that takes-in URLs and processes them to deliver content back to the end-users, while using the HTTP protocol to facilitate the sharing of information over the Internet.
 
 > And if the URL is wrong, the server will generate a response with the infamous 404 code instead.
-> 
 
 ### Servers communicate with browsers using the HTTP protocol
 
@@ -127,7 +126,7 @@ http
 But [writing your own server](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Node_server_without_framework) in Node itself isn’t very practical. Many tasks such as handling different HTTP verbs (like GET and POST) for the same route aren’t supported in Node by default, meaning that you’d have to reinvent the wheel by making your own web framework!
 
 ```javascript
-// Example of web server written with Express! (much easier!)
+// Example of web server written with Express
 
 const express = require('express')
 const app = express()
@@ -142,7 +141,7 @@ app.listen(port, () => {
 })
 ```
 
-Thankfully, Node comes with its own package manager, giving us access to a plethora of community-made modules. One of those modules is Express, the most popular Node web framework. It comes with a variety of features out of the box:
+Thankfully, Node comes with its own package manager, giving us access to a plethora of community-made modules. One of those modules is **Express**, the most popular Node web framework. It comes with a variety of features out of the box:
 
 - Handling requests for the same URL with different HTTP verbs,
 - Parsing JSON data straight from HTTP requests,
@@ -175,18 +174,16 @@ REST calls for the use of the following HTTP verbs:
 - **PUT** is for updating the whole resource.
 - **PATCH** is for updating parts of the resource.
 
-> It’s important that **GET** requests (also known as [“Safe methods”](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP)) do not change anything about the database.
+> It’s important that **GET** (also known as a [“Safe method”](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP)) requests do not change anything about the database.
 > 
 
-RESTful APIs handle routes in an “****[Idempotent](https://restfulapi.net/idempotent-rest-apis/)”** manner, meaning that making the same request multiple times yields the same result. They must also be [stateless](https://www.restapitutorial.com/lessons/whatisrest.html#), meaning that all necessary data to handle the request is contained within the request itself and not remembered from a previous request. This makes RESTful APIs much more scalable than their counterparts.
+RESTful APIs handle routes in an “**[Idempotent](https://restfulapi.net/idempotent-rest-apis/)**” manner, meaning that making the same request multiple times yields the same result. They must also be [stateless](https://www.restapitutorial.com/lessons/whatisrest.html#), meaning that all necessary data to handle the request is contained within the request itself and not remembered from a previous request. This makes RESTful APIs much more scalable than their counterparts.
 
-Sounds good, but how does one go about accessing an API? Well, since it’s just URLs, you might guess that your web browser is the perfect candidate. But if you try that out, you’ll soon realize that browsers are not very good at creating custom HTTP requests. Browsers only allow sending GET requests to specific URLs using the search bar, so they’re not very good for our purposes.
+Developers use `cURL` to debug their APIs, a Linux command that comes pre-installed on most modern distributions. 
 
-So what should we use instead? The answer is `cURL`, a Linux command that comes pre-installed on most modern distributions. With `cURL`, we can customize our HTTP requests however we like. We can type-in our own POST data, make DELETE requests and add our own HTTP headers. There’s no limit to the freedom provided by `cURL`.
+Let’s demonstrate it on the RESTful API that we’ll be making in this tutorial.
 
 ![1.svg](../../static/img/tutorial/rest-api/1.svg)
-
-Let’s demonstrate `cURL` by using it on the REST API that we’ll be making in this tutorial.
 
 For starters, it’s incredibly easy to make GET requests:
 
@@ -204,11 +201,13 @@ curl https://bikes.cyclic.app/bikes/all | jq .
 
 ![3.svg](../../static/img/tutorial/rest-api/3.svg)
 
-Then, we can add Query Strings to our request to access the API’s search feature, which we’ll soon build ourselves:
+Then, we can add **Query Strings** to our request to access the API’s search feature, which we’ll soon build ourselves:
 
 ```bash
 curl "https://bikes.cyclic.app/bikes/search/by-title/?query=Mountain" | jq .
 ```
+
+![4.svg](../../static/img/tutorial/rest-api/4.svg)
 
 We can also make make POST requests to our API using `cURL`; let’s create a new bike item.
 
@@ -239,15 +238,13 @@ We can also make make POST requests to our API using `cURL`; let’s create a ne
 curl -H "Content-Type: application/json" https://bikes.cyclic.app/bikes/ -d @request.json
 ```
 
-![4.svg](../../static/img/tutorial/rest-api/4.svg)
-
 Uh-oh, we just got an HTTP `UNAUTHORIZED` error. After looking-up the meaning of [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), we see that  “UNAUTHORIZED” means that we do not have access to that particular route, yet. (and of course, we’ll be building this authentication system ourselves in this article)
 
-After looking up our [API’s documentation on GitHub](https://github.com/eludadev/bikes-api), we learn that a “Bearer token” is required to make POST requests. (among other actions) 
+After looking up our [API’s documentation on GitHub](https://github.com/eludadev/bikes-api), we learn that a “Bearer token” is required to make POST requests.
 
 ![5.svg](../../static/img/tutorial/rest-api/5.svg)
 
-We also learn that in order to create a Bearer token, we must send a POST request to the following route. And this one does not require authentication:
+We also learn that in order to create a Bearer token, we must send a POST request to the following route. This one, however, does not require authentication.
 
 ```bash
 curl -X POST https://bikes.cyclic.app/api/user | jq .token -r
@@ -255,20 +252,20 @@ curl -X POST https://bikes.cyclic.app/api/user | jq .token -r
 
 ![6.svg](../../static/img/tutorial/rest-api/6.svg)
 
-Let’s try making our request again. Bearer tokens go into the “Authorization” header of the HTTP request and must be formatted in this manner: “`Bearer <TOKEN>`”. Let’s do that in `cURL`:
+Let’s try making our request again. Bearer tokens go into the “Authorization” header of the HTTP request and must be formatted in this manner: “`Bearer <TOKEN>`”.
 
 ```bash
 export TOKEN=...
 curl -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" https://bikes.cyclic.app/bikes/ -d @request.json | jq .
 ```
 
-As you can see, `cURL` is pretty powerful and we’ll be using it again and again throughout this guide.
+As you can see, `cURL` is pretty powerful and we’ll be using it time and again throughout this guide.
 
 ### Using AWS DynamoDB to store & retrieve data
 
 ![Databases.png](../../static/img/tutorial/rest-api/Databases.png)
 
-As we just said, RESTful APIs are built around databases. But *what* really is a database?
+As we just learned, RESTful APIs are built around databases. But *what* really is a database?
 
 Well, a database is a set of inter-connected collections of information. For example, a database may contain a collection of users and a collection of products. Users and products may be connected through shopping carts. (Product A exists in User B’s shopping cart)
 
@@ -288,7 +285,7 @@ SQL is a language used for processing schema-enabled databases. It allows for th
 
 But with DynamoDB, a noSQL database engineered by Amazon’s Web Services (AWS), you still get to enjoy almost the whole power of SQL whilst feeling the freedom that comes with schema-less databases. It’s called [PartiQL](https://partiql.org/).
 
-We’re building a bikes shop API, so our database should contain a collection of bikes. It’s a mix of Strings, Numbers and whole Objects.
+We’re building a bikes shop API, so our database should contain a collection of bikes. It’s a mix of Strings, Numbers and even whole Objects.
 
 Keep reading to see how we’ll be shaping our API around this database.
 
@@ -306,7 +303,7 @@ We just spent a lot of time trying to understand REST in theory, but nothing can
 
 Cyclic offers its users with a variety of starter templates, and REST APIs are included, of course. So let’s begin our exciting journey by visiting [Cyclic’s starters](https://app.cyclic.sh/#/deploy) and deploying the [Database API](https://app.cyclic.sh/#/deploy).
 
-This will fork the respective starter repository to your own Github account (that you signed in with).
+This will fork the aforementioned starter repository to your own Github account (that you used to sign in with Cyclic).
 
 [![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://app.cyclic.sh/#/deploy)
 
@@ -345,13 +342,11 @@ Whenever we clone a GitHub repository, we must run `npm install` to actually *do
 
 ![BikesDB.png](../../static/img/tutorial/rest-api/BikesDB.png)
 
-Everything’s going great, it’s time to get started building our database!
-
-First of all, every AWS DynamoDB instance has a specific name, also known as a *table name*. It’s given to us by Cyclic in its database dashboard page.
+Before we get started, it's important to note that every AWS DynamoDB instance has a specific name, also known as a *table name*. It’s given to us by Cyclic in its database dashboard page.
 
 ![Copying table name to the clipboard.](../../static/img/tutorial/rest-api/screencast2.gif)
 
-Let’s copy that value into the `.env.sample` file and remove the `BUCKET` variable. Such a file contains environment variables that must be registered before running our server. It won’t work until we copy it into a `.env` file, however:
+Let’s copy that value into the `.env.sample` file and remove the `BUCKET` variable. Such a file contains environment variables that must be registered before running our server. However, it won’t work until we copy it into a `.env` file:
 
 [Learn more about environment variables.](https://www.freecodecamp.org/news/what-are-environment-variables-and-how-can-i-use-them-with-gatsby-and-netlify/)
 
@@ -360,7 +355,7 @@ cp env.sample .env
 ```
 
 > The database credentials that we copied into our machine are themselves environment variables. However, we didn’t copy them into our `.env` file since they’re only temporary for our local development, and Cyclic will change them once deployed on the Internet.
-The table name, however, is static and won’t change; it’s safe to put it in the `.env` file.
+The table name, however, is static and won’t change; it’s okay to put it in the `.env` file.
 > 
 
 After doing that, we can start our REST API by running `npm run dev`.
@@ -456,7 +451,7 @@ npm install slugify uuid @faker-js/faker runtypes jsonwebtoken
 npx env-cmd node fill-db.js
 ```
 
-As you can see, it added 25 bike items to our database. Let’s see how to fetch all this data in the next section of this guide.
+As you can see, it added 25 bike items to our database. We"ll see how to access all this data in the next section of this guide.
 
 > **NOTE:** if you encounter an “`ExpiredToken`” error, just refresh Cyclic’s page and `export` the new credentials.
 > 
@@ -472,7 +467,7 @@ With our database full with data, it's time to build a RESTful API that allows u
 3. GET bike by handle
 4. GET bikes by search query
 
-Get started by creating a `router.js` file. This file will contain and export an Express **Router (**the entity that handles URLs with different HTTP verbs), processes them, and returns a response. This entire process is customizable by us, the programmers of the HTTP server.
+Get started by creating a `router.js` file. This file will contain and export an Express **Router** (the entity that handles URLs with different HTTP verbs), processes them, and returns a response. This entire process is customizable by us, the programmers of the HTTP server.
 
 ```javascript
 // router.js
@@ -517,7 +512,7 @@ This implies that all URL paths that begin with `/bikes` will be handled by the 
 
 Our very first route handler is pretty simple: it’s a handler for the `/bikes/all` URL with the GET action, always returning a list of *all* bikes in the database.
 
-> In large APIs that depend on huge databases (such as Instagram and Twitter), it’s common to see the API supporting [pagination](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/), a feature that allows the API’s users to only fetch part of the database, since it’s nearly impossible to return a list of 1,000,000 items in one HTTP response, for example.
+> In large APIs that depend on huge databases (such as Instagram and Twitter), it’s common to see support for [pagination](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/), a feature that allows the API’s users to only fetch part of the database. (since it’s nearly impossible to return a list of one million items in just one HTTP response, for example.)
 > 
 
 We haven’t created a route handler, yet. Thankfully, all of them generally follow the same pattern:
@@ -530,7 +525,7 @@ router.get("/all", async (req, res) => {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
-As you can see, we’re telling Express to handle the GET action on the `/all` route by running the `router.get` method. If we wished to support the POST action instead for example, we would do `router.post`, as we’ll do in the next section of this guide.
+As you can see, we’re telling Express to handle the GET action on the `/all` route by running the `router.get` method. If we wished to support the POST action instead for example, we would do `router.post`, as we’ll see in the next section of this guide.
 
 Route handlers also take a [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) as their second parameter; that’s a function that takes two parameters itself:
 
@@ -539,7 +534,7 @@ Route handlers also take a [callback function](https://developer.mozilla.org/en-
 
 And notice how we’re using an [asynchronous function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) as the callback. While not required, it’s important to note that it’s well-supported with Express and we’ll be using it to wait for DynamoDB to return its data. Of course, we could also use [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) instead.
 
-And now, of course, we must make calls to our DynamoDB instance to actually fetch some data. Let’s get started by creating an instance of our bikes collection, giving us access to a variety of methods for manipulating our database:
+It's time to start making calls to our DynamoDB instance to actually fetch some data. Let’s get started by creating an instance of our bikes collection, giving us access to a variety of methods for manipulating our database:
 
 ```javascript
 // Initialize AWS DynamoDB
@@ -551,10 +546,7 @@ const bikesCollection = db.collection("bikes");
 
 As you can see, we’re using the `cyclic-dynamodb` library to create a programmable instance of our database. That’s a convenience library used to facilitate the communication with our database using simple JavaScript code. We’re also extracting the `CYCLIC_DB` environment variable that we set earlier using `process.env`. 
 
-> The `process.env` object itself was populated with values from the `.env` file when we called the `env-cmd` command that runs with the `dev` script from `package.json`: `env-cmd nodemon index.js`
-> 
-
-Let’s move back into our route handler to finally make some use of this`bikesCollection` object:
+Let’s move back into our route handler to finally make some use of this `bikesCollection` object:
 
 ```javascript
 // Get all bikes
@@ -606,19 +598,19 @@ curl http://localhost:3000/bikes/all | jq .
 
 ### Fetching a bike by ID
 
-We just figured out how to fetch a full list of bikes using DynamoDB, and within that piece of code, we nested a little snippet that fetched a bike using its ID (or key):
+We just figured out how to fetch a full list of bikes using DynamoDB, but within that piece of code, we nested a little snippet that fetched a bike using its ID (or key):
 
 ```javascript
 await bikesCollection.get(key).props;
 ```
 
-We’ll be using that command to build the remainder of this route. But first of all, it’s important to first model our URL. Since our API follows the REST standard, it’s best practice to name it like the following: `/by-id/<ID>`. As you can see, the ID is encoded directly in the URL itself, so how do we use Express to extract this specific part of the URL?
+We’ll be using that command to build the remainder of this route. But first of all, it’s important to first model our URL. Since our API follows the REST standard, it’s best practice to name it like the following: `/bikes/<ID>`. As you can see, the ID is encoded directly in the URL itself, so how do we tell Express to extract this specific part of the URL?
 
-The answer is relatively simple: when using Express, all we have to do is simply replace the dynamic part of the URL with a colon and a name for it.
+The answer is relatively simple: when using Express, all we have to do is simply replace the dynamic part of the URL with a colon and give it a name.
 
 ```javascript
 // Get bike by ID
-router.get("/by-id/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   const id = req.params.id;
 });
 ```
@@ -631,7 +623,7 @@ With the ID now in our hands, we can use that code snippet we just saw to extrac
 
 ```javascript
 // Get bike by ID
-router.get("/by-id/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   const id = req.params.id;
 
   const { props: bike } = await bikesCollection.get(id);
@@ -639,19 +631,19 @@ router.get("/by-id/:id", async (req, res) => {
 });
 ```
 
-Link to full code.
+[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
 Let’s test that:
 
 ```bash
-curl http://localhost:3000/bikes/by-id/<ID> | jq . # replace <ID> with an ID from the response to /all
+curl http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
 
 But what if the item with that ID doesn’t exist? In that case, we wish to return an HTTP response with the 404 status code, indicating that the resource does not exist.
 
 ```javascript
 // Get bike by ID
-router.get("/by-id/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
   const id = req.params.id;
 
   try {
@@ -674,7 +666,7 @@ curl http://localhost:3000/bikes/by-id/blahblah
 
 ### Fetching a bike by handle
 
-Okay, so we’re using IDs to index our bike items. But they’re just a random mix of numbers and letters, designed so that they generate a unique ID per item.
+Okay, so we’re using IDs to index our bike items. But they’re just a random mix of numbers and letters, designed to generate a unique ID per item.
 
 The alternative is “handles”, [slugified](https://developer.mozilla.org/en-US/docs/Glossary/Slug) versions of the title that are still unique.
 
@@ -693,7 +685,7 @@ We can’t just run the `get()` method this time, since we don’t have the item
 
 One thing we could do, of course, is to get a list of every bike item and check the handle of each one. That, however, is not very efficient.
 
-Thankfully, whilst DynamoDB is a schemaless noSQL database, it still supports a variety of SQL-like powerful features collectively called [PartiQL](https://partiql.org/). We can use Cyclic’s DynamoDB object to **filter** the bike items and only keep the ones that match our handle, and there should of course be either only one or none at all.
+Thankfully, we can use Cyclic’s DynamoDB object to **filter** the bike items and only keep the ones that match our handle:
 
 ```javascript
 const { results } = await bikesCollection.filter({ handle });
@@ -715,7 +707,7 @@ router.get("/by-handle/:handle", async (req, res) => {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
-And let’s not forget to do some error handling, in case no bike object matches that particular handle. That’s tested checking the truthiness of `results.length`, returning `False` when it’s an empty array.
+And let’s not forget to do some error handling in case no bike object matches that particular handle. That’s tested by checking the truthiness of `results.length`, returning `False` when it’s an empty array.
 
 ```javascript
 // Get bike by handle
@@ -747,17 +739,17 @@ curl http://localhost:3000/bikes/by-handle/<HANDLE> | jq . # replace <HANDLE> wi
 
 Search is one of the most important features in a website. It’s how users discover new products without having to browse a list of hundreds or even thousands of items. Implementing it, however, is not so simple.
 
-The most popular search engines have to take a plethora of things into account: ignoring pronouns, ignoring uppercase characters, handling misspelled words, etc…
+The most popular search engines have to take a plethora of things into account: ignoring pronouns and uppercase characters, handling misspelled words, etc…
 
 In fact, DynamoDB comes with full support for [ElasticSearch](https://aws.amazon.com/about-aws/whats-new/2015/08/amazon-dynamodb-elasticsearch-integration/), a powerful search engine developed  used by some of the biggest applications out there.
 
 But for the purposes of this tutorial, we’ll stick with something more simple. DynamoDB also supports scans: SQL-like querying that handles many powerful [expressions](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/scan.html).
 
-Scans take-in expressions, powerful combinations of built-in commands, such as **`contains`**. That’s a command that facilitates the ability to check whether one of an item’s fields *contains* a string of characters. Unfortunately, it does not support any advanced search-like features such as ignoring uppercase or lowercase characters, but it’s useful enough for a simple application.
+Scans take-in expressions: powerful combinations of built-in commands, such as **`contains`**. That’s a command that facilitates the ability to check whether one of an item’s fields *contains* a string of characters. Unfortunately, it does not support any advanced search-like features such as ignoring uppercase or lowercase characters, but it’s useful enough for a simple application.
 
 But before we delve deeper into DynamoDB Scans, let’s write the fundamentals of our new router.
 
-We’ll be using query strings this time, also called GET parameters.
+We’ll be using query strings this time, also called **GET parameters**.
 
 They simply are key-value pairs encoded in the right-hand side of a URL in the following manner: `/bikes/search/by-title?term=<QUERY>` (in this case, “term” is the GET parameter with the value  `<TERM>`)
 
@@ -855,7 +847,7 @@ curl http://localhost:3000/bikes/search/by-title\?query\=Bicycle | jq .
 
 ![POST & PUT Routes.png](../../static/img/tutorial/rest-api/POST__PUT_Routes.png)
 
-Our API is now given the ability to fetch data in a variety of ways, but it wouldn’t be complete if we didn’t make for some way to create and replace new and existing items.
+Our API is now given the ability to fetch data in a variety of ways, but it wouldn’t be complete if we weren't able to create and replace new and existing items.
 
 ### Creating a new bike
 
@@ -925,7 +917,7 @@ router.post("/", async (req, res) => {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
-And before saving this data, we must generate its ID and handle. We’ll do the latter using [`uuid`](https://www.npmjs.com/package/uuid), a JavaScript library that generated `Universally Unique IDentifier`, which are guaranteed to be unique every time it’s run. The former, however, will be done using [`slugify`](https://www.npmjs.com/package/slugify), a function that strips text from spaces and replaces it with dashes instead: “Mountains Bike” ↦ “Mountains-Bike”.
+And before saving this data, we must generate its ID and handle. We’ll do the former using [`uuid`](https://www.npmjs.com/package/uuid), a JavaScript library that generates `Universally Unique IDentifiers`, which are guaranteed to be unique every time. The latter, however, will be done using [`slugify`](https://www.npmjs.com/package/slugify), a function that strips text from spaces and replaces it with dashes instead: “Mountains Bike” ↦ “Mountains-Bike”.
 
 ```javascript
 import slugify from "slugify";
@@ -956,7 +948,7 @@ res.send(bike);
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
-Let’s try it out! We’ll use `cURL` and read `request.json` as body data by prefixing it with an @ symbol.
+Let’s try it out! We’ll use `cURL` to read `request.json` as body data by prefixing it with an @ symbol.
 
 ```json
 // request.json (remove this line from the actual file!)
@@ -1066,7 +1058,7 @@ The former allows clients to update only *parts* of a bike item, as opposed to P
 
 ### Updating parts of a bike item
 
-We’ll of course get started by extracting data from the HTTP request, as always:
+As always, we’ll of course get started by extracting data from the HTTP request:
 
 ```javascript
 // Patch bike if it exists
@@ -1188,17 +1180,17 @@ curl -X DELETE http://localhost:3000/bikes/by-id/<ID> | jq . # replace <ID> with
 
 ![Auth.png](../../static/img/tutorial/rest-api/Auth.png)
 
-Every public (and private) API must come with some sort of protection around its data. We don’t want to allow anyone in the world to play around with our important database.
+Every public (and private) API must come with some sort of protection around its data. We mustn't allow anyone in the world to poke around our important database.
 
 And while there are various authentication methods out there, [Bearer](https://swagger.io/docs/specification/authentication/bearer-authentication/) is one of the simplest.
 
-Its idea is quite simple: give users a token (they’re the *bearer* of that token), give that token some privileges (such as only reading or also writing and deleting) and finally require the use of that token when making [unsafe HTTP requests](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP).
+It's quite simple: we give users a token (they’re the *bearer* of that token), we give that token some privileges (such as only reading or also writing and deleting) and finally we require the use of that token when making [unsafe HTTP requests](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP).
 
 We won’t be implementing privileges and roles to keep this guide simple, but we’ll be using Bearer authentication. Get started by installing the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) package; it’s an implementation of [JSON Web Tokens](https://jwt.io/), an standard for creating and checking credentials across the Internet.
 
 After that, create an `auth.js` file, which will contain two important utilities for Bearer authentication.
 
-The first one is an Express middleware, run before every route handler we desire. It’s there to help us avoid repetition, so we can instead write all the authentication logic in one function and not have to worry about it anymore.
+The first one is an Express middleware that's run before every route handler we desire. It’s there to help us avoid repetition, so we can instead write all the authentication logic in one function and not worry about it anymore.
 
 We expect auth-enabled routes to receive an `Authorization` HTTP header containing a value in the form `Bearer <TOKEN>`, so let’s start by extracting the `<TOKEN>`:
 
@@ -1277,7 +1269,7 @@ Let’s try it out now:
 curl -X DELETE http://localhost:3000/bikes/by-id/<ID> # replace <ID> with an ID from the response to /all
 ```
 
-Unsurprisingly, we’re getting our `401 UNAUTHORIZED` response that we previously programmed when there was no Bearer token in the request. Let’s go ahead and add one new route to generate Bearer tokens. This one will directly go into `index.js` as we don’t want it to be prefixed with the `bikes/` route.
+Unsurprisingly, we’re now getting the `401 UNAUTHORIZED` response that we previously programmed when there was no Bearer token in the request. Let’s go ahead and add one new route to generate Bearer tokens. This one will directly go into `index.js` as we don’t want it to be prefixed with the `bikes/` route.
 
 ```javascript
 // Create new bearer token
