@@ -79,6 +79,7 @@ And again, let’s try it out:
 ```bash
 curl -X PATCH -H "Content-Type: application/json" http://localhost:3000/bikes/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
 ```
+![](../../../static/img/tutorial/rest-api/http-patch.svg)
 
 ## Deleting a bike item
 
@@ -130,5 +131,6 @@ Let’s try deleting some data. Make sure to get the ID from your previous calls
 ```bash
 curl -X DELETE http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
+![](../../../static/img/tutorial/rest-api/http-delete.svg)
 
 In the [final part](./part-5) of this series, we'll add authentication to our API to secure access to the bikes database.

@@ -136,6 +136,7 @@ Let’s try it out! We’ll use `cURL` to read `request.json` as body data by pr
 ```bash
 curl -H "Content-Type: application/json" http://localhost:3000/bikes/ -d @request.json | jq .
 ```
+![](../../../static/img/tutorial/rest-api/http-post.svg)
 
 ## Replacing a bike item
 
@@ -207,5 +208,6 @@ What we’re doing here is first checking if the bike item exists by retrieving 
 ```bash
 curl -X PUT -H "Content-Type: application/json" http://localhost:3000/bikes/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
 ```
+![](../../../static/img/tutorial/rest-api/http-put.svg)
 
 In the [next part](./part-4) of this series, we'll build the functionality that allows our API to delete and update data in the bikes database.

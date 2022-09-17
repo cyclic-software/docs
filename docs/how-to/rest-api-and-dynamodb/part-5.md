@@ -52,6 +52,7 @@ require("crypto").randomBytes(64).toString("hex");
 ```bash
 node generate-secret.js
 ```
+![](../../../static/img/tutorial/rest-api/gen-token.svg)
 
 Copy that token and paste it in your `.env` file with the key name: `“TOKEN_SECRET”`.
 
@@ -97,6 +98,7 @@ Let’s try it out now:
 ```bash
 curl -X DELETE http://localhost:3000/bikes/<ID> # replace <ID> with an ID from the response to /all
 ```
+![](../../../static/img/tutorial/rest-api/http-unauthorized.svg)
 
 Unsurprisingly, we’re now getting the `401 UNAUTHORIZED` response that we previously programmed when there was no Bearer token in the request. Let’s go ahead and add one new route to generate Bearer tokens. This one will directly go into `index.js` as we don’t want it to be prefixed with the `bikes/` route.
 
@@ -142,7 +144,7 @@ app.post("/api/user", (req, res) => {
 
 And with that done, we can easily generate new tokens and use them in our API requests. Restart your server (`CTRL`+`C` then `npm run dev`) and run the following command:
 
-```javascript
+```bash
 curl -H 'Content-Type: application/json' http://localhost:3000/api/user -d '{"username": "cyclic"}' | jq .token -r
 ```
 
@@ -152,6 +154,7 @@ Let’s add an “Authorization” header to our new request:
 export TOKEN=<TOKEN> # replace <TOKEN> with the token from /api/user
 curl -H "Authorization: Bearer $TOKEN" -X DELETE http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
+![](../../../static/img/tutorial/rest-api/http-delete-auth.svg)
 
 ## Deploying our API to the web, with Cyclic
 
