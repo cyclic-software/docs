@@ -293,7 +293,7 @@ Keep reading to see how we'll be shaping our API around this database.
 
 **Requirements:**
 
-- Node (16+)
+- Node (14+)
 - NPM (8+)
 - cURL (7+)
 
