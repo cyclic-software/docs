@@ -160,7 +160,7 @@ curl -H "Authorization: Bearer $TOKEN" -X DELETE http://localhost:3000/bikes/<ID
 
 We just created a full-fledged RESTful API that could be used to build an e-commerce store for bikes. Through this journey, we learnt about servers, HTTP, RESTful APIs, AWS DynamoDB and how Cyclic brings all these technologies together into one using its distinct starter templates.
 
-[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://app.cyclic.sh/#/deploy)
+[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/eludadev/bikes-api)
 
 ![app.cyclic.sh_.png](../../../static/img/tutorial/rest-api/app.cyclic.sh_.png)
 

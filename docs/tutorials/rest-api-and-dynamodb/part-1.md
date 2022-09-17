@@ -305,7 +305,7 @@ Cyclic offers its users with a variety of starter templates, and REST APIs are i
 
 This will fork the aforementioned starter repository to your own Github account (that you used to sign in with Cyclic).
 
-[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://app.cyclic.sh/#/deploy)
+[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/eludadev/bikes-api)
 
 Proceed by cloning the repository to your local machine using the `git clone` command, which you can copy from Github. Make sure that `git` is installed on your machine, of course.
 
