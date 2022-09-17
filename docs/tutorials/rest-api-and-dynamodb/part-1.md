@@ -214,7 +214,7 @@ We can also make make POST requests to our API using `cURL`; let's create a new 
 {
   "productType": "Mountain Bicycle",
   "createdAt": "Sat Jun 27 2076 09:24:47 GMT+0100 (GMT+02:00)",
-  "vendor": "Fiat",
+  "vendor": "Cyclic",
   "totalInventory": 5,
   "availableForSale": false,
   "priceRange": {
@@ -227,7 +227,7 @@ We can also make make POST requests to our API using `cURL`; let's create a new 
       "amount": 2303
     }
   },
-  "description": "A omnis deserunt deleniti voluptas tenetur autem. Qui consequuntur omnis ut cupiditate. Fugiat id nihil ratione praesentium totam praesentium.",
+  "description": "Ride the greatest line of your life with the all new and updated Countach from Cyclic. Make no compromises between speed, handling and durability.",
   "title": "Mountain Bicycle Countach"
 }
 ```
