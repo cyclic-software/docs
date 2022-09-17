@@ -7,13 +7,13 @@ sidebar_position: 3
 
 ![POST & PUT Routes.png](../../../static/img/tutorial/rest-api/POST__PUT_Routes.png)
 
-Our API is now given the ability to fetch data in a variety of ways, but it wouldn’t be complete if we weren't able to create and replace new and existing items.
+Our API is now given the ability to fetch data in a variety of ways, but it wouldn't be complete if we weren't able to create and replace new and existing items.
 
 ## Creating a new bike
 
 Our RESTful API should have an endpoint that accepts bike data, with *all* of its fields except for the ID and handle, which will be both automatically generated within our server.
 
-It’s worth noting that POST body data can be in a variety of data-types, hinted in the [`Accept`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) HTTP header. But having declared `app.use(express.json())` in our `index.js` file (it already came with the starter), we can directly access the body data in JSON format by extracting it from the `req.body` property.
+It's worth noting that POST body data can be in a variety of data-types, hinted in the [`Accept`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) HTTP header. But having declared `app.use(express.json())` in our `index.js` file (it already came with the starter), we can directly access the body data in JSON format by extracting it from the `req.body` property.
 
 ```javascript
 // Post new bike
@@ -24,7 +24,7 @@ router.post("/", authenticateUser, async (req, res) => {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
-Then, it’s critical to validate this data. Instead of checking the existence of every field and its value, we can use [`runtypes`](https://www.npmjs.com/package/runtypes),  yet another library whose purpose is to conveniently check the fields of an object.
+Then, it's critical to validate this data. Instead of checking the existence of every field and its value, we can use [`runtypes`](https://www.npmjs.com/package/runtypes),  yet another library whose purpose is to conveniently check the fields of an object.
 
 ```javascript
 import { Record, String, Number, Boolean } from "runtypes";
@@ -77,7 +77,11 @@ router.post("/", async (req, res) => {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
-And before saving this data, we must generate its ID and handle. We’ll do the former using [`uuid`](https://www.npmjs.com/package/uuid), a JavaScript library that generates `Universally Unique IDentifiers`, which are guaranteed to be unique every time. The latter, however, will be done using [`slugify`](https://www.npmjs.com/package/slugify), a function that strips text from spaces and replaces it with dashes instead: “Mountains Bike” ↦ “Mountains-Bike”.
+And before saving this data, we must generate its ID and handle. We'll do the former using [`uuid`](https://www.npmjs.com/package/uuid), a JavaScript library that generates `Universally Unique IDentifiers`, which are guaranteed to be unique every time. The latter, however, will be done using [`slugify`](https://www.npmjs.com/package/slugify), a function that strips text from spaces and replaces it with dashes instead: "Mountains Bike" ↦ "Mountains-Bike".
+
+
+
+
 
 ```javascript
 import slugify from "slugify";
@@ -108,7 +112,7 @@ res.send(bike);
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
-Let’s try it out! We’ll use `cURL` to read `request.json` as body data by prefixing it with an @ symbol.
+Let's try it out! We'll use `cURL` to read `request.json` as body data by prefixing it with an @ symbol.
 
 ```json
 // request.json (remove this line from the actual file!)
@@ -140,7 +144,7 @@ curl -H "Content-Type: application/json" http://localhost:3000/bikes/ -d @reques
 
 ## Replacing a bike item
 
-Another common RESTful API endpoint that we must implement is PUT, whose purpose is to replace a bike item instead of creating it. This time, the ID and handle will be already provided, so we don’t have to do much instead of validating the data.
+Another common RESTful API endpoint that we must implement is PUT, whose purpose is to replace a bike item instead of creating it. This time, the ID and handle will be already provided, so we don't have to do much instead of validating the data.
 
 ```javascript
 // Update entire bike
@@ -178,7 +182,7 @@ router.put("/:id", async (req, res) => {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
 
-What we’re doing here is first checking if the bike item exists by retrieving its ID, and we’re then validating the data, deleting the existing item and replacing it with a new item.
+What we're doing here is first checking if the bike item exists by retrieving its ID, and we're then validating the data, deleting the existing item and replacing it with a new item.
 
 ```json
 // request.json (remove this line from the actual file!)

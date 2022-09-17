@@ -13,15 +13,15 @@ Every public (and private) API must come with some sort of protection around its
 
 And while there are various authentication methods out there, [Bearer](https://swagger.io/docs/specification/authentication/bearer-authentication/) is one of the simplest.
 
-It's quite simple: we give users a token (they’re the *bearer* of that token), we give that token some privileges (such as only reading or also writing and deleting) and finally we require the use of that token when making [unsafe HTTP requests](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP).
+It's quite simple: we give users a token (they're the *bearer* of that token), we give that token some privileges (such as only reading or also writing and deleting) and finally we require the use of that token when making [unsafe HTTP requests](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP).
 
-We won’t be implementing privileges and roles to keep this guide simple, but we’ll be using Bearer authentication. Get started by installing the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) package; it’s an implementation of [JSON Web Tokens](https://jwt.io/), an standard for creating and checking credentials across the Internet.
+We won't be implementing privileges and roles to keep this guide simple, but we'll be using Bearer authentication. Get started by installing the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) package; it's an implementation of [JSON Web Tokens](https://jwt.io/), an standard for creating and checking credentials across the Internet.
 
 After that, create an `auth.js` file, which will contain two important utilities for Bearer authentication.
 
-The first one is an Express middleware that's run before every route handler we desire. It’s there to help us avoid repetition, so we can instead write all the authentication logic in one function and not worry about it anymore.
+The first one is an Express middleware that's run before every route handler we desire. It's there to help us avoid repetition, so we can instead write all the authentication logic in one function and not worry about it anymore.
 
-We expect auth-enabled routes to receive an `Authorization` HTTP header containing a value in the form `Bearer <TOKEN>`, so let’s start by extracting the `<TOKEN>`:
+We expect auth-enabled routes to receive an `Authorization` HTTP header containing a value in the form `Bearer <TOKEN>`, so let's start by extracting the `<TOKEN>`:
 
 ```javascript
 // auth.js
@@ -40,9 +40,9 @@ export function authenticateUser(req, res, next) {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/auth.js)
 
-We’ll proceed by verifying the validity of this token using the `verify()` method. But before we do that, it’s important to note that Bearer authentication depends on one secret stored in the environment variables. With this secret value, Bearer tokens are both generated and verified.
+We'll proceed by verifying the validity of this token using the `verify()` method. But before we do that, it's important to note that Bearer authentication depends on one secret stored in the environment variables. With this secret value, Bearer tokens are both generated and verified.
 
-Let’s create our token by running the following command:
+Let's create our token by running the following command:
 
 ```javascript
 // generate-secret.js
@@ -54,9 +54,9 @@ node generate-secret.js
 ```
 ![](../../../static/img/tutorial/rest-api/gen-token.svg)
 
-Copy that token and paste it in your `.env` file with the key name: `“TOKEN_SECRET”`.
+Copy that token and paste it in your `.env` file with the key name: `"TOKEN_SECRET"`.
 
-Let’s delve back into our code:
+Let's delve back into our code:
 
 ```javascript
 if (!bearerToken) {
@@ -76,9 +76,9 @@ if (!bearerToken) {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/auth.js)
 
-Every [Express middleware](http://expressjs.com/en/guide/using-middleware.html) is handed a `next()` function, which is simply called to run the default route handler. We’re calling it when there’s no error with verification, meaning that the Bearer token is correct.
+Every [Express middleware](http://expressjs.com/en/guide/using-middleware.html) is handed a `next()` function, which is simply called to run the default route handler. We're calling it when there's no error with verification, meaning that the Bearer token is correct.
 
-Let’s go back into our router code and add this middleware to all our [unsafe HTTP method](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP) handlers:
+Let's go back into our router code and add this middleware to all our [unsafe HTTP method](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP) handlers:
 
 ```javascript
 import { authenticateUser } from "./auth.js";
@@ -93,14 +93,14 @@ router.delete("/:id", authenticateUser, ... )
 
 And yes, the second parameter just became the middlware function, while the route handler was pushed to the next position. This is totally possible because JavaScript supports a [clever workaround](https://stackoverflow.com/a/457589) for [overloading](https://en.wikipedia.org/wiki/Function_overloading), a programming language feature that allows functions to have the same names but different parameters.
 
-Let’s try it out now:
+Let's try it out now:
 
 ```bash
 curl -X DELETE http://localhost:3000/bikes/<ID> # replace <ID> with an ID from the response to /all
 ```
 ![](../../../static/img/tutorial/rest-api/http-unauthorized.svg)
 
-Unsurprisingly, we’re now getting the `401 UNAUTHORIZED` response that we previously programmed when there was no Bearer token in the request. Let’s go ahead and add one new route to generate Bearer tokens. This one will directly go into `index.js` as we don’t want it to be prefixed with the `bikes/` route.
+Unsurprisingly, we're now getting the `401 UNAUTHORIZED` response that we previously programmed when there was no Bearer token in the request. Let's go ahead and add one new route to generate Bearer tokens. This one will directly go into `index.js` as we don't want it to be prefixed with the `bikes/` route.
 
 ```javascript
 // Create new bearer token
@@ -126,7 +126,7 @@ export function generateAccessToken(username) {
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/auth.js)
 
-As you can see, we’re using the same secret to generate our Bearer tokens, and we’re also setting them to expire in 30 minutes (or 1800 seconds). We can now finish our token route:
+As you can see, we're using the same secret to generate our Bearer tokens, and we're also setting them to expire in 30 minutes (or 1800 seconds). We can now finish our token route:
 
 ```javascript
 import { generateAccessToken } from "./auth.js";
@@ -148,7 +148,7 @@ And with that done, we can easily generate new tokens and use them in our API re
 curl -H 'Content-Type: application/json' http://localhost:3000/api/user -d '{"username": "cyclic"}' | jq .token -r
 ```
 
-Let’s add an “Authorization” header to our new request:
+Let's add an "Authorization" header to our new request:
 
 ```bash
 export TOKEN=<TOKEN> # replace <TOKEN> with the token from /api/user
@@ -164,17 +164,17 @@ We just created a full-fledged RESTful API that could be used to build an e-comm
 
 ![app.cyclic.sh_.png](../../../static/img/tutorial/rest-api/app.cyclic.sh_.png)
 
-Let’s commit all our new changes back into our code repository and let Cyclic automatically deploy these new changes to the web. We can track this process in Cylic’s Deployments dashboard.
+Let's commit all our new changes back into our code repository and let Cyclic automatically deploy these new changes to the web. We can track this process in Cylic's Deployments dashboard.
 
 ![app.cyclic.sh_ (1).png](../../../static/img/tutorial/rest-api/ENV.png)
 
-And since `.env` files are not committed publicly to GitHub repositories (since they’re supposed to be secret), we must head back to the Cyclic dashboard and manually paste those values.
+And since `.env` files are not committed publicly to GitHub repositories (since they're supposed to be secret), we must head back to the Cyclic dashboard and manually paste those values.
 
 ![app.cyclic.sh_ (2).png](../../../static/img/tutorial/rest-api/app.cyclic.sh__(2).png)
 
 Furthermore, we can give our API its own custom subdomain, for free! 😃
 
-Our API is now live and we can use it the same way we did when it was running locally on our machine, but this time we’ll replace the [localhost](http://localhost) domain with the server’s domain.
+Our API is now live and we can use it the same way we did when it was running locally on our machine, but this time we'll replace the [localhost](http://localhost) domain with the server's domain.
 
 ## Where to go from here
 
@@ -183,6 +183,6 @@ We could still add a variety of endpoints to our API:
 - `GET`ting items by category,
 - advanced searching capabilities using [ElasticSearch](https://aws.amazon.com/about-aws/whats-new/2015/08/amazon-dynamodb-elasticsearch-integration/) (it has a free-tier!)
 
-and many more things. You can get as creative as you want with it, you’ll only be learning new things along the way!
+and many more things. You can get as creative as you want with it, you'll only be learning new things along the way!
 
-Get inspired by the plethora of [public APIs](https://github.com/public-apis/public-apis) out there, attempt rebuilding them while adding your own personal touch, deploy them on Cyclic and you’ll soon be the one teaching all this stuff! 💪
+Get inspired by the plethora of [public APIs](https://github.com/public-apis/public-apis) out there, attempt rebuilding them while adding your own personal touch, deploy them on Cyclic and you'll soon be the one teaching all this stuff! 💪
