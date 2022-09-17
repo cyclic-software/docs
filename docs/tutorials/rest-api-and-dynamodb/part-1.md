@@ -250,7 +250,7 @@ curl -X POST https://bikes.cyclic.app/api/user | jq .token -r
 
 ![5.svg](../../../static/img/tutorial/rest-api/5.svg)
 
-Let's try making our request again. Bearer tokens go into the "Authorization" header of the HTTP request and must be formatted in this manner: "`Bearer <TOKEN>`".
+Let's try making our request again. Bearer tokens go into the "Authorization" header of the HTTP request and must be formatted in this manner: `Bearer <TOKEN>`.
 
 ```bash
 export TOKEN=...
@@ -453,7 +453,7 @@ npx env-cmd node fill-db.js
 
 As you can see, it added 25 bike items to our database. We"ll see how to access all this data in the next section of this guide.
 
-> **NOTE:** if you encounter an "`ExpiredToken`" error, just refresh Cyclic's page and `export` the new credentials.
+> **NOTE:** if you encounter an `ExpiredToken` error, just refresh Cyclic's page and `export` the new credentials.
 >
 
 In the [next part](./part-2) of this series, we'll build the functionality that allows our API to fetch data from this database.
