@@ -177,7 +177,7 @@ REST calls for the use of the following HTTP verbs:
 > It's important that **GET** (also known as a ["Safe method"](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP)) requests do not change anything about the database.
 > 
 
-RESTful APIs handle routes in an "**[Idempotent](https://restfulapi.net/idempotent-rest-apis/)**" manner, meaning that making the same request multiple times yields the same result. They must also be [stateless](https://www.restapitutorial.com/lessons/whatisrest.html#), meaning that all necessary data to handle the request is contained within the request itself and not remembered from a previous request. This makes RESTful APIs much more scalable than their counterparts.
+RESTful APIs handle routes in an [idempotent](https://restfulapi.net/idempotent-rest-apis/) manner, meaning that making the same request multiple times yields the same result. They must also be [stateless](https://www.restapitutorial.com/lessons/whatisrest.html#), meaning that all necessary data to handle the request is contained within the request itself and not remembered from a previous request. This makes RESTful APIs much more scalable than their counterparts.
 
 Developers use `cURL` to debug their APIs, a Linux command that comes pre-installed on most modern distributions. 
 
