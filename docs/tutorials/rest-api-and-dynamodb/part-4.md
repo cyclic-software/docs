@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # Finishing up with routes to update and delete data
 
-![PATCH & DELETE Routes.png](../../../static/img/tutorial/rest-api/PATCH__DELETE_Routes.png)
+![Two HTTP routes: delete bike and update parts of bike.](../../../static/img/tutorial/rest-api/PATCH__DELETE_Routes.png)
 
 We're almost done; but we still must implement two more route handlers: PATCH and DELETE.
 
@@ -79,7 +79,7 @@ And again, let's try it out:
 ```bash
 curl -X PATCH -H "Content-Type: application/json" http://localhost:3000/bikes/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
 ```
-![](../../../static/img/tutorial/rest-api/http-patch.svg)
+![Response to the last command.](../../../static/img/tutorial/rest-api/http-patch.svg)
 
 ## Deleting a bike item
 
@@ -131,6 +131,6 @@ Let's try deleting some data. Make sure to get the ID from your previous calls t
 ```bash
 curl -X DELETE http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
-![](../../../static/img/tutorial/rest-api/http-delete.svg)
+![Response to the last command.](../../../static/img/tutorial/rest-api/http-delete.svg)
 
 In the [final part](./part-5) of this series, we'll add authentication to our API to secure access to the bikes database.

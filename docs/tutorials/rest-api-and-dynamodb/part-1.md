@@ -17,7 +17,7 @@ But before we start with the coding, let's start with a description of *what* se
 
 ### How servers power the Internet
 
-![Web Servers.png](../../../static/img/tutorial/rest-api/Web_Servers.png)
+![Browsers and web servers communicating back-and-forth using HTTP requests and responses.](../../../static/img/tutorial/rest-api/Web_Servers.png)
 
 Before we delve deeper into RESTful APIs, let's start from its origins and make sure that we all agree on what a *web server* is.
 
@@ -152,7 +152,7 @@ Express also comes with its own bundle of community-made middleware to handle al
 
 ### Let's understand RESTful APIs
 
-![REST APIs.png](../../../static/img/tutorial/rest-api/REST_APIs.png)
+![A RESTful API communicating with the browser through a variety of HTTP actions, and relaying those to a database.](../../../static/img/tutorial/rest-api/REST_APIs.png)
 
 Server-side programmers have the ability to build their APIs however they want. That's the freedom that Node and Express give you:
 
@@ -189,7 +189,7 @@ For starters, it's incredibly easy to make GET requests:
 curl https://bikes.cyclic.app/bikes/all
 ```
 
-![1.svg](../../../static/img/tutorial/rest-api/1.svg)
+![Response to the previous command.](../../../static/img/tutorial/rest-api/1.svg)
 
 It's also more convenient to use `cURL` with another command-line utility called `jq`. After [installing it on your own machine](https://stedolan.github.io/jq/download/), run the following:
 
@@ -197,7 +197,7 @@ It's also more convenient to use `cURL` with another command-line utility called
 curl https://bikes.cyclic.app/bikes/all | jq .
 ```
 
-![2.svg](../../../static/img/tutorial/rest-api/2.svg)
+![Response to the previous command.](../../../static/img/tutorial/rest-api/2.svg)
 
 Then, we can add **Query Strings** to our request to access the API's search feature, which we'll soon build ourselves:
 
@@ -205,7 +205,7 @@ Then, we can add **Query Strings** to our request to access the API's search fea
 curl "https://bikes.cyclic.app/bikes/search/by-title/?query=Mountain" | jq .
 ```
 
-![3.svg](../../../static/img/tutorial/rest-api/3.svg)
+![Response to the previous command.](../../../static/img/tutorial/rest-api/3.svg)
 
 We can also make make POST requests to our API using `cURL`; let's create a new bike item.
 
@@ -236,7 +236,7 @@ We can also make make POST requests to our API using `cURL`; let's create a new 
 curl -H "Content-Type: application/json" https://bikes.cyclic.app/bikes/ -d @request.json
 ```
 
-![4.svg](../../../static/img/tutorial/rest-api/4.svg)
+![Response to the previous command.](../../../static/img/tutorial/rest-api/4.svg)
 
 Uh-oh, we just got an HTTP `UNAUTHORIZED` error. After looking-up the meaning of [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), we see that  "UNAUTHORIZED" means that we do not have access to that particular route, yet. (and of course, we'll be building this authentication system ourselves in this article)
 
@@ -248,7 +248,7 @@ We also learn that in order to create a Bearer token, we must send a POST reques
 curl -X POST https://bikes.cyclic.app/api/user | jq .token -r
 ```
 
-![5.svg](../../../static/img/tutorial/rest-api/5.svg)
+![Response to the previous command.](../../../static/img/tutorial/rest-api/5.svg)
 
 Let's try making our request again. Bearer tokens go into the "Authorization" header of the HTTP request and must be formatted in this manner: `Bearer <TOKEN>`.
 
@@ -257,13 +257,13 @@ export TOKEN=...
 curl -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" https://bikes.cyclic.app/bikes/ -d @request.json | jq .
 ```
 
-![6.svg](../../../static/img/tutorial/rest-api/6.svg)
+![Response to the previous command.](../../../static/img/tutorial/rest-api/6.svg)
 
 As you can see, `cURL` is pretty powerful and we'll be using it time and again throughout this guide.
 
 ### Using AWS DynamoDB to store & retrieve data
 
-![Databases.png](../../../static/img/tutorial/rest-api/Databases.png)
+![A database containing two collections: User and Product. User is connected to Product through the shopping cart field.](../../../static/img/tutorial/rest-api/Databases.png)
 
 As we just learned, RESTful APIs are built around databases. But *what* really is a database?
 
@@ -340,7 +340,7 @@ Whenever we clone a GitHub repository, we must run `npm install` to actually *do
 
 ## Our database is empty… let's create some mock data
 
-![BikesDB.png](../../../static/img/tutorial/rest-api/BikesDB.png)
+![Bike collection containing eight fields: vendor, available for sale, total inventory, price range, title, product type, created at, description.](../../../static/img/tutorial/rest-api/BikesDB.png)
 
 Before we get started, it's important to note that every AWS DynamoDB instance has a specific name, also known as a *table name*. It's given to us by Cyclic in its database dashboard page.
 

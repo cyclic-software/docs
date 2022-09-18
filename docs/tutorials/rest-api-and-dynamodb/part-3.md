@@ -5,7 +5,7 @@ sidebar_position: 3
 
 # Creating routes to create and replace data
 
-![POST & PUT Routes.png](../../../static/img/tutorial/rest-api/POST__PUT_Routes.png)
+![Two HTTP routes: create bike and update bike.](../../../static/img/tutorial/rest-api/POST__PUT_Routes.png)
 
 Our API is now given the ability to fetch data in a variety of ways, but it wouldn't be complete if we weren't able to create and replace new and existing items.
 
@@ -140,7 +140,7 @@ Let's try it out! We'll use `cURL` to read `request.json` as body data by prefix
 ```bash
 curl -H "Content-Type: application/json" http://localhost:3000/bikes/ -d @request.json | jq .
 ```
-![](../../../static/img/tutorial/rest-api/http-post.svg)
+![Response to the last command.](../../../static/img/tutorial/rest-api/http-post.svg)
 
 ## Replacing a bike item
 
@@ -212,6 +212,6 @@ What we're doing here is first checking if the bike item exists by retrieving it
 ```bash
 curl -X PUT -H "Content-Type: application/json" http://localhost:3000/bikes/<ID> -d @request.json | jq . # replace <ID> with an ID from the response to /all
 ```
-![](../../../static/img/tutorial/rest-api/http-put.svg)
+![Response to the last command.](../../../static/img/tutorial/rest-api/http-put.svg)
 
 In the [next part](./part-4) of this series, we'll build the functionality that allows our API to delete and update data in the bikes database.
