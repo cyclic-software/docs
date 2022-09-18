@@ -319,7 +319,7 @@ We'll be using ECMA6 import and export statement in this project, so open `packa
 }
 ```
 
-Let's also replace Cyclic's starter code with `import`s. But that's a matter of preference and you can keep it however you like. (if you decide to keep the `require`s, revert the last change that was made to `"type"` in `package.json`.)
+Then, we'll replace all instances of `require` with `import`:
 
 ```javascript
 import express from "express";
@@ -328,9 +328,9 @@ import db from "cyclic-dynamodb";
 
 [Link to full code.](https://github.com/eludadev/bikes-api/blob/main/index.js)
 
-![Copying database credentials to clipboard](../../../static/img/tutorial/rest-api/screencast1.gif)
-
 And since we're building our API around our a DynamoDB database, we need to make sure that we have read and write access to it by exporting the keys provided by Cyclic's "**Data/Storage**" dashboard to our local machine. (do this every time you launch the terminal)
+
+![Copying database credentials to clipboard](../../../static/img/tutorial/rest-api/screencast1.gif)
 
 Cyclic does this automatically for us in production-mode, however. So we don't need to worry about this task when deploying our API.
 
