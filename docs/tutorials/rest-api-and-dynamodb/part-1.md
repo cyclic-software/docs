@@ -9,9 +9,11 @@ This five-part series will show you how to build an API from the ground-up using
 
 We'll build an API that simply reads and writes data about bikes, a perfect start for an e-commerce shop. We'll also be using Cyclic to host our API for free, including the DynamoDB storage.
 
-You can check out this project's [full code on GitHub](https://github.com/eludadev/bikes-api) if you ever get lost.
-
 But before we start with the coding, let's start with a description of *what* servers and APIs really are.
+
+:::tip  Got lost?
+You can check out this project's [full code on GitHub](https://github.com/eludadev/bikes-api) to stay up-to-date with the tutorial.
+:::
 
 ## A quick refresher on server-side programming
 
@@ -25,7 +27,9 @@ From a hardware point-of-view, a web **server** is a physical computer that stor
 
 Furthermore, every web server must run an **HTTP server**. That's a piece of software that takes-in URLs and processes them to deliver content back to the end-users, while using the HTTP protocol to facilitate the sharing of information over the Internet.
 
-> And if the URL is wrong, the server will generate a response with the infamous 404 code instead.
+:::tip
+And if the URL is wrong, the server will generate a response with the infamous 404 code instead.
+:::
 
 ### Servers communicate with browsers using the HTTP protocol
 
@@ -174,8 +178,9 @@ REST calls for the use of the following HTTP verbs:
 - **PUT** is for updating the whole resource.
 - **PATCH** is for updating parts of the resource.
 
-> It's important that **GET** (also known as a ["Safe method"](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP)) requests do not change anything about the database.
-> 
+:::caution
+It's important that **GET** (also known as a ["Safe method"](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP)) requests do not change anything about the database.
+:::
 
 RESTful APIs handle routes in an [idempotent](https://restfulapi.net/idempotent-rest-apis/) manner, meaning that making the same request multiple times yields the same result. They must also be [stateless](https://www.restapitutorial.com/lessons/whatisrest.html#), meaning that all necessary data to handle the request is contained within the request itself and not remembered from a previous request. This makes RESTful APIs much more scalable than their counterparts.
 
@@ -450,7 +455,8 @@ npx env-cmd node fill-db.js
 
 As you can see, it added 25 bike items to our database. We"ll see how to access all this data in the next section of this guide.
 
-> **NOTE:** if you encounter an `ExpiredToken` error, just refresh Cyclic's page and `export` the new credentials.
->
+:::caution
+If you encounter an `ExpiredToken` error, just refresh Cyclic's page and `export` the new credentials.
+:::
 
 In the [next part](./part-2) of this series, we'll build the functionality that allows our API to fetch data from this database.

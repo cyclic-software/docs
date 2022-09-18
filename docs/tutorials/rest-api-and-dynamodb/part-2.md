@@ -59,8 +59,9 @@ This implies that all URL paths that begin with `/bikes` will be handled by the 
 
 Our very first route handler is pretty simple: it's a handler for the `/bikes/all` URL with the GET action, always returning a list of *all* bikes in the database.
 
-> In large APIs that depend on huge databases (such as Instagram and Twitter), it's common to see support for [pagination](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/), a feature that allows the API's users to only fetch part of the database. (since it's nearly impossible to return a list of one million items in just one HTTP response, for example.)
-> 
+:::tip
+In large APIs that depend on huge databases (such as Instagram and Twitter), it's common to see support for [pagination](https://developer.atlassian.com/server/confluence/pagination-in-the-rest-api/), a feature that allows the API's users to only fetch part of the database. (since it's nearly impossible to return a list of one million items in just one HTTP response, for example.)
+:::
 
 We haven't created a route handler, yet. Thankfully, all of them generally follow the same pattern:
 
