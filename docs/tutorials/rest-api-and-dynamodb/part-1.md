@@ -301,11 +301,11 @@ and it won't hurt to take a quick refresher on ES6 JavaScript programming.
 
 We just spent a lot of time trying to understand REST in theory, but nothing can beat learning by practice. So let's create our own API. Our theme is a bikes shop, so that's how we'll be modelling our RESTful routes.
 
-Cyclic offers its users with a variety of starter templates, and REST APIs are included, of course. So let's begin our exciting journey by visiting [Cyclic's starters](https://app.cyclic.sh/#/deploy) and deploying the [Database API](https://app.cyclic.sh/#/deploy).
+Cyclic offers its users with a variety of starter templates, and REST APIs are included, of course. So let's begin our exciting journey by visiting [Cyclic's starters](https://docs.cyclic.sh/overview/starters) and deploying the [REST API](https://github.com/cyclic-software/starter-rest-api).
+
+[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-rest-api)
 
 This will fork the aforementioned starter repository to your own Github account (that you used to sign in with Cyclic).
-
-[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/eludadev/bikes-api)
 
 Proceed by cloning the repository to your local machine using the `git clone` command, which you can copy from Github. Make sure that `git` is installed on your machine, of course.
 
