@@ -59,6 +59,14 @@ Two things to keep in mind when if using Cloudflare:
 - The validation record **should not be proxied**
 - The routing record can be proxied - but if proxy is enabled on the routing record, `full end-to-end encryption` must be enabled in the cloudflare's `SSL/TLS` settings
 
+#### Apex Domains and `www` 
+To have requests to `www.your-domain.com` to be redirected to `your-domain.com`, configure `Rules` and `Bulk Redirects`in Cloudflare. 
+
+Refer to Cloudflare documentation:
+- <a href="https://developers.cloudflare.com/pages/how-to/www-redirect/" target="_blank">Redirecting www to domain apex</a>
+
+
+
 
 ## Additional support 
 Reach out to us for any additional support on  [<i className="fab fa-discord"></i>  Discord](https://discord.cyclic.sh/support)
