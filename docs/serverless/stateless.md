@@ -35,5 +35,5 @@ A popular pattern with many tutorials is to simulate a database by reading and w
 While it is possible to write to the `/tmp` directory in a stateless runtime, the `/tmp` directory is not shared between multiple instances of the application and is lost after each shutdown. This makes the same issues that arise in a stateful environment immediately apparent. 
 
 :::danger
-Do not use a `json` file as your database. Cyclic [has a database](concepts/database) you can use for free. 
+Do not use a `json` file as your database. Cyclic [has a database](/concepts/database) you can use for free. 
 :::
