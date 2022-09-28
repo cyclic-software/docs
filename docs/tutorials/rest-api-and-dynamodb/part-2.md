@@ -4,7 +4,7 @@ sidebar_position: 2
 
 # Creating routes to fetch and search data
 
-![Four HTTP GET routes: list all, get by id, get by handle, and search by title.](../../../static/img/tutorial/rest-api/GET_Routes.png)
+<p align="center"><img alt="Four HTTP GET routes: list all, get by id, get by handle, and search by title." src="/img/tutorial/rest-api/GET_Routes.png" width="640" /></p>
 
 With our database full with data, it's time to build a RESTful API that allows us to fetch that data in four different ways:
 
@@ -142,7 +142,7 @@ All looking good! Since our server is automatically restarted when we change our
 ```bash
 curl http://localhost:3000/bikes/all | jq .
 ```
-![Response to the last command.](../../../static/img/tutorial/rest-api/api-all.svg)
+<p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/api-all.svg" width="640" /></p>
 
 ## Fetching a bike by ID
 
@@ -186,7 +186,7 @@ Let's test that:
 ```bash
 curl http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
-![Response to the last command.](../../../static/img/tutorial/rest-api/http-get-id.svg)
+<p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/http-get-id.svg" width="640" /></p>
 
 But what if the item with that ID doesn't exist? In that case, we wish to return an HTTP response with the 404 status code, indicating that the resource does not exist.
 
@@ -212,7 +212,7 @@ Let's see if that works:
 ```bash
 curl http://localhost:3000/bikes/blahblah
 ```
-![Response to the last command.](../../../static/img/tutorial/rest-api/api-blahblah.svg)
+<p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/api-blahblah.svg" width="640" /></p>
 
 ## Fetching a bike by handle
 
@@ -284,7 +284,7 @@ And of course, we should always battle-test our API before shipping it to the In
 ```bash
 curl http://localhost:3000/bikes/by-handle/<HANDLE> | jq . # replace <HANDLE> with a handle from the response to /all
 ```
-![Response to the last command.](../../../static/img/tutorial/rest-api/api-handle.svg)
+<p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/api-handle.svg" width="640" /></p>
 
 ## Fetching bikes by search on title
 
@@ -393,6 +393,6 @@ Let's try it out! Make a search with the term "Bicycle" (case-sensitive) and see
 ```bash
 curl http://localhost:3000/bikes/search/by-title\?query\=Bicycle | jq .
 ```
-![Response to the last command.](../../../static/img/tutorial/rest-api/api-search.svg)
+<p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/api-search.svg" width="640" /></p>
 
 In the [next part](./part-3) of this series, we'll add more functionality that gives us the ability to create and replace data in the bikes database.

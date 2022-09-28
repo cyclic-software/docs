@@ -6,7 +6,7 @@ sidebar_position: 5
 
 ## Securing our database with authentication
 
-![Browsers sending an authorization HTTP header to the web server.](../../../static/img/tutorial/rest-api/Auth.png)
+<p align="center"><img alt="Browsers sending an authorization HTTP header to the web server." src="/img/tutorial/rest-api/Auth.png" width="640" /></p>
 
 Every public (and private) API must come with some sort of protection around its data. We mustn't allow anyone in the world to poke around our important database.
 
@@ -51,7 +51,7 @@ require("crypto").randomBytes(64).toString("hex");
 ```bash
 node generate-secret.js
 ```
-![Response to the last command.](../../../static/img/tutorial/rest-api/gen-token.svg)
+<p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/gen-token.svg" width="640" /></p>
 
 Copy that token and paste it in your `.env` file with the key name: `"TOKEN_SECRET"`.
 
@@ -97,7 +97,7 @@ Let's try it out now:
 ```bash
 curl -X DELETE http://localhost:3000/bikes/<ID> # replace <ID> with an ID from the response to /all
 ```
-![Response to the last command.](../../../static/img/tutorial/rest-api/http-unauthorized.svg)
+<p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/http-unauthorized.svg" width="640" /></p>
 
 Unsurprisingly, we're now getting the `401 UNAUTHORIZED` response that we previously programmed when there was no Bearer token in the request. Let's go ahead and add one new route to generate Bearer tokens. This one will directly go into `index.js` as we don't want it to be prefixed with the `bikes/` route.
 
@@ -153,7 +153,7 @@ Let's add an "Authorization" header to our new request:
 export TOKEN=<TOKEN> # replace <TOKEN> with the token from /api/user
 curl -H "Authorization: Bearer $TOKEN" -X DELETE http://localhost:3000/bikes/<ID> | jq . # replace <ID> with an ID from the response to /all
 ```
-![Response to the last command.](../../../static/img/tutorial/rest-api/http-delete-auth.svg)
+<p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/http-delete-auth.svg" width="640" /></p>
 
 ## Deploying our API to the web, with Cyclic
 
@@ -161,15 +161,15 @@ We just created a full-fledged RESTful API that could be used to build an e-comm
 
 [![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/eludadev/bikes-api)
 
-![Deployments tab in Cyclic dashboard showing the deployment history.](../../../static/img/tutorial/rest-api/app.cyclic.sh_.png)
+<p align="center"><img alt="Deployments tab in Cyclic dashboard showing the deployment history." src="/img/tutorial/rest-api/app.cyclic.sh_.png" width="640" /></p>
 
 Let's commit all our new changes back into our code repository and let Cyclic automatically deploy these new changes to the web. We can track this process in Cylic's Deployments dashboard.
 
-![Variables tab in Cyclic dashboard showing two environment variables: token secret and cyclic DB.](../../../static/img/tutorial/rest-api/ENV.png)
+<p align="center"><img alt="Variables tab in Cyclic dashboard showing two environment variables: token secret and cyclic DB." src="/img/tutorial/rest-api/ENV.png" width="640" /></p>
 
 And since `.env` files are not committed publicly to GitHub repositories (since they're supposed to be secret), we must head back to the Cyclic dashboard and manually paste those values.
 
-![Environments tab in Cyclic dashboard showing the custom subdomain.](../../../static/img/tutorial/rest-api/app.cyclic.sh__(2).png)
+<p align="center"><img alt="Environments tab in Cyclic dashboard showing the custom subdomain." src="/img/tutorial/rest-api/app.cyclic.sh__(2).png" width="640" /></p>
 
 Furthermore, we can give our API its own custom subdomain, for free! 😃
 
