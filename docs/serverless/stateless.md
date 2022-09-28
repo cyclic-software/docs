@@ -24,7 +24,7 @@ Serverless apps run on read-only file systems. This means it is impossible to pe
 :::tip AWS S3 and Uploading/Downloading Files 
 Cyclic exposes many features of AWS S3 directly to your apps. To handle uploads directly to the object store, S3 can be used to generate pre-signed GET, PUT and POST urls than can be used by a client to upload and download files over the 6MB api size limitation. 
 
-[Read more on presigned URL's](https://aws.amazon.com/blogs/developer/generate-presigned-url-modular-aws-sdk-javascript/)
+[Read more on presigned URLs](https://aws.amazon.com/blogs/developer/generate-presigned-url-modular-aws-sdk-javascript/)
 :::
 #### Processing and Uploading 
 The `/tmp` directory can be written to. But it should only be used for intermediary processing. Either upload the result to an object store or download to the client. An example use case for `/tmp` may be to create thumbnail images, store them in /tmp, and then upload them to S3.
