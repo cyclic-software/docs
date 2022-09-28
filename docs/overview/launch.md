@@ -6,7 +6,7 @@ sidebar_position: 4
 
 Cyclic apps are hosted on AWS serverless infrastructure. This means any lambda constraints are inherited. This also means there are no servers to manage, no OS patches to apply, no maintenance windows to schedule and no networking headaches.
 
-There at no servers to start or stop. When your app gets more requests Lambda will initialize more runtimes for you. We will then start your app and send it all the http traffic.
+There are no servers to start or stop. When your app gets more requests, Lambda will initialize more runtimes for you. We will then start your app and send it all the http traffic.
 
 ## Start
 Cyclic runs nodejs apps and follows general conventions for running them. In order to identify how to start, a `package.json` file must exist in the root of the repo.
