@@ -17,5 +17,5 @@ Every `git push` or change to the default branch will trigger a Cyclic deploymen
 Once deployed, apps are linked on the Github repo in the `Environments` section on the right hand side of the page:
 <img src="/img/deploy/1.png" alt="drawing" width="400"/>
 
-For each deployment afterwards, a record will be published with a link to the deployment logs, live site and corresponding commit hash.
+For each deployment afterwards, a record will be published with a link to the deployment logs, live site, and corresponding commit hash.
 <img src="/img/deploy/2.png" alt="drawing" width="600"/>
