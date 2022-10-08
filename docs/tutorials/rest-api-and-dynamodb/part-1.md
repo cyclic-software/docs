@@ -11,7 +11,7 @@ We'll build an API that simply reads and writes data about bikes, a perfect star
 But before we start with the coding, let's start with a description of _what_ servers and APIs really are.
 
 :::tip Got lost?
-You can check out this project's [full code on GitHub](https://github.com/cyclic-software/bikes-api) to stay up-to-date with the tutorial.
+You can check out this project's [full code on GitHub](https://github.com/cyclic-software/tutorial-bikes-api) to stay up-to-date with the tutorial.
 :::
 
 ## A quick refresher on server-side programming
@@ -244,7 +244,7 @@ curl -H "Content-Type: application/json" https://bikes.cyclic.app/bikes/ -d @req
 
 Uh-oh, we just got an HTTP `UNAUTHORIZED` error. After looking-up the meaning of [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), we see that "UNAUTHORIZED" means that we do not have access to that particular route, yet. (and of course, we'll be building this authentication system ourselves in this article)
 
-After looking up our [API's documentation on GitHub](https://github.com/cyclic-software/bikes-api), we learn that a "Bearer token" is required to make POST requests.
+After looking up our [API's documentation on GitHub](https://github.com/cyclic-software/tutorial-bikes-api), we learn that a "Bearer token" is required to make POST requests.
 
 We also learn that in order to create a Bearer token, we must send a POST request to the following route. This one, however, does not require authentication.
 
@@ -330,7 +330,7 @@ import express from "express";
 import db from "cyclic-dynamodb";
 ```
 
-[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/index.js)
+[Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/index.js)
 
 And since we're building our API around our a DynamoDB database, we need to make sure that we have read and write access to it by exporting the keys provided by Cyclic's "**Data/Storage**" dashboard to our local machine. (do this every time you launch the terminal)
 
@@ -442,7 +442,7 @@ async function fillDataBaseWithBikes() {
 fillDataBaseWithBikes();
 ```
 
-[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/fill-db.js)
+[Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/fill-db.js)
 
 Don't worry if you don't understand what this script is doing; we'll be going over all its intricate parts in the rest of this tutorial. Run the following commands to execute this script:
 
