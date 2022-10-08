@@ -36,7 +36,7 @@ Requests will be held in the Cyclic runtime to make sure none are ever missed, e
 
 ```javascript
 
-const { MongoClient} = require('mongodb');
+const { MongoClient } = require('mongodb');
 const express = require('express');
 const app = express();
 
