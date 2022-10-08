@@ -8,9 +8,9 @@ This five-part series will show you how to build an API from the ground-up using
 
 We'll build an API that simply reads and writes data about bikes, a perfect start for an e-commerce shop. We'll also be using Cyclic to host our API for free, including the DynamoDB storage.
 
-But before we start with the coding, let's start with a description of *what* servers and APIs really are.
+But before we start with the coding, let's start with a description of _what_ servers and APIs really are.
 
-:::tip  Got lost?
+:::tip Got lost?
 You can check out this project's [full code on GitHub](https://github.com/cyclic-software/bikes-api) to stay up-to-date with the tutorial.
 :::
 
@@ -20,9 +20,9 @@ You can check out this project's [full code on GitHub](https://github.com/cyclic
 
 <p align="center"><img alt="Browsers and web servers communicating back-and-forth using HTTP requests and responses." src="/img/tutorial/rest-api/Web_Servers.png" width="640" /></p>
 
-Before we delve deeper into RESTful APIs, let's start from its origins and make sure that we all agree on what a *web server* is.
+Before we delve deeper into RESTful APIs, let's start from its origins and make sure that we all agree on what a _web server_ is.
 
-From a hardware point-of-view, a web **server** is a physical computer that stores and ***serves*** data over the Internet, and that includes everything from HTML documents, CSS stylesheets, images and video files.
+From a hardware point-of-view, a web **server** is a physical computer that stores and **_serves_** data over the Internet, and that includes everything from HTML documents, CSS stylesheets, images and video files.
 
 Furthermore, every web server must run an **HTTP server**. That's a piece of software that takes-in URLs and processes them to deliver content back to the end-users, while using the HTTP protocol to facilitate the sharing of information over the Internet.
 
@@ -34,20 +34,20 @@ And if the URL is wrong, the server will generate a response with the infamous 4
 
 When you search for a product, view details on it or even buy it, an **HTTP request** is sent to a web server.
 
-HTTP is a web standard that allows *any* server to know what to expect when it receives an *HTTP request*:
+HTTP is a web standard that allows _any_ server to know what to expect when it receives an _HTTP request_:
 
 - a URL linking to the resource,
 - request parameters defined in the query string, (like `google.com/?q=my%20search`)
 - a method defining the desired action, (whether to get, create or delete that resource)
 - JSON data encoded in the request body or in associated cookies.
 
-HTTP servers proceed by processing the request, then sending an *HTTP response* back to the sender. The response includes a *status line* indicating the result of that operation. Success for example, is represented with the `HTTP/1.1 200 OK` code. Unavailable resources would instead respond with the `HTTP/1.1 404 NOT FOUND` code.
+HTTP servers proceed by processing the request, then sending an _HTTP response_ back to the sender. The response includes a _status line_ indicating the result of that operation. Success for example, is represented with the `HTTP/1.1 200 OK` code. Unavailable resources would instead respond with the `HTTP/1.1 404 NOT FOUND` code.
 
-And just like any other resource, *static websites* are just HTML files hosted on web servers. (with a hint of CSS files, JS files and other media)
+And just like any other resource, _static websites_ are just HTML files hosted on web servers. (with a hint of CSS files, JS files and other media)
 
 ---
 
-Sounds good, we just learnt that servers are the building-blocks of the Internet, and that they're responsible for storing *static* resources and serving them back to the users of the Internet.
+Sounds good, we just learnt that servers are the building-blocks of the Internet, and that they're responsible for storing _static_ resources and serving them back to the users of the Internet.
 
 But what about websites that are always changing? Think Walmart, for example. It's an online store that's constantly changing:
 
@@ -57,20 +57,20 @@ But what about websites that are always changing? Think Walmart, for example. It
 
 These kinds of websites, which may even be categorized as full-fledged applications, are usually using an **API** (Application Programming Interface) behind the scenes.
 
-Instead of delivering whole HTML files, APIs *only* return useful information (usually in JSON format) that may be used to build a website. For instance, the Walmart API may have one URL for retrieving the list of items in display:
+Instead of delivering whole HTML files, APIs _only_ return useful information (usually in JSON format) that may be used to build a website. For instance, the Walmart API may have one URL for retrieving the list of items in display:
 
 ```json
 [
-	{
-		"name": "Oranges",
-		"inStock": 8,
-		"description": "..."
-	},
-	{
-		"name": "Table",
-		"inStock": 0,
-		"description": "..."
-	}
+  {
+    "name": "Oranges",
+    "inStock": 8,
+    "description": "..."
+  },
+  {
+    "name": "Table",
+    "inStock": 0,
+    "description": "..."
+  }
 ]
 ```
 
@@ -91,7 +91,7 @@ With Node, we're able to write our back-end code in JavaScript, giving us full a
 When both the front-end and back-end sides of an application are written in the same language, developers experience less of "context shift", making it ideal for large-scale projects.
 
 ```javascript
-// Example of a web server written in Node 
+// Example of a web server written in Node
 
 const http = require('http');
 const fs = require('fs');
@@ -131,17 +131,17 @@ But [writing your own server](https://developer.mozilla.org/en-US/docs/Learn/Ser
 ```javascript
 // Example of web server written with Express
 
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require("express");
+const app = express();
+const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});
 ```
 
 Thankfully, Node comes with its own package manager, giving us access to a plethora of community-made modules. One of those modules is **Express**, the most popular Node web framework. It comes with a variety of features out of the box:
@@ -183,7 +183,7 @@ It's important that **GET** (also known as a ["Safe method"](https://developer.m
 
 RESTful APIs handle routes in an [idempotent](https://restfulapi.net/idempotent-rest-apis/) manner, meaning that making the same request multiple times yields the same result. They must also be [stateless](https://www.restapitutorial.com/lessons/whatisrest.html#), meaning that all necessary data to handle the request is contained within the request itself and not remembered from a previous request. This makes RESTful APIs much more scalable than their counterparts.
 
-Developers use `cURL` to debug their APIs, a Linux command that comes pre-installed on most modern distributions. 
+Developers use `cURL` to debug their APIs, a Linux command that comes pre-installed on most modern distributions.
 
 Let's demonstrate it on the RESTful API that we'll be making in this tutorial.
 
@@ -242,7 +242,7 @@ curl -H "Content-Type: application/json" https://bikes.cyclic.app/bikes/ -d @req
 
 <p align="center"><img alt="Response to the previous command." src="/img/tutorial/rest-api/4.svg" width="640" /></p>
 
-Uh-oh, we just got an HTTP `UNAUTHORIZED` error. After looking-up the meaning of [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), we see that  "UNAUTHORIZED" means that we do not have access to that particular route, yet. (and of course, we'll be building this authentication system ourselves in this article)
+Uh-oh, we just got an HTTP `UNAUTHORIZED` error. After looking-up the meaning of [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), we see that "UNAUTHORIZED" means that we do not have access to that particular route, yet. (and of course, we'll be building this authentication system ourselves in this article)
 
 After looking up our [API's documentation on GitHub](https://github.com/cyclic-software/bikes-api), we learn that a "Bearer token" is required to make POST requests.
 
@@ -269,7 +269,7 @@ As you can see, `cURL` is pretty powerful and we'll be using it time and again t
 
 <p align="center"><img alt="A database containing two collections: User and Product. User is connected to Product through the shopping cart field." src="/img/tutorial/rest-api/Databases.png" width="640" /></p>
 
-As we just learned, RESTful APIs are built around databases. But *what* really is a database?
+As we just learned, RESTful APIs are built around databases. But _what_ really is a database?
 
 Well, a database is a set of inter-connected collections of information. For example, a database may contain a collection of users and a collection of products. Users and products may be connected through shopping carts. (Product A exists in User B's shopping cart)
 
@@ -279,9 +279,9 @@ On the other hand, schema-less databases have no such limitation. Each item in a
 
 ```json
 {
-	"name": "John Doe",
-	"isActive": true,
-	"email": "example@domain.tld"
+  "name": "John Doe",
+  "isActive": true,
+  "email": "example@domain.tld"
 }
 ```
 
@@ -313,13 +313,13 @@ This will fork the aforementioned starter repository to your own Github account 
 
 Proceed by cloning the repository to your local machine using the `git clone` command, which you can copy from Github. Make sure that `git` is installed on your machine, of course.
 
-We'll be using ECMA6 import and export statement in this project, so open `package.json` and set the project's type to "module". 
+We'll be using ECMA6 import and export statement in this project, so open `package.json` and set the project's type to "module".
 
 ```json
 // package.json
 
 {
-	"type": "module"
+  "type": "module"
 }
 ```
 
@@ -338,15 +338,15 @@ And since we're building our API around our a DynamoDB database, we need to make
 
 Cyclic does this automatically for us in production-mode, however. So we don't need to worry about this task when deploying our API.
 
-Remember when we mentioned Node's package manager (NPM) that we used to get access to Express? Well, GitHub repositories that use NPM only contain the *names* and *versions* of used packages, but not the actual packages themselves.
+Remember when we mentioned Node's package manager (NPM) that we used to get access to Express? Well, GitHub repositories that use NPM only contain the _names_ and _versions_ of used packages, but not the actual packages themselves.
 
-Whenever we clone a GitHub repository, we must run `npm install` to actually *download* those packages into our machine. 
+Whenever we clone a GitHub repository, we must run `npm install` to actually _download_ those packages into our machine.
 
 ## Our database is empty… let's create some mock data
 
 <p align="center"><img alt="Bike collection containing eight fields: vendor, available for sale, total inventory, price range, title, product type, created at, description." src="/img/tutorial/rest-api/BikesDB.png" width="640" /></p>
 
-Before we get started, it's important to note that every AWS DynamoDB instance has a specific name, also known as a *table name*. It's given to us by Cyclic in its database dashboard page.
+Before we get started, it's important to note that every AWS DynamoDB instance has a specific name, also known as a _table name_. It's given to us by Cyclic in its database dashboard page.
 
 <p align="center"><img alt="Copying table name to the clipboard." src="/img/tutorial/rest-api/screencast2.gif" width="640" /></p>
 
@@ -359,20 +359,19 @@ cp env.sample .env
 ```
 
 > The database credentials that we copied into our machine are themselves environment variables. However, we didn't copy them into our `.env` file since they're only temporary for our local development, and Cyclic will change them once deployed on the Internet.
-The table name, however, is static and won't change; it's okay to put it in the `.env` file.
-> 
+> The table name, however, is static and won't change; it's okay to put it in the `.env` file.
 
 After doing that, we can start our REST API by running `npm run dev`.
 
-Let's make sure that our *local* server is up and running by debugging it using cURL:
+Let's make sure that our _local_ server is up and running by debugging it using cURL:
 
 ```bash
-curl http://localhost:3000/animals/rin%20tin%20tin \
-    --data '{"breed":"German Shepard", "gender": "male"}' \
+curl http://localhost:3000/bikes/hybrid%20bike \
+    --data '{"title": "Hybrid Bicycle Sentra", "vendor": "Audi"}' \
     -XPOST -H 'Content-Type: application/json'| jq .
 ```
 
-As you can see, *local* servers are hosted on the [`localhost`](http://localhost) domain or [`127.0.0.1`](http://127.0.0.1) IP address. It's also common to see them running on the `3000` port, as being done in this server. (`8000`, `8080`, `5000` are also equally as common) 
+As you can see, _local_ servers are hosted on the [`localhost`](http://localhost) domain or [`127.0.0.1`](http://127.0.0.1) IP address. It's also common to see them running on the `3000` port, as being done in this server. (`8000`, `8080`, `5000` are also equally as common)
 
 [Learn more about local hosting and ports.](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server)
 
@@ -445,7 +444,7 @@ fillDataBaseWithBikes();
 
 [Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/fill-db.js)
 
-Don't worry if you don't understand what this script is doing; we'll be going over all its intricate parts in the rest of this tutorial. Run the following commands to execute this script: 
+Don't worry if you don't understand what this script is doing; we'll be going over all its intricate parts in the rest of this tutorial. Run the following commands to execute this script:
 
 ```bash
 npm install slugify uuid @faker-js/faker runtypes jsonwebtoken
