@@ -21,7 +21,7 @@ router.post("/", authenticateUser, async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Then, it's critical to validate this data. Instead of checking the existence of every field and its value, we can use [`runtypes`](https://www.npmjs.com/package/runtypes),  yet another library whose purpose is to conveniently check the fields of an object.
 
@@ -49,7 +49,7 @@ const BikeData = Record({
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 We can now check the validity of our data by calling one simple method:
 
@@ -74,7 +74,7 @@ router.post("/", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 And before saving this data, we must generate its ID and handle. We'll do the former using [`uuid`](https://www.npmjs.com/package/uuid), a JavaScript library that generates `Universally Unique IDentifiers`, which are guaranteed to be unique every time. The latter, however, will be done using [`slugify`](https://www.npmjs.com/package/slugify), a function that strips text from spaces and replaces it with dashes instead: "Mountains Bike" ↦ "Mountains-Bike".
 
@@ -98,7 +98,7 @@ const bike = {
 };
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 And the last step of course is to save this data and send it back to the client. This time, the client will receive a bike object with the ID and handle included:
 
@@ -109,7 +109,7 @@ await bikesCollection.set(bikeId, bike);
 res.send(bike);
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's try it out! We'll use `cURL` to read `request.json` as body data by prefixing it with an @ symbol.
 
@@ -179,7 +179,7 @@ router.put("/:id", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 What we're doing here is first checking if the bike item exists by retrieving its ID, and we're then validating the data, deleting the existing item and replacing it with a new item.
 

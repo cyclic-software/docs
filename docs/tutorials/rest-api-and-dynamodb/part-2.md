@@ -24,7 +24,7 @@ import { Router } from "express";
 export const router = Router();
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 We can now use the `router` object to define a variety of HTTP request handlers for this server. But to make it work, we must attach it to the `index.js` file, which is executed by Cyclic when the server is first started using `npm run dev`:
 
@@ -50,7 +50,7 @@ app.listen(port, () => {
 // delete all other lines after this
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/index.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/index.js)
 
 This implies that all URL paths that begin with `/bikes` will be handled by the router defined in the `router.js` script. (e.g `/bikes/all`, `/bikes`, …)
 
@@ -70,7 +70,7 @@ router.get("/all", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 As you can see, we're telling Express to handle the GET action on the `/all` route by running the `router.get` method. If we wished to support the POST action instead for example, we would do `router.post`, as we'll see in the next section of this guide.
 
@@ -89,7 +89,7 @@ const db = DynamoDb(process.env.CYCLIC_DB);
 const bikesCollection = db.collection("bikes");
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 As you can see, we're using the `cyclic-dynamodb` library to create a programmable instance of our database. That's a convenience library used to facilitate the communication with our database using simple JavaScript code. We're also extracting the `CYCLIC_DB` environment variable that we set earlier using `process.env`. 
 
@@ -108,7 +108,7 @@ router.get("/all", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's dissect the above code snippet line-by-line:
 
@@ -163,7 +163,7 @@ router.get("/:id", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 As you can see, we're inserting `:id` into our URL and proceed to extract it from the `req.params` object.
 
@@ -179,7 +179,7 @@ router.get("/:id", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's test that:
 
@@ -205,7 +205,7 @@ router.get("/:id", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's see if that works: 
 
@@ -229,7 +229,7 @@ router.get("/by-handle/:handle", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 We can't just run the `get()` method this time, since we don't have the item's key.
 
@@ -255,7 +255,7 @@ router.get("/by-handle/:handle", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 And let's not forget to do some error handling in case no bike object matches that particular handle. That's tested by checking the truthiness of `results.length`, returning `False` when it's an empty array.
 
@@ -277,7 +277,7 @@ router.get("/by-handle/:handle", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 And of course, we should always battle-test our API before shipping it to the Internet:
 
@@ -311,7 +311,7 @@ router.get("/search/by-title", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's proceed now by using this search term to look-up some data. The function that we're looking for is `parallel_scan`, taking the expression `contains(title, <TERM>)`. However, we must split this expression into its three parts:
 
@@ -333,7 +333,7 @@ const { results } = await bikesCollection.parallel_scan({
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's see how that fits into the router code:
 
@@ -357,7 +357,7 @@ router.get("/search/by-title", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 And with the same error handling, it's even more robust:
 
@@ -386,7 +386,7 @@ router.get("/search/by-title", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's try it out! Make a search with the term "Bicycle" (case-sensitive) and see the results:
 

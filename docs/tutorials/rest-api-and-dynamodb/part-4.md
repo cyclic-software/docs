@@ -22,7 +22,7 @@ router.patch("/:id", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Next step is to check whether or not a bike item with this ID exists, before we update anything.
 
@@ -41,7 +41,7 @@ router.patch("/:id", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 After that, we may take advantage of DynamoDB's [UpdateItem](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_UpdateItem.html) command to only replace parts of our bike item:
 
@@ -50,7 +50,7 @@ After that, we may take advantage of DynamoDB's [UpdateItem](https://docs.aws.am
 await bikesCollection.set(bikeId, newData);
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's finish up by sending the full bike object back to the client. We'll take advantage of JavaScript [Spread Syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) to create that object:
 
@@ -63,7 +63,7 @@ const bike = {
 res.send(bike);
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 And again, let's try it out:
 
@@ -93,7 +93,7 @@ router.delete("/:id", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Following that, we quite simply call one function from Cyclic's DynamoDB library and the job's done!
 
@@ -101,7 +101,7 @@ Following that, we quite simply call one function from Cyclic's DynamoDB library
 await bikesCollection.delete(bikeId);
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 We'll do some error handling too and return the deleted item's ID back to the client:
 
@@ -123,7 +123,7 @@ router.delete("/:id", async (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 Let's try deleting some data. Make sure to get the ID from your previous calls to `/bikes/all`:
 

@@ -37,7 +37,7 @@ export function authenticateUser(req, res, next) {
 }
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/auth.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/auth.js)
 
 We'll proceed by verifying the validity of this token using the `verify()` method. But before we do that, it's important to note that Bearer authentication depends on one secret stored in the environment variables. With this secret value, Bearer tokens are both generated and verified.
 
@@ -73,7 +73,7 @@ if (!bearerToken) {
 }
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/auth.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/auth.js)
 
 Every [Express middleware](http://expressjs.com/en/guide/using-middleware.html) is handed a `next()` function, which is simply called to run the default route handler. We're calling it when there's no error with verification, meaning that the Bearer token is correct.
 
@@ -88,7 +88,7 @@ router.patch("/:id", authenticateUser, ... )
 router.delete("/:id", authenticateUser, ... )
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/router.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/router.js)
 
 And yes, the second parameter just became the middlware function, while the route handler was pushed to the next position. This is totally possible because JavaScript supports a [clever workaround](https://stackoverflow.com/a/457589) for [overloading](https://en.wikipedia.org/wiki/Function_overloading), a programming language feature that allows functions to have the same names but different parameters.
 
@@ -111,7 +111,7 @@ app.post("/api/user", (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/index.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/index.js)
 
 We still need a utility function that generated the Bearer tokens. Head back to the `auth.js` file and add the following:
 
@@ -123,7 +123,7 @@ export function generateAccessToken(username) {
 }
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/auth.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/auth.js)
 
 As you can see, we're using the same secret to generate our Bearer tokens, and we're also setting them to expire in 30 minutes (or 1800 seconds). We can now finish our token route:
 
@@ -139,7 +139,7 @@ app.post("/api/user", (req, res) => {
 });
 ```
 
-[Link to full code.](https://github.com/eludadev/bikes-api/blob/main/index.js)
+[Link to full code.](https://github.com/cyclic-software/bikes-api/blob/main/index.js)
 
 And with that done, we can easily generate new tokens and use them in our API requests. Restart your server (`CTRL`+`C` then `npm run dev`) and run the following command:
 
@@ -159,7 +159,7 @@ curl -H "Authorization: Bearer $TOKEN" -X DELETE http://localhost:3000/bikes/<ID
 
 We just created a full-fledged RESTful API that could be used to build an e-commerce store for bikes. Through this journey, we learnt about servers, HTTP, RESTful APIs, AWS DynamoDB and how Cyclic brings all these technologies together into one using its distinct starter templates.
 
-[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/eludadev/bikes-api)
+[![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/cyclic-software/bikes-api)
 
 <p align="center"><img alt="Deployments tab in Cyclic dashboard showing the deployment history." src="/img/tutorial/rest-api/app.cyclic.sh_.png" width="640" /></p>
 
