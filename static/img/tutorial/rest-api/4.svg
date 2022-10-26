@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="terminal" baseProfile="full" viewBox="0 0 640 410" width="640" version="1.1">
+    <defs>
+        <termtosvg:template_settings xmlns:termtosvg="https://github.com/nbedos/termtosvg">
+            <termtosvg:screen_geometry columns="80" rows="24"/>
+            <termtosvg:animation type="css"/>
+        </termtosvg:template_settings>
+        <style type="text/css" id="generated-style"><![CDATA[#screen {
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+        text {
+            dominant-baseline: text-before-edge;
+            white-space: pre;
+        }
+    
+            :root {
+                --animation-duration: 4700ms;
+            }
+
+            @keyframes roll {
+                0.000%{transform:translateY(0px)}
+0.277%{transform:translateY(-442px)}
+0.319%{transform:translateY(-884px)}
+0.511%{transform:translateY(-1326px)}
+0.553%{transform:translateY(-1768px)}
+4.660%{transform:translateY(-2210px)}
+13.468%{transform:translateY(-2652px)}
+13.553%{transform:translateY(-3094px)}
+34.660%{transform:translateY(-3536px)}
+34.745%{transform:translateY(-3978px)}
+34.872%{transform:translateY(-4420px)}
+35.000%{transform:translateY(-4862px)}
+78.723%{transform:translateY(-5304px)}
+100.000%{transform:translateY(-5304px)}
+            }
+
+            #screen_view {
+                animation-duration: 4700ms;
+                animation-iteration-count:infinite;
+                animation-name:roll;
+                animation-timing-function: steps(1,end);
+                animation-fill-mode: forwards;
+            }
+        ]]></style>
+        <style type="text/css" id="user-style">
+            /* The colors defined below are the default 16 colors used for rendering text of the terminal. Adjust
+               them as needed.
+               PowerShell colors based on https://en.wikipedia.org/wiki/ANSI_escape_code#Colors */
+            .foreground {fill: #cccccc;}
+            .background {fill: #0c0c0c;}
+            .color0 {fill: #0c0c0c;}
+            .color1 {fill: #c50f1f;}
+            .color2 {fill: #13a10e;}
+            .color3 {fill: #c19c00;}
+            .color4 {fill: #0037da;}
+            .color5 {fill: #881798;}
+            .color6 {fill: #3a96dd;}
+            .color7 {fill: #cccccc;}
+            .color8 {fill: #767676;}
+            .color9 {fill: #e74856;}
+            .color10 {fill: #16c60c;}
+            .color11 {fill: #f9f1a5;}
+            .color12 {fill: #3b78ff;}
+            .color13 {fill: #b4009e;}
+            .color14 {fill: #61d6d6;}
+            .color15 {fill: #f2f2f2;}
+        </style>
+    </defs>
+    <svg id="screen" width="640" height="408" viewBox="0 0 640 408" preserveAspectRatio="xMidYMin slice">
+    <rect class="background" height="100%" width="100%" x="0" y="0"/><defs><g id="g1"><text x="0" textLength="8" class="background"> </text></g><g id="g2"><text x="0" textLength="8" class="background"> </text><text x="8" textLength="632" class="foreground">                                                                               </text></g><g id="g3"><text x="0" textLength="24" font-weight="bold" class="color10">&#10140;  </text><text x="24" textLength="160" font-weight="bold" class="color14">terminal-screenshots</text><text x="184" textLength="8" class="foreground"> </text><text x="192" textLength="8" class="background"> </text><text x="200" textLength="440" class="foreground">                                                       </text></g><g id="g4"><text x="0" textLength="24" font-weight="bold" class="color10">&#10140;  </text><text x="24" textLength="160" font-weight="bold" class="color14">terminal-screenshots</text><text x="184" textLength="8" class="foreground"> </text><text x="192" textLength="448" class="background">curl -H "Content-Type: application/json" https://bikes.c</text></g><g id="g5"><text x="0" textLength="272" class="background">yclic.app/bikes/ -d @request.json </text><text x="272" textLength="368" class="foreground">                                              </text></g><g id="g6"><text x="0" textLength="24" font-weight="bold" class="color10">&#10140;  </text><text x="24" textLength="160" font-weight="bold" class="color14">terminal-screenshots</text><text x="184" textLength="456" class="foreground"> curl -H "Content-Type: application/json" https://bikes.c</text></g><g id="g7"><text x="0" textLength="264" class="foreground">yclic.app/bikes/ -d @request.json</text><text x="264" textLength="8" class="background"> </text><text x="272" textLength="368" class="foreground">                                              </text></g><g id="g8"><text x="0" textLength="640" class="foreground">yclic.app/bikes/ -d @request.json                                               </text></g><g id="g9"><text x="0" textLength="96" class="foreground">Unauthorized</text><text x="96" textLength="8" class="background"> </text></g><g id="g10"><text x="0" textLength="96" class="foreground">Unauthorized</text><text x="96" textLength="8" font-weight="bold" class="background">%</text><text x="104" textLength="536" class="foreground">                                                                   </text></g><g id="g11"><text x="0" textLength="8" class="background"> </text><text x="8" textLength="88" class="foreground">           </text></g><g id="g12"><text x="0" textLength="24" font-weight="bold" class="color10">&#10140;  </text><text x="24" textLength="160" font-weight="bold" class="color14">terminal-screenshots</text><text x="184" textLength="456" class="foreground">                                                         </text></g></defs><g id="screen_view"><g><rect x="0" y="17" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="17"/></g><g><rect x="0" y="459" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="459"/></g><g><rect x="0" y="901" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="901"/></g><g><rect x="192" y="1343" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="1343"/></g><g><rect x="192" y="1785" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="1785"/></g><g><rect x="192" y="2227" width="448" height="17" class="foreground"/><use xlink:href="#g4" y="2227"/><rect x="0" y="2244" width="272" height="17" class="foreground"/><use xlink:href="#g5" y="2244"/></g><g><use xlink:href="#g6" y="2669"/><rect x="264" y="2686" width="8" height="17" class="foreground"/><use xlink:href="#g7" y="2686"/></g><g><use xlink:href="#g6" y="3111"/><use xlink:href="#g8" y="3128"/><rect x="0" y="3145" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="3145"/></g><g><use xlink:href="#g6" y="3553"/><use xlink:href="#g8" y="3570"/><rect x="96" y="3587" width="8" height="17" class="foreground"/><use xlink:href="#g9" y="3587"/></g><g><use xlink:href="#g6" y="3995"/><use xlink:href="#g8" y="4012"/><rect x="96" y="4029" width="8" height="17" class="foreground"/><use xlink:href="#g10" y="4029"/><rect x="0" y="4046" width="8" height="17" class="foreground"/><use xlink:href="#g11" y="4046"/></g><g><use xlink:href="#g6" y="4437"/><use xlink:href="#g8" y="4454"/><rect x="96" y="4471" width="8" height="17" class="foreground"/><use xlink:href="#g10" y="4471"/><rect x="192" y="4488" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="4488"/></g><g><use xlink:href="#g6" y="4879"/><use xlink:href="#g8" y="4896"/><rect x="96" y="4913" width="8" height="17" class="foreground"/><use xlink:href="#g10" y="4913"/><rect x="192" y="4930" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="4930"/></g><g><use xlink:href="#g6" y="5321"/><use xlink:href="#g8" y="5338"/><rect x="96" y="5355" width="8" height="17" class="foreground"/><use xlink:href="#g10" y="5355"/><use xlink:href="#g12" y="5372"/><rect x="0" y="5389" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="5389"/></g></g></svg>
+</svg>

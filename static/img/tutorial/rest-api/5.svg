@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="terminal" baseProfile="full" viewBox="0 0 640 410" width="640" version="1.1">
+    <defs>
+        <termtosvg:template_settings xmlns:termtosvg="https://github.com/nbedos/termtosvg">
+            <termtosvg:screen_geometry columns="80" rows="24"/>
+            <termtosvg:animation type="css"/>
+        </termtosvg:template_settings>
+        <style type="text/css" id="generated-style"><![CDATA[#screen {
+                font-family: 'DejaVu Sans Mono', monospace;
+                font-style: normal;
+                font-size: 14px;
+            }
+
+        text {
+            dominant-baseline: text-before-edge;
+            white-space: pre;
+        }
+    
+            :root {
+                --animation-duration: 3451ms;
+            }
+
+            @keyframes roll {
+                0.000%{transform:translateY(0px)}
+0.377%{transform:translateY(-442px)}
+0.406%{transform:translateY(-884px)}
+0.695%{transform:translateY(-1326px)}
+0.724%{transform:translateY(-1768px)}
+22.023%{transform:translateY(-2210px)}
+30.600%{transform:translateY(-2652px)}
+30.774%{transform:translateY(-3094px)}
+31.411%{transform:translateY(-3536px)}
+31.469%{transform:translateY(-3978px)}
+37.265%{transform:translateY(-4420px)}
+37.525%{transform:translateY(-4862px)}
+46.740%{transform:translateY(-5304px)}
+46.856%{transform:translateY(-5746px)}
+47.001%{transform:translateY(-6188px)}
+47.262%{transform:translateY(-6630px)}
+71.023%{transform:translateY(-7072px)}
+100.000%{transform:translateY(-7072px)}
+            }
+
+            #screen_view {
+                animation-duration: 3451ms;
+                animation-iteration-count:infinite;
+                animation-name:roll;
+                animation-timing-function: steps(1,end);
+                animation-fill-mode: forwards;
+            }
+        ]]></style>
+        <style type="text/css" id="user-style">
+            /* The colors defined below are the default 16 colors used for rendering text of the terminal. Adjust
+               them as needed.
+               PowerShell colors based on https://en.wikipedia.org/wiki/ANSI_escape_code#Colors */
+            .foreground {fill: #cccccc;}
+            .background {fill: #0c0c0c;}
+            .color0 {fill: #0c0c0c;}
+            .color1 {fill: #c50f1f;}
+            .color2 {fill: #13a10e;}
+            .color3 {fill: #c19c00;}
+            .color4 {fill: #0037da;}
+            .color5 {fill: #881798;}
+            .color6 {fill: #3a96dd;}
+            .color7 {fill: #cccccc;}
+            .color8 {fill: #767676;}
+            .color9 {fill: #e74856;}
+            .color10 {fill: #16c60c;}
+            .color11 {fill: #f9f1a5;}
+            .color12 {fill: #3b78ff;}
+            .color13 {fill: #b4009e;}
+            .color14 {fill: #61d6d6;}
+            .color15 {fill: #f2f2f2;}
+        </style>
+    </defs>
+    <svg id="screen" width="640" height="408" viewBox="0 0 640 408" preserveAspectRatio="xMidYMin slice">
+    <rect class="background" height="100%" width="100%" x="0" y="0"/><defs><g id="g1"><text x="0" textLength="8" class="background"> </text></g><g id="g2"><text x="0" textLength="8" class="background"> </text><text x="8" textLength="632" class="foreground">                                                                               </text></g><g id="g3"><text x="0" textLength="24" font-weight="bold" class="color10">&#10140;  </text><text x="24" textLength="160" font-weight="bold" class="color14">terminal-screenshots</text><text x="184" textLength="8" class="foreground"> </text><text x="192" textLength="8" class="background"> </text><text x="200" textLength="440" class="foreground">                                                       </text></g><g id="g4"><text x="0" textLength="24" font-weight="bold" class="color10">&#10140;  </text><text x="24" textLength="160" font-weight="bold" class="color14">terminal-screenshots</text><text x="184" textLength="8" class="foreground"> </text><text x="192" textLength="448" class="background">curl -X POST https://bikes.cyclic.app/api/user | jq .tok</text></g><g id="g5"><text x="0" textLength="48" class="background">en -r </text><text x="48" textLength="592" class="foreground">                                                                          </text></g><g id="g6"><text x="0" textLength="24" font-weight="bold" class="color10">&#10140;  </text><text x="24" textLength="160" font-weight="bold" class="color14">terminal-screenshots</text><text x="184" textLength="456" class="foreground"> curl -X POST https://bikes.cyclic.app/api/user | jq .tok</text></g><g id="g7"><text x="0" textLength="40" class="foreground">en -r</text><text x="40" textLength="8" class="background"> </text><text x="48" textLength="592" class="foreground">                                                                          </text></g><g id="g8"><text x="0" textLength="640" class="foreground">en -r                                                                           </text></g><g id="g9"><text x="0" textLength="264" class="foreground">  % Total    % Received % Xferd  </text><text x="264" textLength="8" class="background"> </text></g><g id="g10"><text x="0" textLength="632" class="foreground">  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current</text></g><g id="g11"><text x="0" textLength="616" class="foreground">                                 Dload  Upload   Total   Spent    Left  Speed</text></g><g id="g12"><text x="0" textLength="624" class="foreground">  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0</text><text x="624" textLength="8" class="background"> </text></g><g id="g13"><text x="0" textLength="568" class="foreground">  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:-</text><text x="568" textLength="8" class="background">-</text><text x="576" textLength="48" class="foreground">     0</text></g><g id="g14"><text x="0" textLength="552" class="foreground">100   140  100   140    0     0    264      0 --:--:-- --:--:-- --:--</text><text x="552" textLength="8" class="background">:</text><text x="560" textLength="64" class="foreground">--     0</text></g><g id="g15"><text x="0" textLength="624" class="foreground">100   140  100   140    0     0    264      0 --:--:-- --:--:-- --:--:--   264</text></g><g id="g16"><text x="0" textLength="640" class="foreground">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NjIyODAzNDIsImV4cCI6MTY2MjI4MjE</text></g><g id="g17"><text x="0" textLength="384" class="foreground">0Mn0.pMs568hop8afugbRdXzxxGKRwuc7YOPLL73ayMJx0rs</text></g><g id="g18"><text x="0" textLength="24" font-weight="bold" class="color10">&#10140;  </text><text x="24" textLength="160" font-weight="bold" class="color14">terminal-screenshots</text><text x="184" textLength="456" class="foreground">                                                         </text></g></defs><g id="screen_view"><g><rect x="0" y="17" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="17"/></g><g><rect x="0" y="459" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="459"/></g><g><rect x="0" y="901" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="901"/></g><g><rect x="192" y="1343" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="1343"/></g><g><rect x="192" y="1785" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="1785"/></g><g><rect x="192" y="2227" width="448" height="17" class="foreground"/><use xlink:href="#g4" y="2227"/><rect x="0" y="2244" width="48" height="17" class="foreground"/><use xlink:href="#g5" y="2244"/></g><g><use xlink:href="#g6" y="2669"/><rect x="40" y="2686" width="8" height="17" class="foreground"/><use xlink:href="#g7" y="2686"/></g><g><use xlink:href="#g6" y="3111"/><use xlink:href="#g8" y="3128"/><rect x="0" y="3145" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="3145"/></g><g><use xlink:href="#g6" y="3553"/><use xlink:href="#g8" y="3570"/><rect x="264" y="3587" width="8" height="17" class="foreground"/><use xlink:href="#g9" y="3587"/></g><g><use xlink:href="#g6" y="3995"/><use xlink:href="#g8" y="4012"/><use xlink:href="#g10" y="4029"/><use xlink:href="#g11" y="4046"/><rect x="624" y="4063" width="8" height="17" class="foreground"/><use xlink:href="#g12" y="4063"/></g><g><use xlink:href="#g6" y="4437"/><use xlink:href="#g8" y="4454"/><use xlink:href="#g10" y="4471"/><use xlink:href="#g11" y="4488"/><rect x="568" y="4505" width="8" height="17" class="foreground"/><use xlink:href="#g13" y="4505"/></g><g><use xlink:href="#g6" y="4879"/><use xlink:href="#g8" y="4896"/><use xlink:href="#g10" y="4913"/><use xlink:href="#g11" y="4930"/><rect x="624" y="4947" width="8" height="17" class="foreground"/><use xlink:href="#g12" y="4947"/></g><g><use xlink:href="#g6" y="5321"/><use xlink:href="#g8" y="5338"/><use xlink:href="#g10" y="5355"/><use xlink:href="#g11" y="5372"/><rect x="552" y="5389" width="8" height="17" class="foreground"/><use xlink:href="#g14" y="5389"/></g><g><use xlink:href="#g6" y="5763"/><use xlink:href="#g8" y="5780"/><use xlink:href="#g10" y="5797"/><use xlink:href="#g11" y="5814"/><use xlink:href="#g15" y="5831"/><use xlink:href="#g16" y="5848"/><use xlink:href="#g17" y="5865"/><rect x="0" y="5882" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="5882"/></g><g><use xlink:href="#g6" y="6205"/><use xlink:href="#g8" y="6222"/><use xlink:href="#g10" y="6239"/><use xlink:href="#g11" y="6256"/><use xlink:href="#g15" y="6273"/><use xlink:href="#g16" y="6290"/><use xlink:href="#g17" y="6307"/><rect x="0" y="6324" width="8" height="17" class="foreground"/><use xlink:href="#g2" y="6324"/></g><g><use xlink:href="#g6" y="6647"/><use xlink:href="#g8" y="6664"/><use xlink:href="#g10" y="6681"/><use xlink:href="#g11" y="6698"/><use xlink:href="#g15" y="6715"/><use xlink:href="#g16" y="6732"/><use xlink:href="#g17" y="6749"/><rect x="192" y="6766" width="8" height="17" class="foreground"/><use xlink:href="#g3" y="6766"/></g><g><use xlink:href="#g6" y="7089"/><use xlink:href="#g8" y="7106"/><use xlink:href="#g10" y="7123"/><use xlink:href="#g11" y="7140"/><use xlink:href="#g15" y="7157"/><use xlink:href="#g16" y="7174"/><use xlink:href="#g17" y="7191"/><use xlink:href="#g18" y="7208"/><rect x="0" y="7225" width="8" height="17" class="foreground"/><use xlink:href="#g1" y="7225"/></g></g></svg>
+</svg>
