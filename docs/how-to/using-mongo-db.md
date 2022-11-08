@@ -21,24 +21,26 @@ MongoDB is not an on-demand database and its connection mechanism is persistent,
 
 This behavior is possible in traditional long-running environments but occurs much less often  because the connection event happens only when the server is restarted. 
 
-:::caution  MongoClient connection in a serverless runtime
-It is very important to make sure the `MongoClient.connect` is finished before allowing your app to serve requests. 
-:::
-
-## Connection Example with Express.JS
 
 
 :::tip Listen for requests after mongo has connected
 MongoDB connections should be established before a server's `listen` method is called. To make sure this happens every time, call the `listen` method in the connect callback. 
 :::
 
-Requests will be held in the Cyclic runtime to make sure none are ever missed, even if the connection takes a moment.
+## Connection Example MongoClient
+
+:::caution  MongoClient connection in a serverless runtime
+It is very important to make sure the `MongoClient.connect` is finished before allowing your app to serve requests. 
+:::
+
+This example does not start listening to `PORT` until the DB connection is established. Requests will be held in the Cyclic runtime to make sure none are ever missed, even if the connection takes a moment.
 
 ```javascript
 
 const { MongoClient } = require('mongodb');
 const express = require('express');
 const app = express();
+const PORT = process.env.PORT || 3000
 
 const uri = process.env.MONGO_CONNECTION_STRING;
 const client = new MongoClient(uri);
@@ -55,9 +57,49 @@ app.get("/items/:my_item", async (req, res) => {
 client.connect(err => {
     if(err){ console.error(err); return false;}
     // connection to mongo is successful, listen for requests
-    app.listen(3000, () => {
+    app.listen(PORT, () => {
         console.log("listening for requests");
     })
 });
 
+```
+
+
+## Connection Example Mongoose
+
+:::caution  Mongoose connection in a serverless runtime
+It is very important to make sure that `mongoose.connect` is finished before allowing your app to serve requests. 
+:::
+
+This example does not start listening to `PORT` until the DB connection is established. Requests will be held in the Cyclic runtime to make sure none are ever missed, even if the connection takes a moment.
+
+
+```javascript
+const express = require('express')
+const mongoose = require('mongoose')
+
+const app = express()
+const PORT = process.env.PORT || 3000
+
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
+
+//Routes go here
+app.all('*', (req,res) => {
+    res.json({"every thing":"is awesome"})
+})
+
+//Connect to the database before listening
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("listening for requests");
+    })
+})
 ```
