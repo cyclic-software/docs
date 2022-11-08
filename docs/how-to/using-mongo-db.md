@@ -67,7 +67,7 @@ client.connect(err => {
 
 ## Connection Example Mongoose
 
-:::caution  MongoClient connection in a serverless runtime
+:::caution  Mongoose connection in a serverless runtime
 It is very important to make sure that `mongoose.connect` is finished before allowing your app to serve requests. 
 :::
 
