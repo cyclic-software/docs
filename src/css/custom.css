@@ -4,6 +4,15 @@
  * work well for content-centric websites.
  */
 
+.search-icon {
+  visibility: hidden;
+}
+
+.navbar__search-input {
+  background: var(--ifm-navbar-search-input-background-color) no-repeat .75rem center/1rem 1rem
+}
+
+
 /* You can override the default Infima variables here. */
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap');
 
@@ -40,7 +49,7 @@
     --shadow-mid:  0px 8px 16px rgba(0, 0, 0, 0.15);
     --shadow-far:  0px 16px 48px rgba(0, 0, 0, 0.176);
 
-    
+
 }
 .hero__title{
   font-size: 2.85em;
@@ -149,5 +158,5 @@ html[data-theme='dark'] {
   --ifm-menu-color-active: white;
   --ifm-footer-link-color: black;
   --ifm-color-scheme: dark;
-  --ifm-color-emphasis-300: var(--pink); 
-} 
+  --ifm-color-emphasis-300: var(--pink);
+}

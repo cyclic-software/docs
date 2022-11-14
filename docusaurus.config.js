@@ -17,6 +17,7 @@ const config = {
   projectName: 'docs', // Usually your repo name.
   trailingSlash: false, // https://docusaurus.io/docs/deployment#deploying-to-github-pages
   plugins: [
+    require.resolve('docusaurus-lunr-search'),
     './src/plugins/analytics/index.js',
     [
       '@docusaurus/plugin-client-redirects',
