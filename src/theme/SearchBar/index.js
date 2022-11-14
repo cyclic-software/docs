@@ -83,9 +83,9 @@ const Search = props => {
       <span
         aria-label="expand searchbar"
         role="button"
-        // className={classnames("search-icon", {
-        //   "search-icon-hidden": props.isSearchBarExpanded
-        // })}
+        className={classnames("search-icon", {
+          "search-icon-hidden": props.isSearchBarExpanded
+        })}
         onClick={toggleSearchIconClick}
         onKeyDown={toggleSearchIconClick}
         tabIndex={0}
