@@ -1,4 +1,4 @@
-.search-icon {
+/* .search-icon {
   background-image: var(--ifm-navbar-search-input-icon);
   height: auto;
   width: 24px;
@@ -8,11 +8,11 @@
   background-repeat: no-repeat;
   background-position: center;
   display: none;
-}
+} */
 
-.search-icon-hidden {
+/* .search-icon-hidden {
   visibility: hidden;
-}
+} */
 
 @media (max-width: 360px) {
   .search-bar {
@@ -26,8 +26,8 @@
     width: 9rem !important;
   }
 
-  .search-icon {
+  /* .search-icon {
     display: inline;
     vertical-align: sub;
-  }
+  } */
 }
