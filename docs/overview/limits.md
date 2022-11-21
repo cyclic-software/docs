@@ -6,25 +6,25 @@ sidebar_position: 5
 
 Cyclic apps have limits on capacity and usage. Some of these are inherited from the underlying hosting implementation and some are to protect the quality and stability of the service for all users.
 
-Hard limits cannot be changed. Soft limits may be changed but they require a conversation with us and depending on the use case possibly a paid plan: <hello@cyclic.sh>
+Hard limits cannot be changed. Soft limits may be changed but they require a conversation with us and depending on the use case possibly a paid plan: [chat with us on Discord](https://discord.cyclic.sh/support)
 
 ## Hard limits
 
+- Runtime Node.js 18.x, 16.x or 14.x.
 - 30s Maximum request time
 - 6MB Maximum HTTP request payload size
 - 6MB Maximum HTTP response payload size
 - No streaming of requests or responses
+- 240 MB final code bundle size per app
 - 512MB of ephemeral disk space mounted at `/tmp`
   - the data will persist between invokes but there is no guarantee that any further invocations will use the same instance and thus can not be relied on to store persistent data.
 - 5 TB single file size in S3 storage
 
 ## Soft limits
 
-- Runtime Node.js 16.x or 14.x
 - 5 API requests per second steady state (for free tier)
 - 10 API requests per second in a burst (for free tier)
 - 10 GB code and dependencies file size while building
-- 240 MB final code bundle size per app
 - 1 GB of S3 storage (for free tier)
 - 10 GB of S3 transfer out to internet (for free tier)
 - 1 GB of DynamoDB storage (for free tier)

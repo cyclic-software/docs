@@ -70,7 +70,7 @@ You can always link your own repository from github.
 
 :::note Language and runtime support
 
-Cyclic supports Node.js 16 and 14 runtimes for both building and running apps. Let us know if you are looking for another language or version: [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE) 
+Cyclic supports Node.js 18, 16 and 14 runtimes for both building and running apps. Let us know if you are looking for another language or version: [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE) 
 
 
 :::
