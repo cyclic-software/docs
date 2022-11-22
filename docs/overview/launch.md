@@ -11,9 +11,11 @@ There are no servers to start or stop. When your app gets more requests, Lambda 
 ## Start
 Cyclic runs nodejs apps and follows general conventions for running them. In order to identify how to start, a `package.json` file must exist in the root of the repo.
 
-:::tip  TLDR
-Cyclic launches your app by calling `npm start`
-:::
+<div style={{textAlign: 'center'}}>
+
+![Cyclic Server Launch Process](/img/diagram/server-launch.png "Cyclic Server Launch Process")
+
+</div>
 
 
 It is expected that the start command launches an application that listens to http requests on a TCP port.
