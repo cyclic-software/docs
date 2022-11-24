@@ -54,8 +54,10 @@ Many registrars support forwarding. A common practice is to register a `www` sub
 
 
 ## Set up with your domain registrar
-- [Cloudflare](/how-to/custom-domains/cloudflare)
-- [GoDaddy](/how-to/custom-domains/godaddy)
+### Cloudflare
+- [Custom Domains ⟫ Cloudflare](/how-to/custom-domains/cloudflare)
+### GoDaddy
+- [Custom Domains ⟫ GoDaddy](/how-to/custom-domains/godaddy)
 
 ## Additional support 
 Reach out to us for any additional support on  [<i className="fab fa-discord"></i>  Discord](https://discord.cyclic.sh/support)
