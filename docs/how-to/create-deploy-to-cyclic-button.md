@@ -1,6 +1,6 @@
 ---
 # slug: / # if you wanna drop straight into docs uncomment along with config change
-sidebar_position: 1
+sidebar_position: 2
 ---
 
 # Create 'Deploy to Cyclic' button

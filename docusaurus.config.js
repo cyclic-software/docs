@@ -27,6 +27,10 @@ const config = {
             to: '/',
             from: '/docs/intro',
           },
+          {
+            to: '/how-to/custom-domains/overview',
+            from: '/how-to/add-custom-domain-for-an-app',
+          },
         ],
         createRedirects(existingPath) {
           console.log(`Creating redirect to ${existingPath} from /docs${existingPath}`)
