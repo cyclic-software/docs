@@ -38,8 +38,8 @@ Unlike many other DNS services, Cloudflare supports CNAME records at the apex do
     4. Copy the _Record Value_ (from the instructions) into the _Target_ section in Cloudflare.
     5. The traffic can be proxied through Cloudflare for this record (if so, ensure that the encryption mode in SSL/TLS > Overview is set to full).
     6. <img src="/img/domains/cloudflare_3.png" width="650px"/>
-12. Press _Save_ to apply the record.
-13. In the Cyclic dashboard, refresh and wait for a certificate to be issued (up to 15 minutes but often much less). Once the certificate is issued, a message will appear saying `https://example.com has been validated and is active`.
+14. Press _Save_ to apply the record.
+15. In the Cyclic dashboard, refresh and wait for a certificate to be issued (up to 15 minutes but often much less). Once the certificate is issued, a message will appear saying `https://example.com has been validated and is active`.
 
 ## Subdomains
 
