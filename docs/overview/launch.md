@@ -12,8 +12,8 @@ There are no servers to start or stop. When your app gets more requests, Lambda 
 Cyclic runs nodejs apps and follows general conventions for running them. In order to identify how to start, a `package.json` file must exist in the root of the repo.
 
 <div style={{textAlign: 'center'}}>
-
-![Cyclic Server Launch Process](/img/diagram/server-launch.png "Cyclic Server Launch Process")
+ 
+ <img src="/img/diagram/server-launch.png" width="650px" style={{background:'white'}}/>
 
 </div>
 

@@ -52,3 +52,64 @@ NPM executes several [lifecycle scripts](https://docs.npmjs.com/cli/v8/using-npm
 - `postbuild`
 
 If you have particular needs try putting it into the appropriate lifecycle script. If you have needs beyond what these lifecycle scripts can provide or they don't solve for your use case send us an email: <i className="far fa-envelope"></i> hello@cyclic.sh or join us on [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE)
+
+### Advanced Options
+
+By default, the build process and the above lifecycle scripts
+-  run at the root of the repo 
+-  everything at the root of the repo is bundled
+   -  except files specified in `.npmignore`
+-  At runtime `npm run start` is used to execute the application
+
+It is possible to customize this process with _Advanced Options_
+- at the time of first deployment, in the _Advanced_ dropdown:
+  - 1. <img src="/img/build_options_1.png" width="350px"/>
+- in  _Environments_ tab > _Build Options_ of an app's dashboard
+  - 1. <img src="/img/build_options_2.png" width="650px"/>
+
+#### **Root Path**
+The root path specifies which directory Cyclic will run build scripts. 
+For example for a repository structured as:
+```
+├──/frontend
+|   ├── ...
+|   └── package.json
+├──/backend
+|   └── ...
+└──package.json
+```
+
+To have cyclic run `npm run build` in the `frontend` directory, configure "Root Path" as `/frontend`.
+
+#### **Output Path**
+The contents of the _Output Path_ are bundled for deployment. For example if at the end of the above build, a build directory is generated inside `/frontend`:
+```
+├──/frontend
+|   ├── build
+|   |   ├── index.html
+|   |   └── package.json
+|   ├── ...
+|   └── package.json
+├──/backend
+|   └── ...
+└──package.json
+```
+To make sure that the _build output_ are the only files to be bundled, specify `/frontend/build` as the _Output Path_.
+
+
+:::caution `npm run start`
+**Unless the output is a static site**, the output directory should still contain a package.json with a valid start script for run time. 
+
+Read more about the [launch procedure](/overview/launch#start).
+:::
+
+#### **Static Site**
+Check this toggle if the contents of the output directory are only static files and do not contain a server instance. This applies to build outputs of static site framework builds such as React, Vue, Angular, etc.
+
+
+
+
+
+
+
+
