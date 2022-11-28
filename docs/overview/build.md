@@ -94,11 +94,13 @@ The contents of the _Output Path_ are bundled for deployment. For example if at 
 |   └── ...
 └──package.json
 ```
-To make sure that only the build output is the only thing being bundled, specify `/frontend/build` as the _Output Path_.
+To make sure that the _build output_ are the only files to be bundled, specify `/frontend/build` as the _Output Path_.
 
 
 :::caution `npm run start`
 **Unless the output is a static site**, the output directory should still contain a package.json with a valid start script for run time. 
+
+Read more about the [launch procedure](/overview/launch#start).
 :::
 
 #### **Static Site**
