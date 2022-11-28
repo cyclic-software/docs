@@ -51,4 +51,9 @@ NPM executes several [lifecycle scripts](https://docs.npmjs.com/cli/v8/using-npm
 - `build`
 - `postbuild`
 
+
+## Advanced Options
+
+
+
 If you have particular needs try putting it into the appropriate lifecycle script. If you have needs beyond what these lifecycle scripts can provide or they don't solve for your use case send us an email: <i className="far fa-envelope"></i> hello@cyclic.sh or join us on [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE)
