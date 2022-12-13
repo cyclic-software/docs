@@ -15,7 +15,7 @@ Basic session implementations are usually built with the assumption that the ser
 :::tip Database backed sessions
 Best practices for stateful environments will dictate that sessions should be backed up to a database. With serverless, storing sessions in a database is a must. There are many libraries and session extensions that enable this for a variety of databases.
 
-Check out the linked example for how it can be done with Cyclic's included database >> [DynamoDB](https://github.com/cyclic-software/starter-user-app/blob/8955eeeab73a37b3a4f0f813f13f2322ca16bb14/src/index.js#L39)
+ Check out our npm package that will let you use apps' built-in AWS DynamoDB database for session storage. >> [@cyclic.sh/session-store](https://www.npmjs.com/package/@cyclic.sh/session-store)
 :::
 
 ### File Upload
