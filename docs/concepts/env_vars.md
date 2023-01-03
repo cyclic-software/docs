@@ -83,7 +83,7 @@ Environment variables that are set for the runtime are also accessible to the sc
 :::caution  Support for variables in first deployment
 Support for setting environment variables before a first deployment is coming soon.
 
-Currently, as a workaround - consider modifying your build step to pass. This will allow you to use the app dashboard to add variables. Once added, revert your build scripts to their original state. Variables be available for all subsequent builds.
+Currently, as a workaround - consider modifying your build step to pass. This will allow you to use the app dashboard to add variables. Once added, revert your build scripts to their original state. Variables will be available for all subsequent builds.
 
 :::
 
