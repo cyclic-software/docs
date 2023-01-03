@@ -24,9 +24,9 @@ When developing and interacting with AWS on local, use credentials provided on t
 The credentials are temporary and expire after 60 minutes. New credentials can be retrieved by reloading the page.
 :::
 
-### Using DynamoDB with the `cyclic-dynamodb` Package
+### Using DynamoDB with the `@cyclic.sh/dynamodb` Package
 
-[GitHub](https://github.com/cyclic-software/db-sdk) | [NPM](https://www.npmjs.com/package/cyclic-dynamodb)
+[GitHub](https://github.com/cyclic-software/dynamodb) | [NPM](https://www.npmjs.com/package/@cyclic.sh/dynamodb)
 
 The sdk simplifies the DynamoDB interface and enables collection organization of records, queries and data scheme discovery among other features.
 
