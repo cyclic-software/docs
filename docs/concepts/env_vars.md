@@ -90,9 +90,9 @@ Currently, as a workaround - consider modifying your build step to pass. This wi
 
 ## Reserved Environment Variables
 
-Cyclic apps run on AWS and have pre-configured AWS credentials for access to the built-in S3 Storage and DynamoDB Database. 
+Cyclic apps run on AWS and have pre-configured AWS credentials for access to the built-in S3 storage and DynamoDB database. 
 
-For this Cyclic reserves the following environment variables:
+For this, Cyclic reserves the following environment variables:
 ```
 AWS_REGION
 AWS_ACCESS_KEY_ID
