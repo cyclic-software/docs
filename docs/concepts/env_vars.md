@@ -44,6 +44,12 @@ Cyclic stores environment variables securely by encrypting them at rest, they ar
 Changes to environment variables are applied immediately to running apps **without a re-deployment**.
 :::
 
+All apps are preset with the following variables:
+- `CYCLIC_URL` - the default url of the app
+- `CYCLIC_DB` - the name of the AWS DynamoDB table available to the app
+- `CYCLIC_BUCKET_NAME` - the name of the AWS S3 Bucket available to the app
+- `CYCLIC_APP_ID` - the app environments unique id 
+
 There are two ways to set up variables:
 #### Key-Value Editor:
 
