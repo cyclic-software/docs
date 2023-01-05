@@ -27,6 +27,7 @@ On local, there are many ways to get environment variables into your application
        }
     ...
     ```
+      - tip: as of node 18, `node --watch` can be used to watch for file changes in place of `nodemon`
 - dotenv - <a href="https://www.npmjs.com/package/dotenv" target="_blank">https://www.npmjs.com/package/dotenv</a>
   - sets variables from a `.env` file with:
     ```js
