@@ -53,19 +53,19 @@ NPM executes several [lifecycle scripts](https://docs.npmjs.com/cli/v8/using-npm
 
 If you have particular needs try putting it into the appropriate lifecycle script. If you have needs beyond what these lifecycle scripts can provide or they don't solve for your use case send us an email: <i className="far fa-envelope"></i> hello@cyclic.sh or join us on [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE)
 
-### Advanced Options
+### Advanced Build Options
 
-By default, the build process and the above lifecycle scripts
+By default, the build process and the above lifecycle scripts:
 -  run at the root of the repo 
 -  everything at the root of the repo is bundled
    -  except files specified in `.npmignore`
 -  At runtime `npm run start` is used to execute the application
 
-It is possible to customize this process with _Advanced Options_
-- at the time of first deployment, in the _Advanced_ dropdown:
-  - 1. <img src="/img/build_options_1.png" width="350px"/>
+It is possible to customize this process with _Advanced Build Options_:
+- at the time of first deployment, in the _Advanced_ dropdown
+  - <img src="/img/build-options/advancedWNode.png" width="350px"/>
 - in  _Environments_ tab > _Build Options_ of an app's dashboard
-  - 1. <img src="/img/build_options_2.png" width="650px"/>
+  - <img src="/img/build-options/buildwithnode2.png" width="650px"/>
 
 #### **Root Path**
 The root path specifies which directory Cyclic will run build scripts. 
@@ -104,12 +104,16 @@ Read more about the [launch procedure](/overview/launch#start).
 :::
 
 #### **Static Site**
-Check this toggle if the contents of the output directory are only static files and do not contain a server instance. This applies to build outputs of static site framework builds such as React, Vue, Angular, etc.
+Check this toggle if the contents of the output directory are only static files and do not contain a server instance. 
+This applies to build outputs of static site framework builds such as React, Vue, Angular, etc.
+
+This video will give you an example of how to deploy a static site without a backend on Cyclic:
+<iframe width="350" height="230" src="https://www.youtube.com/embed/-B98D6x8mBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
-
-
-
+#### **Runtime**
+Newly deployed Cyclic apps will use Node.js v18.12.1 by default. If you are using a framework or library that requires an older version of Node.js to function properly, you may adjust it here.
+<img src="/img/build-options/runtime.png" width="350px"/>
 
 
 
