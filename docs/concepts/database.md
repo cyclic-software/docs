@@ -7,7 +7,7 @@ sidebar_position: 4
 Apps have access to a pre-configured AWS DynamoDB Table. External databases can be integrated by setting their connection strings as environment variables.
 
 
-## DynamoDB (Preview)
+## DynamoDB
 An enhanced single-table database built on the fast and globally scalable DynamoDB.
 On top of DynamoDB NoSQL functionality and table there is a number of additional resources that enable features including:
 - Simple Key-Value inspired SDK
