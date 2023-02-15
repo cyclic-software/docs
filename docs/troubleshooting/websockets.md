@@ -15,7 +15,7 @@ Websockets require a persistent bi-directional link. In most websockets implemen
 ## Possible Alternatives
 
 There are several realtime API services that you might use to create a similar effect to websockets. 
-As a starting point, this ones on this list are creditable and well-supported:
+As a starting point, the ones on this list are creditable and well-supported:
 - [Ably](https://ably.com/)
 - [Pusher](https://pusher.com/)
 - [PubNub](https://www.pubnub.com/)
