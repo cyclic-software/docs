@@ -4,7 +4,7 @@
 
 # Common Error Codes
 
-No list of common error codes is exhaustive, but the follow should help you quickly find an error based on type and navigate to relevant documentation which may help you resolve it.
+No list of common error codes is exhaustive, but the following should help you quickly find an error based on type and navigate to relevant documentation which may help you resolve it.
 
 ### Build Options Errors
 
