@@ -2,13 +2,13 @@
 sidebar_position: 4
 ---
 
-# Transactions
+# Network
 
-We think of a *transaction* as an encapsulation of events that compose a single unit of service for a web application. 
+We think of a *network transaction* as an encapsulation of events that compose a single unit of service for a web application. 
 
 These events consist of an entire end-to-end lifecycle of a single request handled by an app. The Cyclic runtime instruments applications with tooling that captures, measures and aggregates network requests, responses, application logs, errors and exceptions to provide full visibility for each call. 
 
-## Transaction components
+## Network Transaction components
 Each transaction is composed of:
   - The request sent by the caller:
     - url
@@ -28,9 +28,9 @@ Each transaction is composed of:
     - headers
     - payload body
 
-## Using transactions for analysis and debugging
-In addition to the Cyclic realtime log stream, transactions are a great way to understand what is happening in your application.
-Transactions are available as a tab on an application view; each request to an app is presented as a request-response pair.
+## Using network transactions for analysis and debugging
+In addition to the Cyclic realtime log stream, network transactions are a great way to understand what is happening in your application.
+Network is available as a tab on an application view; each request to an app is presented as a request-response pair.
 ### Request
 Given a sample request made via `curl`
   ```
@@ -58,7 +58,7 @@ Cyclic presents the timeline of the logs, errors and exceptions in context of th
   
 
 ## Limitations
-- Cyclic currently allows viewing transactions from the last 15 minutes
+- Cyclic currently allows viewing network transactions from the last 7 days
 - Keyword and date filters are not yet available
 
 

@@ -13,7 +13,7 @@ After first deploying your app, you visit the url and see:
 }
 ```
 
-You then investigate further by going to the `Logs` or `Transactions` tab of your app and see something like:
+You then investigate further by going to the `Logs` or `Network` tab of your app and see something like:
 
 ```
 2021-12-20 08:37:31: sh: nodemon: command not found
