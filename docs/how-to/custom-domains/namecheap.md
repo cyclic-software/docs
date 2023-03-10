@@ -43,4 +43,8 @@ This should complete the pointing of your custom URL to Namecheap. Bear in mind,
 3. If you would like to add additional URL redirects, follow the same pattern as above.
    1. ![](/static/img/domains/httpredirect.png)
 
+### Checking your success
 
+In Cyclic, you can check if you have completed the steps correctly.
+Under the DNS record there is a status box that will give you current information about your domain and SSL certificate. If you have an uncertainty, be sure to check here first.
+![](/static/img/domains/successSSL.png)
