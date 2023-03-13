@@ -48,4 +48,4 @@ This should complete the pointing of your custom URL to from Namecheap to your a
 
 In Cyclic, you can check if you have completed the steps correctly.
 Below the pink DNS record section, there is a status box that will give you current information about your domain and SSL certificate. If you are uncertain, be sure to check here first.
-![](/img/domains/successSSL.png)
+![](/img/domains/success.png)
