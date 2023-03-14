@@ -42,7 +42,6 @@ This should complete the pointing of your custom URL to from Namecheap to your a
 2. We recommend the ```@``` Host redirect for all users. Include the full URL from your Cyclic DNS record request as the Value. Failure to include ```https://``` could cause your redirect to fail.
       ![](/img/domains/URLredirect1.png)
 3. If you would like to add additional URL redirects, follow the same pattern as above.
-      ![](/img/domains/httpredirect.png)
 
 ### Checking your success
 
