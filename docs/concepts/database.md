@@ -9,7 +9,7 @@ Apps have access to a pre-configured AWS DynamoDB Table. External databases can 
 
 ## DynamoDB
 An enhanced single-table database built on the fast and globally scalable DynamoDB.
-On top of DynamoDB NoSQL functionality and table there is a number of additional resources that enable features including:
+On top of DynamoDB NoSQL functionality and table, there are a number of additional resources that enable features including:
 - Simple Key-Value inspired SDK
 - Write-Time Indexing
 - Flexible Queries
@@ -17,7 +17,7 @@ On top of DynamoDB NoSQL functionality and table there is a number of additional
 
 :::tip  Local Dev 
 When deployed Cyclic apps are directly integrated with AWS resources with no need for any additional config.
-When developing and interacting with AWS on local, use credentials provided on the `Data / Storage` tab of an app.
+When developing and interacting with AWS locally, use credentials provided on the `Data / Storage` tab of an app.
 
 ![Transaction Request](/img/cyclic/creds.png "Transaction Request")
 
@@ -28,7 +28,7 @@ The credentials are temporary and expire after 60 minutes. New credentials can b
 
 [GitHub](https://github.com/cyclic-software/dynamodb) | [NPM](https://www.npmjs.com/package/@cyclic.sh/dynamodb)
 
-The sdk simplifies the DynamoDB interface and enables collection organization of records, queries and data scheme discovery among other features.
+The sdk simplifies the DynamoDB interface and enables collection organization of records, queries, and data scheme discovery among other features.
 
 ### Collection Items
 The package organizes items into the following structure:
@@ -49,7 +49,7 @@ The package organizes items into the following structure:
 ```
 The `key` should be used to uniquely identify an item and its set of child items.
 
-`$index` is a list of `props` by which them item will be indexed. key-value pairs that have been indexed can be used to retrieve or query items with greater performance.
+`$index` is a list of `props` by which the item will be indexed. key-value pairs that have been indexed can be used to retrieve or query items with greater performance.
 
 ```js
 // example.js
@@ -96,9 +96,9 @@ let mikes_work = await users.item('mike').fragment('work').get()
 ```
 ## Using DynamoDB Directly
 
-If you choose not to use the open source `cyclic-dynamodb` package, apps have CRUD access to the table and can make use of the table's generic raw schema directly. 
+If you choose not to use the open-source `cyclic-dynamodb` package, apps have CRUD access to the table and can make use of the table's generic raw schema directly. 
 
-When using the table directly with AWS DynamoDB SDK or other third party SDKs, the following fields and indexes can be used:
+When using the table directly with AWS DynamoDB SDK or other third-party SDKs, the following fields and indexes can be used:
 
 | IndexName | Partition Key | Range Key     | Projected Fields     |
 |-----------|---------------|---------------|----------------------|
