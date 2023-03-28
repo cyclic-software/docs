@@ -11,7 +11,7 @@ Follow these steps to deploy a private repository on your Cyclic account.
 2. Select the `Link your own` tab
 3. Type the private repository's name (or portion of it)
 4. Click `Add a private repo...`
-5. In the GitHub pop up add Cyclic app to the private repository
+5. In the GitHub pop up, add the Cyclic app to the private repository
 6. Finish deploying the private repository like a public repository.
 
 ## Add a private repo...
