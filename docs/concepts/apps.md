@@ -13,7 +13,7 @@ When deployed, they service requests from browsers, servers, other apps, or anyt
 
 ## Infrastructure
 
-Cyclic manages the provisioning, upgrades, instrumentation, configuration and cloud best practices to set your code up with scalable, fault tolerant, serverless infrastructure.
+Cyclic manages the provisioning, upgrades, instrumentation, configuration and cloud best practices to set your code up with scalable, fault-tolerant, serverless infrastructure.
 - **AWS Cloud**: App infrastructure is provisioned and managed as infrastructure as code (IaC) in <a href="https://aws.amazon.com/cloudformation/" target="_blank">AWS CloudFormation</a>
 - **Serverless**: a cloud execution model that enables your apps to be highly scalable, they can process single requests or millions of requests on demand without having to change logic, manage clusters, tune parameters or deploy anything.
 - **Fault Tolerant**: Apps have the capability to be provisioned with <a href="https://aws.amazon.com/blogs/architecture/disaster-recovery-dr-architecture-on-aws-part-iv-multi-site-active-active/" target="_blank">active-active disaster recovery strategy</a> in all AWS regions. This means that applications can be made resilient to severe outages, limiting impact to end-users with zero downtime.
@@ -36,4 +36,4 @@ The repos must contain a `package.json` file to inform the build and runtime pro
 ### Build
 Cyclic follows the instructions provided in `package.json` scripts included in your code. The build environment is transient, all build files/memory is removed after the build. While built apps are [limited](../overview/limits.md) to 250 MB, the build environment can support up to 10GB including dev dependencies.
 
-Cyclic will prune any devDependencies from the build directory before trying to package. Therefore move any frameworks or modules that are only needed at build time into the `devDependencies` section of your `package.json`.
+Cyclic will prune any devDependencies from the build directory before trying to package. Therefore, move any frameworks or modules that are only needed at build time into the `devDependencies` section of your `package.json`.
