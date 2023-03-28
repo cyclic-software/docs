@@ -11,12 +11,12 @@ Environment variables are key-value pairs defined to match a specific applicatio
 ## Setting Variables
 ### Local
 :::danger Do not put your `.env` file in GitHub
-Especially if your repo is public. Make sure to add `.env` file to your `.gitignore`. If you accidentally push your `.env` file to GitHub, its contents will be permanently in the repository's history - **even if you delete it afterwards**
+Especially if your repo is public. Make sure to add `.env` to your `.gitignore` file. If you accidentally push your `.env` file to GitHub, its contents will be permanently in the repository's history - **even if you delete it afterwards**
 :::
 
 On local, there are many ways to get environment variables into your application. Refer to these popular packages for more info:
 - env-cmd - <a href="https://www.npmjs.com/package/env-cmd" target="_blank">https://www.npmjs.com/package/env-cmd</a> (recommended)
-  - can be used in package.json scripts to inject variables from `.env` without changes to application code. For example: 
+  - can be used in package.json scripts to inject variables from `.env` without changes to the application code. For example: 
     - in `dev` - load local env vars from `.env` and watch for file changes
     - when deployed, Cyclic runs `start`. env-cmd is not needed since variables are available automatically. This way `env-cmd` only has to be a `devDependency` 
     ```js
@@ -49,7 +49,7 @@ All apps are preset with the following variables:
 - `CYCLIC_URL` - the default url of the app
 - `CYCLIC_DB` - the name of the AWS DynamoDB table available to the app
 - `CYCLIC_BUCKET_NAME` - the name of the AWS S3 Bucket available to the app
-- `CYCLIC_APP_ID` - the app environments unique id 
+- `CYCLIC_APP_ID` - the app environment's unique id 
 
 There are two ways to set up variables:
 #### Key-Value Editor:
@@ -81,7 +81,7 @@ Application code on the **backend** has access to variables via `process.env` du
 ### Build
 Environment variables that are set for the runtime are also accessible to the scripts defined in `package.json`
 
-:::caution  Support for variables in first deployment
+:::caution  Support for variables in the first deployment
 Support for setting environment variables before a first deployment is coming soon.
 
 Currently, as a workaround - consider modifying your build step to pass. This will allow you to use the app dashboard to add variables. Once added, revert your build scripts to their original state. Variables will be available for all subsequent builds.
@@ -101,7 +101,7 @@ AWS_SECRET_KEY
 AWS_SECRET_ACCESS_KEY
 ```
 
-If you are using resources in your own AWS account and would like you add your own credentials.
+If you are using resources in your own AWS account and would like to add your own credentials.
 Consider using alternative environment variables and setting the credentials on the SDK clients directly:
 
 ```
