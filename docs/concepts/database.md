@@ -100,11 +100,11 @@ If you choose not to use the open source `cyclic-dynamodb` package, apps have CR
 
 When using the table directly with AWS DynamoDB SDK or other third party SDKs, the following fields and indexes can be used:
 
-| IndexName      | Partition Key  | Range Key          | Projected Fields |
-| -----------   | -----------     | ----               |  ----   |
-| primary       | `pk`            |   `sk`             | all |
-| keys_gsi      | `keys_gsi`      |   `keys_gsi_sk`   | `pk`,`sk`, `gsi_prj` |
-| gsi_prj       | `gsi_prj`       |   -               | `prj` |
+| IndexName | Partition Key | Range Key     | Projected Fields     |
+|-----------|---------------|---------------|----------------------|
+| primary   | `pk`          | `sk`          | all                  |
+| keys_gsi  | `keys_gsi`    | `keys_gsi_sk` | `pk`,`sk`, `gsi_prj` |
+| gsi_prj   | `gsi_prj`     | -             | `prj`                |
 
 
 The table also has several attribute names that are reserved and should not be used directly:
