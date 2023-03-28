@@ -30,7 +30,7 @@ Cyclic exposes many features of AWS S3 directly to your apps. To handle uploads 
 The `/tmp` directory can be written to. But it should only be used for intermediary processing. Either upload the result to an object store or download to the client. An example use case for `/tmp` may be to create thumbnail images, store them in /tmp, and then upload them to S3.
 
 ### db.json
-A popular pattern with many tutorials is to simulate a database by reading and writing records to and from a `db.json` file. In traditional server environments, this pattern may work for some *very* low volume of read's and write's, it will very quickly become vulnerable to race conditions and should be avoided even in those environments.
+A popular pattern with many tutorials is to simulate a database by reading and writing records to and from a `db.json` file. In traditional server environments, this pattern may work for some *very* low volume of reads and writes, it will very quickly become vulnerable to race conditions and should be avoided even in those environments.
 
 While it is possible to write to the `/tmp` directory in a stateless runtime, the `/tmp` directory is not shared between multiple instances of the application and is lost after each shutdown. This makes the same issues that arise in a stateful environment immediately apparent. 
 
