@@ -6,7 +6,7 @@ sidebar_position: 4
 
 We think of a *transaction* as an encapsulation of events that compose a single unit of service for a web application. 
 
-These events consist of an entire end-to-end lifecycle of a single request handled by an app. The Cyclic runtime instruments applications with tooling that captures, measures and aggregates network requests, responses, application logs, errors and exceptions to provide full visibility for each call. 
+These events consist of an entire end-to-end lifecycle of a single request handled by an app. The Cyclic runtime instruments applications with tooling that captures, measures, and aggregates network requests, responses, application logs, errors, and exceptions to provide full visibility for each call. 
 
 ## Transaction components
 Each transaction is composed of:
@@ -19,9 +19,9 @@ Each transaction is composed of:
     - source ip
     - user agent
   - App initialization output
-  - App logging output to console or from any loggers:
+  - App logging output to the console or from any loggers:
     - log payload
-    - type of io `stdout`,`stderr`
+    - type of io `stdout`, `stderr`
   - Exceptions and runtime errors
   - The response from your application:
     - http status code
@@ -53,7 +53,7 @@ On the back end, we had a single api handler at the root `/` route implemented a
       return res.send('ok')
     })
   ```
-Cyclic presents the timeline of the logs, errors and exceptions in context of the request and response in an easy to read, syntax highlighted timeline as:
+Cyclic presents the timeline of the logs, errors, and exceptions in the context of the request and response in an easy-to-read and syntax-highlighted timeline as:
   ![Transaction Timeline](/img/transactions/history.png "Transaction Timeline")
   
 
