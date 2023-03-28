@@ -6,7 +6,7 @@ sidebar_position: 5
 
 Cyclic apps have limits on capacity and usage. Some of these are inherited from the underlying hosting implementation and some are to protect the quality and stability of the service for all users.
 
-Hard limits cannot be changed. Soft limits may be changed but they require a conversation with us and depending on the use case possibly a paid plan: [chat with us on Discord](https://discord.cyclic.sh/support)
+Hard limits cannot be changed. Soft limits may be changed, but they require a conversation with us and, depending on the use case, possibly a paid plan: [chat with us on Discord](https://discord.cyclic.sh/support)
 
 ## Hard limits
 
@@ -17,7 +17,7 @@ Hard limits cannot be changed. Soft limits may be changed but they require a con
 - No streaming of requests or responses
 - 240 MB final code bundle size per app
 - 512MB of ephemeral disk space mounted at `/tmp`
-  - the data will persist between invokes but there is no guarantee that any further invocations will use the same instance and thus can not be relied on to store persistent data.
+  - the data will persist between invokes, but there is no guarantee that any further invocations will use the same instance and thus can not be relied on to store persistent data.
 - 5 TB single file size in S3 storage
 
 ## Soft limits
