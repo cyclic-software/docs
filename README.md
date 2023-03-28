@@ -26,4 +26,4 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-A github action is configured to deploy on any push/merge to main.
+A GitHub action is configured to deploy on any push/merge to main.
