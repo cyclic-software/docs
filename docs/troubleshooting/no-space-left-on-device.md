@@ -8,7 +8,7 @@ Cyclic builds and deploys apps using serverless technologies. The build environm
 The built bundle may not exceed 240 MB.
 
 ## Bundle limit
-The size of the packaged code that is deployed is limited to 240 MB. By default any generated files and the entire repo contents are packaged. 
+The size of the packaged code that is deployed is limited to 240 MB. By default, any generated files and the entire repo contents are packaged. 
 
 Several SPA frameworks (including React) by default include build time tools in standard generated `dependencies`. If you move these to `devDependencies` you will most likely resolve any space issues.
 
@@ -22,7 +22,7 @@ Several SPA frameworks (including React) by default include build time tools in 
 If you get an error in the deploy log that says `production dependencies cannot exceed 240MB`, here is how to fix.
 
 ### Solution
-Currently the code size is limited to 240MB. Fortunately, most projects are can to be optimized by appropriately organizing dependencies and excluding unnecessary files from the build. 
+Currently, the code size is limited to 240MB. Fortunately, most projects are can to be optimized by appropriately organizing dependencies and excluding unnecessary files from the build. 
 - remove any unused dependencies
 - move any dev dependencies to `devDependencies`
 - add file patterns to an `.npmignore` file to exclude them from the build
@@ -34,7 +34,7 @@ Read more about <a href="https://www.atlassian.com/git/tutorials/saving-changes/
 ## Build environment limit
 The build environment has 10 GB disk and 10 GB RAM available for temporary use to run installation and build `npm` scripts defined in the repos `package.json`.
 ## Error message
-If your space requirements exceed these amounts, while running the install or step you will see a `No space left on device` error.
+If your space requirements exceed these amounts, while running the installation or step you will see a `No space left on device` error.
 
 ```code
 fatal: cannot create directory at 'some_large_file.txt': No space left on device
