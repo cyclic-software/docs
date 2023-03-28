@@ -11,11 +11,11 @@ Namecheap is one of the most popular domain registrars but can trip up first-tim
 1. Navigate to the Advanced tab in the application you want to link your custom domain to. 
 2. Enter your domain name in the "Domain Name" field, ex. ```www.mydomainiscool.com```
    ![](/img/domains/customdomain.png)
-1. Even if your domain was purchased as an apex domain (without a ```www``` prefix) include the ```www``` prefix to make sure it points correctly.
-2. Within a minute, you can refresh the page, and your records will be available below.
-3. If you need to cancel and restart for any reason, just hit the "Cancel Request" button.
+3. Even if your domain was purchased as an apex domain (without a ```www``` prefix) include the ```www``` prefix to make sure it points correctly.
+4. Within a minute, you can refresh the page, and your records will be available below.
+5. If you need to cancel and restart for any reason, just hit the "Cancel Request" button.
    ![](/img/domains/cancelrequest.png)
-4. Once Cyclic has issued a DNS record for your domain, you will see a pink highlighted box appear below. There are two sections within this box: Validation Record and Routing Record.
+6. Once Cyclic has issued a DNS record for your domain, you will see a pink highlighted box appear below. There are two sections within this box: Validation Record and Routing Record.
    ![](/img/domains/dnsrecords.png)
 
 Follow the instructions below to use this information to connect to Namecheap.
