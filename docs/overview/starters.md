@@ -78,7 +78,7 @@ If you run into issues or have questions on the starters please ask in the suppo
 
 ### Discord Bot
 
-- Discord Bot starter DM's and Slash commands
+- Discord Bot starter DMs and Slash commands
 - Source: https://github.com/cyclic-software/starter-discord-bot
 
 [![Deploy](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-discord-bot)
