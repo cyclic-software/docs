@@ -6,9 +6,9 @@ sidebar_position: 3
 # Using MongoDB
 
 ## Atlas Configuration
-Cyclic apps do not have static IPs for white listing with Atlas and Cyclic does not offer private networking on free tier.
+Cyclic apps do not have static IPs for whitelisting with Atlas and Cyclic does not offer private networking on the free tier.
 
-Setting `0.0.0.0/0` will enable access to your service cluster from all IPs and make it possible for services to authenticate via connection string.
+Setting `0.0.0.0/0` will enable access to your service cluster from all IPs and make it possible for services to authenticate via a connection string.
 
 
 ## Connections in a Serverless Runtime
@@ -17,9 +17,9 @@ MongoDB is not an on-demand database and its connection mechanism is persistent,
 
 - Serverless environments are restarted frequently, often right when a request is made. 
 - A route handler may already be trying to serve the request before the `MongoClient.connect` method finishes connecting.
--  This may result in a failure to respond from the server. 
+- This may result in a failure to respond from the server. 
 
-This behavior is possible in traditional long-running environments but occurs much less often  because the connection event happens only when the server is restarted. 
+This behavior is possible in traditional long-running environments but occurs much less often because the connection event happens only when the server is restarted. 
 
 
 
