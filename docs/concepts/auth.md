@@ -62,7 +62,7 @@ When enabled, Auth is required on requests whenever a certain URL pattern is mat
 ## Example
 
 - Enable auth for your app as explained above.
-- Encode user name and password using online base64 encoder or bash: `echo -n 'username:password' | base64`
+- Encode username and password using online base64 encoder or bash: `echo -n 'username:password' | base64`
 - Use base64 encoded string in Authorization header:
 ```shell
 curl -H "Authorization: Basic $(echo -n 'username:password' | base64)" https://app-url.cyclic.app
