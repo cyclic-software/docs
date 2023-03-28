@@ -34,7 +34,7 @@ Follow the instructions below to use this information to connect to Namecheap.
    4. Add a second CNAME record where the Host is ```www``` and the Value is your Cyclic generated link.
           ![](/img/domains/cname2.png)
 
-This should complete the pointing of your custom URL to from Namecheap to your application on Cyclic. Bear in mind, it may take up to 48 hours for it to propagate through servers everywhere.
+This should complete the pointing of your custom URL from Namecheap to your application on Cyclic. Bear in mind, it may take up to 48 hours for it to propagate through servers everywhere.
 
 ### Redirects
 
