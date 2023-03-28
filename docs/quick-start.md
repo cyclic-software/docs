@@ -23,7 +23,7 @@ Go to the `Link Your Own` tab on the deployment page. This will let you chose a 
 ---------
 Here is what you need to know:
 
-1. Cyclic supports **nodejs** apps that live in **github repos**
+1. Cyclic supports **nodejs** apps that live in **GitHub repos**
 2. A `package.json` must exist at the root of the repo
 3. On every deployment Cyclic will run `npm install` for production and will prune dev dependencies 
    - Cyclic will also run `npm run build` if a build script has been defined in the `package.json`
