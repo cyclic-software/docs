@@ -34,11 +34,11 @@ No list of common error codes is exhaustive, but the following should help you q
 ### Other Errors
 
 - __Cannot find module " "__ - If Cyclic is unable to find or run a specific module, it may not be available to Cyclic because of errors in the code or because it is not supported.
-  - Ex: CORS - Make sure CORS is installed and required if you are receiving this message in regards to CORS.
+  - Ex: CORS - Make sure CORS is installed and required if you are receiving this message regarding CORS.
   - EX: Websockets - If you see "Cannot Find Modules 'ws'", it is in reference to WebSockets. Read more about Cyclic and [Websockets here.](/docs/troubleshooting/websockets.md)
 - __npm ERR! gyp ERR!__ - Node-gyp requires Python. Because Python is not currently supported on Cyclic, you will not be able to use this package on Cyclic, resulting in this error. Even if you are not actively using Python in your code, you will encounter this error.
 - __```ERROR```:Failed to run "npm run start"__ - Make sure your package.json is in the build folder.
-- __"Runs on local, but doesn't run on Cyclic"__ - Not an error code, persay, but a frequent concern. Here's how to troubleshoot:
-  - Check package.json has all required dependences
+- __"Runs on local, but doesn't run on Cyclic"__ - Not an error code, per se, but a frequent concern. Here's how to troubleshoot:
+  - Check package.json has all required dependencies
   - Check that your start script is defined and runs 
-  - Check your environment varibales are set and match your expectations
+  - Check your environment variables are set and match your expectations
