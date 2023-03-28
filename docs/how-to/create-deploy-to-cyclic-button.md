@@ -23,7 +23,7 @@ Renders as:
 
 If you would like to embed HTML directly into a site with a configured target you can set the `app.cyclic.sh` path yourself. Replace `GH_LOGIN` and `GH_REPO` with the values for your GitHub username and repository name.
 
-For example if you wanted to create a fork and deploy button for: https://github.com/seekayel/express-hello-world
+For example, if you wanted to create a fork and deploy button for: https://github.com/seekayel/express-hello-world
 
 The values would be:
 
