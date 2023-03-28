@@ -16,7 +16,7 @@ Especially if your repo is public. Make sure to add `.env` file to your `.gitign
 
 On local, there are many ways to get environment variables into your application. Refer to these popular packages for more info:
 - env-cmd - <a href="https://www.npmjs.com/package/env-cmd" target="_blank">https://www.npmjs.com/package/env-cmd</a> (recommended)
-  - can be used in package.json scripts to injects variables from `.env` without changes to application code. For example: 
+  - can be used in package.json scripts to inject variables from `.env` without changes to application code. For example: 
     - in `dev` - load local env vars from `.env` and watch for file changes
     - when deployed, Cyclic runs `start`. env-cmd is not needed since variables are available automatically. This way `env-cmd` only has to be a `devDependency` 
     ```js
