@@ -4,10 +4,10 @@ sidebar_position: 4
 
 # File System
 
-The Node.js file system module gives you access to the file system on your local environment. To include the `fs` modules use the `require()` method:
+The Node.js file system module gives you access to the file system in your local environment. To include the `fs` modules use the `require()` method:
 `const fs = require('fs');`
 
-The `fs` method is often used for reading, creating, updating, deleting, and renaming files, however there is a long list of methods, which you can see here in the Node documentation: [https://nodejs.org/api/fs.html](https://nodejs.org/api/fs.html).
+The `fs` module is often used for reading, creating, updating, deleting, and renaming files, though there is a long list of methods that you can see in the Node documentation: [https://nodejs.org/api/fs.html](https://nodejs.org/api/fs.html).
 
 Files created by the `fs` module are read-only once the project is deployed to Cyclic.sh. This results in an `EROFS: Error Read-Only File System` error. 
 
