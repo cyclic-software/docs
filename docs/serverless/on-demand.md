@@ -11,7 +11,7 @@ This can limit some traditional server use cases:
 ### Sockets
 Socket connectivity is not available because it requires the server to continuously be connected to a potentially idle client. [Read more](/troubleshooting/websockets)
 :::note  Workaround
-Some popular socket connection libraries such as `SocketIO` have automatic fallback mechanisms to revert to polling for this scenario. Polling works for many use cases that do not require instantaneous real-time push from server. 
+Some popular socket connection libraries such as `SocketIO` have automatic fallback mechanisms to revert to polling for this scenario. Polling works for many use cases that do not require an instantaneous real-time push from the server.  
 
 Keep in mind that polling uses up a lot of requests and choose an appropriate polling rate for your use-case that is not excessive.
 :::
@@ -32,7 +32,7 @@ The Cyclic dashboard allows you can configure scheduled requests to specific api
 ### Async/Await
 Runtimes are suspended immediately after each response is sent. This means all promises must be resolved before a response is returned. 
 
-In the following snippet, the `db.write` method takes some time. The database will probably be written to on local or in a persistent environment, but this writing actually happens *after* the response `ok` has already been sent.
+In the following snippet, the `db.write` method takes some time. The database will probably be written to a local or persistent environment, but this writing actually happens *after* the response `ok` has already been sent.
 ```javascript
   // BAD CODE - Example of not using await before returning
   router.post('/some_route', requiresAuth(), async (req, res) => {
