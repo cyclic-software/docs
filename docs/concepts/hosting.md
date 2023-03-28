@@ -9,7 +9,7 @@ We describe hosting in terms of where the underlying app infrastructure is hoste
 Cyclic manages limits and constraints as well as the access boundaries and permissions to cloud resources external to the application to maintain logical isolation of your apps. 
 
 ## Self-hosted
-While Cyclic still helps you manage deployments, config and features of the runtime, you have **full control** of the app infrastructure with access to customize, take apart and tinker. This enables use-cases like: 
+While Cyclic still helps you manage deployments, config, and features of the runtime, you have **full control** of the app infrastructure with access to customize, take apart, and tinker. This enables use-cases like:  
   - Integration with other AWS infrastructure in your own accounts like:
     - Connect a Cyclic app to a SageMaker model
     - Use Cyclic apps to produce alerts based on CloudWatch alarms 
