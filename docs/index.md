@@ -40,7 +40,7 @@ Apps can be launched around the world to make sure your users see the least late
 ### Right-to-Repair
 We are developers here, sometimes we want to open the box and change everything around. You are welcome to open the hood, poke around or take your apps apart. When **apps grow up**, take them with you, integrate them into _legacy code_.
 :::tip  You can have your own cyclic apps and host them too
-Given a role, **Cyclic can deploy apps into your own AWS account**. This allows you to have total and complete control over your app's infrastructure. Self hosting gives the root access to integrate, customize and set your own limits.
+Given a role, **Cyclic can deploy apps into your own AWS account**. This allows you to have total and complete control over your app's infrastructure. Self-hosting gives the root access to integrate, customize and set your own limits.
 :::
 
 ### CI/CD
@@ -58,13 +58,13 @@ Launch a pre-baked expressjs starter:
 
 ### DIY
 
-You can always link your own repository from github.
+You can always link your own repository from GitHub.
 
 - Sign up: [https://app.cyclic.sh/api/login](https://app.cyclic.sh/api/login)
-- Using github as your login
+- Using GitHub as your login
 - Choose "Link my own", and type in your repo name
 - Click deploy
-- Approve "Cyclic - Preview" app in github
+- Approve "Cyclic - Preview" app in GitHub
 - Watch the terminal for your deployment logs
 
 
