@@ -9,7 +9,7 @@ Follow these steps to create a button that will allow users to fork your repo an
 
 ## Easy
 
-Just copy this markdown directly into your README.md file inside your repo on Github. The target `https://deploy.cyclic.sh/` uses http referrer header to determine the source repo to use in targeting the `app.cyclic.sh` deploy path.
+Just copy this markdown directly into your README.md file inside your repo on GitHub. The target `https://deploy.cyclic.sh/` uses http referrer header to determine the source repo to use in targeting the `app.cyclic.sh` deploy path.
 
 ```markdown
 [![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/)
@@ -21,7 +21,7 @@ Renders as:
 
 ## HTML
 
-If you would like to embed HTML directly into a site with a configured target you can set the `app.cyclic.sh` path yourself. Replace `GH_LOGIN` and `GH_REPO` with the values for your Github user name and repository name.
+If you would like to embed HTML directly into a site with a configured target you can set the `app.cyclic.sh` path yourself. Replace `GH_LOGIN` and `GH_REPO` with the values for your GitHub username and repository name.
 
 For example if you wanted to create a fork and deploy button for: https://github.com/seekayel/express-hello-world
 
