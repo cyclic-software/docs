@@ -19,3 +19,9 @@ Follow these steps to deploy a private repository on your Cyclic account.
 Here is an example of what adding a private repository menu looks like in the dashboard.
 
 <img src="/img/how-to/add-private-repository.png" width="650px" style={{background:'white'}}/>
+
+## Watch a walkthrough here
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rNHaKj3CGEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
