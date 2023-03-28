@@ -18,7 +18,7 @@ Launch a pre-baked expressjs starter:
 
 ## Launching your own app
 
-Go to the `Link Your Own` tab on the deployment page. This will let you chose a repo from one of your public GitHub repos.
+Go to the `Link Your Own` tab on the deployment page. This will let you choose a repo from one of your public GitHub repos.
 
 ---------
 Here is what you need to know:
