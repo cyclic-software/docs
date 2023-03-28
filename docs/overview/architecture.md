@@ -6,9 +6,9 @@ sidebar_position: 1
 
 Cyclic apps are built and deployed into AWS. We pre-provision a serverless app using cloudformation.
 
-At first launch we select an available stack and deploy the code for your app into the existing lambda.
+At the first launch, we select an available stack and deploy the code for your app into the existing lambda.
 
-For subsequent launches we update the lambda to use your latest code.
+For subsequent launches, we update the lambda to use your latest code.
 
 ## Components
 
@@ -54,4 +54,4 @@ When errors happen we should show the error message, stack trace, or known bug. 
 
 ### Right to repair
 
-Open source is a statement about whether the software system is even available for inspection. We wish to go a step further. Right to repair means you can take a Cyclic app and poke around inside. You can "eject" at anytime and the app will keep running in your account.
+Open source is a statement about whether the software system is even available for inspection. We wish to go a step further. Right to repair means you can take a Cyclic app and poke around inside. You can "eject" at any time and the app will keep running in your account.
