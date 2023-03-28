@@ -3,13 +3,13 @@ sidebar_position: 4
 ---
 # Storage
 
-Cyclic provides object storage backed by AWS S3. Each app is provisioned with an S3 bucket and allowed read/write access. Any AWS S3 compatible client will work.
+Cyclic provides object storage backed by AWS S3. Each app is provisioned with an S3 bucket and allowed read/write access. Any AWS S3-compatible client will work.
 
 ## Config
 
-Apps running on Cyclic have environment AWS environment variables that provide for access to the app's associated S3 bucket. However, you will need to provide either a `BUCKET` environment variable or set the bucket name directly in your code.
+Apps running on Cyclic have environment AWS environment variables that provide access to the app's associated S3 bucket. However, you will need to provide either a `BUCKET` environment variable or set the bucket name directly in your code.
 
-To access the bucket from local, go to the storage tab of the app, copy credentials and paste on your associated command line. As with running on Cyclic you will need to provide your code or cli the bucket name.
+To access the bucket locally, go to the storage tab of the app, copy the credentials, and paste them on your associated command line. As with running on Cyclic, you will need to provide your code or cli the bucket name.
 
 ## Cost and Limits
 
@@ -93,7 +93,7 @@ app.delete('*', async (req,res) => {
 })
 
 // /////////////////////////////////////////////////////////////////////////////
-// Catch all handler for all other request.
+// Catch all handlers for all other requests.
 app.use('*', (req,res) => {
   res.sendStatus(404).end()
 })
