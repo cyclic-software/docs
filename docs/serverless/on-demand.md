@@ -24,7 +24,7 @@ Even though it is not possible to run a background process longer than it takes 
 :::
 
 ### Cron Tasks
-Cron tasks are technically long running processes and cannot be run in the same way that they do in a unix environment. You can still build the behavior you need by specifying cron tasks in the Cyclic dashboard.
+Cron tasks are technically long-running processes and cannot be run in the same way that they do in a unix environment. You can still build the behavior you need by specifying cron tasks in the Cyclic dashboard.
 :::tip  Cron Tasks
 The Cyclic dashboard allows you can configure scheduled requests to specific api routes to run up to once an hour (with one second resolution) or trigger at a specific time (one second resolution).
 :::
