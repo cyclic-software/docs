@@ -14,7 +14,7 @@ And while there are various authentication methods out there, [Bearer](https://s
 
 It's quite simple: we give users a token (they're the *bearer* of that token), we give that token some privileges (such as only reading or also writing and deleting) and finally we require the use of that token when making [unsafe HTTP requests](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP).
 
-We won't be implementing privileges and roles to keep this guide simple, but we'll be using Bearer authentication. Get started by installing the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) package; it's an implementation of [JSON Web Tokens](https://jwt.io/), an standard for creating and checking credentials across the Internet.
+We won't be implementing privileges and roles to keep this guide simple, but we'll be using Bearer authentication. Get started by installing the [`jsonwebtoken`](https://www.npmjs.com/package/jsonwebtoken) package; it's an implementation of [JSON Web Tokens](https://jwt.io/), a standard for creating and checking credentials across the Internet.
 
 After that, create an `auth.js` file, which will contain two important utilities for Bearer authentication.
 
@@ -90,7 +90,7 @@ router.delete("/:id", authenticateUser, ... )
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/router.js)
 
-And yes, the second parameter just became the middlware function, while the route handler was pushed to the next position. This is totally possible because JavaScript supports a [clever workaround](https://stackoverflow.com/a/457589) for [overloading](https://en.wikipedia.org/wiki/Function_overloading), a programming language feature that allows functions to have the same names but different parameters.
+And yes, the second parameter just became the middleware function, while the route handler was pushed to the next position. This is totally possible because JavaScript supports a [clever workaround](https://stackoverflow.com/a/457589) for [overloading](https://en.wikipedia.org/wiki/Function_overloading), a programming language feature that allows functions to have the same names but different parameters.
 
 Let's try it out now:
 
@@ -163,7 +163,7 @@ We just created a full-fledged RESTful API that could be used to build an e-comm
 
 <p align="center"><img alt="Deployments tab in Cyclic dashboard showing the deployment history." src="/img/tutorial/rest-api/app.cyclic.sh_.png" width="640" /></p>
 
-Let's commit all our new changes back into our code repository and let Cyclic automatically deploy these new changes to the web. We can track this process in Cylic's Deployments dashboard.
+Let's commit all our new changes back into our code repository and let Cyclic automatically deploy these new changes to the web. We can track this process in Cyclic's Deployments dashboard.
 
 <p align="center"><img alt="Variables tab in Cyclic dashboard showing two environment variables: token secret and cyclic DB." src="/img/tutorial/rest-api/ENV.png" width="640" /></p>
 
@@ -184,4 +184,4 @@ We could still add a variety of endpoints to our API:
 
 and many more things. You can get as creative as you want with it, you'll only be learning new things along the way!
 
-Get inspired by the plethora of [public APIs](https://github.com/public-apis/public-apis) out there, attempt rebuilding them while adding your own personal touch, deploy them on Cyclic and you'll soon be the one teaching all this stuff! 💪
+Get inspired by the plethora of [public APIs](https://github.com/public-apis/public-apis) out there, attempt rebuilding them while adding your own personal touch, deploy them on Cyclic, and you'll soon be the one teaching all this stuff! 💪
