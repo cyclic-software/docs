@@ -6,7 +6,7 @@ sidebar_position: 3
 
 Assuming you own `example.com`, registered with GoDaddy:
 ## Subdomains
-Link a subdomain, for example `api.example.com` to a Cyclic app:
+Link a subdomain, for example, `api.example.com` to a Cyclic app:
 
 
 ### Cyclic
@@ -34,7 +34,7 @@ Link a subdomain, for example `api.example.com` to a Cyclic app:
 
 At this point, the SSL certificate is still pending, navigating to your subdomain `https://api.example.com`, will produce a browser error `NET::ERR_CERT_COMMON_NAME_INVALID`. 
 
-Return to Cyclic dashboard. It will take a few minutes (up to 15 but usually less) for a certificate to be issued once the validation record has been entered.
+Return to the Cyclic dashboard. It will take a few minutes (up to 15 but usually less) for a certificate to be issued once the validation record has been entered.
 
 After refreshing, you should see a message that says: 
 ```
@@ -46,14 +46,14 @@ After refreshing, you should see a message that says:
 Link the apex domain `example.com` to a Cyclic app. 
 
 :::caution Apex Domains cannot be linked via CNAME
-   The most common approach is to link the `www` subdomain and use forwarding in GoDaddy to set up redirect from `example.com` to `www.example.com`
+   The most common approach is to link the `www` subdomain and use forwarding in GoDaddy to set up a redirect from `example.com` to `www.example.com`
 :::
 
 ### Cyclic
 **Follow the above _subdomain_ procedure to link `www.example.com` to your Cyclic app. **
 
-After you have set up the records and SSL certificate was issued:
-- Verify that you can access your app via `https://wwww.example.com`.
+After you have set up the records and the SSL certificate was issued:
+- Verify that you can access your app via `https://www.example.com`.
 
 ### GoDaddy
 1. Navigate to _DNS Management_ for the domain, scroll down to the _Forwarding_ section
