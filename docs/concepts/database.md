@@ -47,7 +47,7 @@ The package organizes items into the following structure:
   ]
 }
 ```
-The `key` should be used to uniquely identify an item and it's set of child items.
+The `key` should be used to uniquely identify an item and its set of child items.
 
 `$index` is a list of `props` by which them item will be indexed. key-value pairs that have been indexed can be used to retrieve or query items with greater performance.
 
@@ -98,7 +98,7 @@ let mikes_work = await users.item('mike').fragment('work').get()
 
 If you choose not to use the open source `cyclic-dynamodb` package, apps have CRUD access to the table and can make use of the table's generic raw schema directly. 
 
-When using the table directly with AWS DynamoDB SDK or other third party SDK's, the following fields and indexes can be used:
+When using the table directly with AWS DynamoDB SDK or other third party SDKs, the following fields and indexes can be used:
 
 | IndexName      | Partition Key  | Range Key          | Projected Fields |
 | -----------   | -----------     | ----               |  ----   |
