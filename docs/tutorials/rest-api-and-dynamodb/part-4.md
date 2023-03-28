@@ -8,7 +8,7 @@ sidebar_position: 4
 
 We're almost done; but we still must implement two more route handlers: PATCH and DELETE.
 
-The former allows clients to update only *parts* of a bike item, as opposed to PUT which always replaces the whole thing. The latter is quite self-explanatory and it simply deletes the item in demand.
+The former allows clients to update only *parts* of a bike item, as opposed to PUT which always replaces the whole thing. The latter is quite self-explanatory, and it simply deletes the item in demand.
 
 ## Updating parts of a bike item
 
