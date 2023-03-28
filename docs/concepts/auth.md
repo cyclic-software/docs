@@ -9,7 +9,7 @@ Cyclic allows you to add authentication to secure parts of your api with a simpl
 This feature is available on all apps configuration pages in the `Auth` tab
 :::
 
-Authentication and authorization can be very complex. At some point applications may require role and attribute based access control, groups and groups of groups, etc. Cyclic's auth intends to cover applications with less complex access control scenarios to enable you to gradually build more complex mechanisms while the app stays secure. 
+Authentication and authorization can be very complex. At some point, applications may require role and attribute-based access control, groups and groups of groups, etc. Cyclic's auth intends to cover applications with less complex access control scenarios to enable you to gradually build more complex mechanisms while the app stays secure. 
 
 ## Use Cases
 Add API Auth to your endpoints to protect the entire app or individual paths or pages.
@@ -55,7 +55,7 @@ When enabled, Auth is required on requests whenever a certain URL pattern is mat
   - <a href="https://swagger.io/specification/authentication/basic-authentication/" target="_blank">Read more</a> to understand basic auth in detail.
   
 ## Limits
-- Currently only `Basic` auth scheme is available with others coming soon
+- Currently, only the `Basic` auth scheme is available with others coming soon
 - The number of credentials is limited to `3` per app
 - The number of route patterns is limited to `3` per app
 
@@ -63,7 +63,7 @@ When enabled, Auth is required on requests whenever a certain URL pattern is mat
 
 - Enable auth for your app as explained above.
 - Encode username and password using online base64 encoder or bash: `echo -n 'username:password' | base64`
-- Use base64 encoded string in Authorization header:
+- Use base64 encoded string in the Authorization header:
 ```shell
 curl -H "Authorization: Basic $(echo -n 'username:password' | base64)" https://app-url.cyclic.app
 ```
