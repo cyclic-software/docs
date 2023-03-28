@@ -211,7 +211,7 @@ curl "https://bikes.cyclic.app/bikes/search/by-title/?query=Mountain" | jq .
 
 <p align="center"><img alt="Response to the previous command." src="/img/tutorial/rest-api/3.svg" width="640" /></p>
 
-We can also make make POST requests to our API using `cURL`; let's create a new bike item.
+We can also make POST requests to our API using `cURL`; let's create a new bike item.
 
 ```json
 // request.json
@@ -263,7 +263,7 @@ curl -H "Content-Type: application/json" -H "Authorization: Bearer $TOKEN" https
 
 <p align="center"><img alt="Response to the previous command." src="/img/tutorial/rest-api/6.svg" width="640" /></p>
 
-As you can see, `cURL` is pretty powerful and we'll be using it time and again throughout this guide.
+As you can see, `cURL` is pretty powerful, and we'll be using it time and again throughout this guide.
 
 ### Using AWS DynamoDB to store & retrieve data
 
@@ -309,9 +309,9 @@ Cyclic offers its users with a variety of starter templates, and REST APIs are i
 
 [![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-rest-api)
 
-This will fork the aforementioned starter repository to your own Github account (that you used to sign in with Cyclic).
+This will fork the aforementioned starter repository to your own GitHub account (that you used to sign in with Cyclic).
 
-Proceed by cloning the repository to your local machine using the `git clone` command, which you can copy from Github. Make sure that `git` is installed on your machine, of course.
+Proceed by cloning the repository to your local machine using the `git clone` command, which you can copy from GitHub. Make sure that `git` is installed on your machine, of course.
 
 We'll be using ECMA6 import and export statement in this project, so open `package.json` and set the project's type to "module".
 
