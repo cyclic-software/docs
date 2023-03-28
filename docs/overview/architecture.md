@@ -26,7 +26,7 @@ For subsequent launches we update the lambda to use your latest code.
 
 ## Design principles
 
-In designing and building Cyclic we must make decisions and trade offs. Here is a statement of the principles that guide our decisions, in priority order.
+In designing and building Cyclic we must make decisions and trade-offs. Here is a statement of the principles that guide our decisions, in priority order.
 
 1. Working vs "Correct"
 2. Fail quickly
@@ -46,11 +46,11 @@ If given the choice we would rather completely break sooner than be partially br
 
 ### Fail predictably
 
-Failure will happen. When it does we should make it repeatable. The same inputs should lead to the same failure. Similar failures should be processed in the same way.
+Failure will happen. When it does, we should make it repeatable. The same inputs should lead to the same failure. Similar failures should be processed in the same way.
 
 ### Fail visibly
 
-When errors happen we should show the error message, stack trace, or known bug. This could mean we need to email the user or tell the world on twitter.
+When errors happen we should show the error message, stack trace, or known bug. This could mean we need to email the user or tell the world on Twitter.
 
 ### Right to repair
 
