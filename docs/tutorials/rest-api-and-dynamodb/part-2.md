@@ -79,7 +79,7 @@ Route handlers also take a [callback function](https://developer.mozilla.org/en-
 - **HTTP Request:** as the first parameter passed to this function (which we conveniently named `req`), it's an object that contains all kinds of information about the HTTP request including but not limited to the query strings, body data and even HTTP headers.
 - **HTTP Response:** this is the second parameter, and it's used to fill the HTTP response with some information before sending it back to the client using the `res.send` method. For now, we're simply returning an empty `Array`, but we'll soon populate it with bikes data.
 
-And notice how we're using an [asynchronous function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) as the callback. While not required, it's important to note that it's well-supported with Express and we'll be using it to wait for DynamoDB to return its data. Of course, we could also use [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) instead.
+And notice how we're using an [asynchronous function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) as the callback. While not required, it's important to note that it's well-supported with Express, and we'll be using it to wait for DynamoDB to return its data. Of course, we could also use [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) instead.
 
 It's time to start making calls to our DynamoDB instance to actually fetch some data. Let's get started by creating an instance of our bikes collection, giving us access to a variety of methods for manipulating our database:
 
