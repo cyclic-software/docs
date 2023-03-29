@@ -10,7 +10,7 @@ sidebar_position: 2
 
 Cyclic apps are built and deployed into AWS from code that originates in GitHub.
 
-To trigger a build and deployment, install the [Cyclic GitHub app](https://github.com/apps/cyclic-sh) on any public repo. On first installation we will assign your repo to an app and give it a public url such as `random-words.cyclic.app`. We will then build and deploy your app as described below. On future commits to the default branch (for example: merges of PRs or pushes) GitHub will send a webhook api call to us. We will then perform the same build and deploy steps.
+To trigger a build and deployment, install the [Cyclic GitHub app](https://github.com/apps/cyclic-sh) on any public repo. On the first installation, we will assign your repo to an app and give it a public url such as `random-words.cyclic.app`. We will then build and deploy your app as described below. On future commits to the default branch (for example: merges of PRs or pushes) GitHub will send a webhook api call to us. We will then perform the same build and deploy steps.
 
 The input of the **build** step is a single commit in a git repo and the output is a zip archive that can be deployed and run inside of an AWS lambda with the Cyclic lambda runtime.
 
@@ -51,7 +51,7 @@ NPM executes several [lifecycle scripts](https://docs.npmjs.com/cli/v8/using-npm
 - `build`
 - `postbuild`
 
-If you have particular needs try putting it into the appropriate lifecycle script. If you have needs beyond what these lifecycle scripts can provide, or they don't solve for your use case, send us an email: <i className="far fa-envelope"></i> hello@cyclic.sh or join us on [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE).
+If you have particular needs, try putting them into the appropriate lifecycle script. If you have needs beyond what these lifecycle scripts can provide, or they don't solve your use case, send us an email: <i className="far fa-envelope"></i> hello@cyclic.sh or join us on [<i className="fab fa-discord"></i>  Discord](https://discord.gg/huhcqxXCbE).
 
 ### Advanced Build Options
 
@@ -62,14 +62,14 @@ By default, the build process and the above lifecycle scripts:
 -  At runtime `npm run start` is used to execute the application
 
 It is possible to customize this process with _Advanced Build Options_:
-- at the time of first deployment, in the _Advanced_ dropdown
+- at the time of the first deployment, in the _Advanced_ dropdown
   - <img src="/img/build-options/advancedWNode.png" width="350px"/>
 - in  _Environments_ tab > _Build Options_ of an app's dashboard
   - <img src="/img/build-options/buildwithnode2.png" width="650px"/>
 
 #### **Root Path**
 The root path specifies which directory Cyclic will run build scripts. 
-For example for a repository structured as:
+For example, for a repository structured as:
 ```
 ├──/frontend
 |   ├── ...
@@ -82,7 +82,7 @@ For example for a repository structured as:
 To have cyclic run `npm run build` in the `frontend` directory, configure "Root Path" as `/frontend`.
 
 #### **Output Path**
-The contents of the _Output Path_ are bundled for deployment. For example if at the end of the above build, a build directory is generated inside `/frontend`:
+The contents of the _Output Path_ are bundled for deployment. For example, if a build directory is generated inside `/frontend` at the end of the above build:
 ```
 ├──/frontend
 |   ├── build
