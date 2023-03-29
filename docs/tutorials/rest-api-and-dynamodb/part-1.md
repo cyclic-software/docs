@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Getting Started with a RESTful API
 
-This five-part series will show you how to build an API from the ground-up using Node's Express and AWS DynamoDB.
+This five-part series will show you how to build an API from the ground up using Node's Express and AWS DynamoDB.
 
 We'll build an API that simply reads and writes data about bikes, a perfect start for an e-commerce shop. We'll also be using Cyclic to host our API for free, including the DynamoDB storage.
 
@@ -20,11 +20,11 @@ You can check out this project's [full code on GitHub](https://github.com/cyclic
 
 <p align="center"><img alt="Browsers and web servers communicating back-and-forth using HTTP requests and responses." src="/img/tutorial/rest-api/Web_Servers.png" width="640" /></p>
 
-Before we delve deeper into RESTful APIs, let's start from its origins and make sure that we all agree on what a _web server_ is.
+Before we delve deeper into RESTful APIs, let's start from their origins and make sure that we all agree on what a _web server_ is.
 
-From a hardware point-of-view, a web **server** is a physical computer that stores and **_serves_** data over the Internet, and that includes everything from HTML documents, CSS stylesheets, images and video files.
+From a hardware point-of-view, a web **server** is a physical computer that stores and **_serves_** data over the Internet, and that includes everything from HTML documents, CSS stylesheets, images, and video files.
 
-Furthermore, every web server must run an **HTTP server**. That's a piece of software that takes-in URLs and processes them to deliver content back to the end-users, while using the HTTP protocol to facilitate the sharing of information over the Internet.
+Furthermore, every web server must run an **HTTP server**. That's a piece of software that takes in URLs and processes them to deliver content back to the end-users while using the HTTP protocol to facilitate the sharing of information over the Internet.
 
 :::tip
 And if the URL is wrong, the server will generate a response with the infamous 404 code instead.
@@ -32,7 +32,7 @@ And if the URL is wrong, the server will generate a response with the infamous 4
 
 ### Servers communicate with browsers using the HTTP protocol
 
-When you search for a product, view details on it or even buy it, an **HTTP request** is sent to a web server.
+When you search for a product, view details on it, or even buy it, an **HTTP request** is sent to a web server.
 
 HTTP is a web standard that allows _any_ server to know what to expect when it receives an _HTTP request_:
 
@@ -41,13 +41,13 @@ HTTP is a web standard that allows _any_ server to know what to expect when it r
 - a method defining the desired action, (whether to get, create or delete that resource)
 - JSON data encoded in the request body or in associated cookies.
 
-HTTP servers proceed by processing the request, then sending an _HTTP response_ back to the sender. The response includes a _status line_ indicating the result of that operation. Success for example, is represented with the `HTTP/1.1 200 OK` code. Unavailable resources would instead respond with the `HTTP/1.1 404 NOT FOUND` code.
+HTTP servers proceed by processing the request, then sending an _HTTP response_ back to the sender. The response includes a _status line_ indicating the result of that operation. Success, for example, is represented with the `HTTP/1.1 200 OK` code. Unavailable resources would instead respond with the `HTTP/1.1 404 NOT FOUND` code.
 
-And just like any other resource, _static websites_ are just HTML files hosted on web servers. (with a hint of CSS files, JS files and other media)
+And just like any other resource, _static websites_ are just HTML files hosted on web servers. (with a hint of CSS files, JS files, and other media)
 
 ---
 
-Sounds good, we just learnt that servers are the building-blocks of the Internet, and that they're responsible for storing _static_ resources and serving them back to the users of the Internet.
+Sounds good, we just learnt that servers are the building blocks of the Internet and that they're responsible for storing _static_ resources and serving them back to the users of the Internet.
 
 But what about websites that are always changing? Think Walmart, for example. It's an online store that's constantly changing:
 
@@ -74,7 +74,7 @@ Instead of delivering whole HTML files, APIs _only_ return useful information (u
 ]
 ```
 
-It may fetch this data from a database that's maintained by an entirely different department in Walmart. The sender of the HTTP request, then, can solely focus on using this information to build a website and show it to the end-user.
+It may fetch this data from a database that's maintained by an entirely different department in Walmart. The sender of the HTTP request, then, can solely focus on using this information to build a website and show it to the end user.
 
 Web servers are critical in the creation of APIs that rely on **dynamic** data:
 
@@ -86,9 +86,9 @@ With this kind of separation, our website can use JavaScript to fetch data from 
 
 Furthermore, server-side code can be written in a variety of programming languages, including but not limited to PHP, Python, Ruby, and C#. But why stray away from the same language that we already use in client-side programming?
 
-With Node, we're able to write our back-end code in JavaScript, giving us full access to the server operating system. (storage, networking, scheduling, and more.) It runs directly in the server operating system, while adding new modules including HTTP and file-system libraries.
+With Node, we're able to write our back-end code in JavaScript, giving us full access to the server operating system. (storage, networking, scheduling, and more.) It runs directly in the server operating system while adding new modules including HTTP and file-system libraries.
 
-When both the front-end and back-end sides of an application are written in the same language, developers experience less of "context shift", making it ideal for large-scale projects.
+When both the front-end and back-end sides of an application are written in the same language, developers experience less of a "context shift", making it ideal for large-scale projects.
 
 ```javascript
 // Example of a web server written in Node
@@ -151,7 +151,7 @@ Thankfully, Node comes with its own package manager, giving us access to a pleth
 - Reading query data straight from HTTP requests,
 - Running "middleware" for any routes before handling the requests. (Useful for authentication)
 
-Express also comes with its own bundle of community-made middleware to handle all kinds of necessities such as parsing cookies and security headers. We'll be using Express in the remainder of this tutorial.
+Express also comes with its own bundle of community-made middleware to handle all kinds of necessities such as parsing cookies and security headers. We'll be using Express for the remainder of this tutorial.
 
 ### Let's understand RESTful APIs
 
@@ -231,7 +231,7 @@ We can also make POST requests to our API using `cURL`; let's create a new bike 
       "amount": 2303
     }
   },
-  "description": "Ride the greatest line of your life with the all new and updated Countach from Cyclic. Make no compromises between speed, handling and durability.",
+  "description": "Ride the greatest line of your life with the all-new and updated Countach from Cyclic. Make no compromises between speed, handling, and durability.",
   "title": "Mountain Bicycle Countach"
 }
 ```
@@ -242,7 +242,7 @@ curl -H "Content-Type: application/json" https://bikes.cyclic.app/bikes/ -d @req
 
 <p align="center"><img alt="Response to the previous command." src="/img/tutorial/rest-api/4.svg" width="640" /></p>
 
-Uh-oh, we just got an HTTP `UNAUTHORIZED` error. After looking-up the meaning of [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), we see that "UNAUTHORIZED" means that we do not have access to that particular route, yet. (and of course, we'll be building this authentication system ourselves in this article)
+Uh-oh, we just got an HTTP `UNAUTHORIZED` error. After looking up the meaning of [HTTP status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status), we see that "UNAUTHORIZED" means that we do not have access to that particular route, yet. (and of course, we'll be building this authentication system ourselves in this article)
 
 After looking up our [API's documentation on GitHub](https://github.com/cyclic-software/tutorial-bikes-api), we learn that a "Bearer token" is required to make POST requests.
 
@@ -271,11 +271,11 @@ As you can see, `cURL` is pretty powerful, and we'll be using it time and again 
 
 As we just learned, RESTful APIs are built around databases. But _what_ really is a database?
 
-Well, a database is a set of inter-connected collections of information. For example, a database may contain a collection of users and a collection of products. Users and products may be connected through shopping carts. (Product A exists in User B's shopping cart)
+Well, a database is a set of interconnected collections of information. For example, a database may contain a collection of users and a collection of products. Users and products may be connected through shopping carts. (Product A exists in User B's shopping cart)
 
-Some databases require every collection to have a fixed-set of data-points. For example, a user might have a name, a phone number and an email address. That would be the constraint in a **schema**-enabled database. Collections might also be seen as tables in this case, with a fixed number of columns that have their own data-type. (such as text, integer, booleans, and more)
+Some databases require every collection to have a fixed set of data points. For example, a user might have a name, a phone number, and an email address. That would be the constraint in a **schema**-enabled database. Collections might also be seen as tables in this case, with a fixed number of columns that have their own data type. (such as text, integer, booleans, and more)
 
-On the other hand, schema-less databases have no such limitation. Each item in a collection is a JSON document, and it can have any structure desired. Such databases are also referred to as noSQL databases, while their counterparts are known as SQL databases. A user, for example, might have the following entry in a noSQL database:
+On the other hand, schema-less databases have no such limitation. Each item in a collection is a JSON document, and it can have any structure desired. Such databases are also referred to as NoSQL databases, while their counterparts are known as SQL databases. A user, for example, might have the following entry in a NoSQL database:
 
 ```json
 {
@@ -287,9 +287,9 @@ On the other hand, schema-less databases have no such limitation. Each item in a
 
 SQL is a language used for processing schema-enabled databases. It allows for the efficient searching and processing of information even on the biggest databases out there.
 
-But with DynamoDB, a noSQL database engineered by Amazon's Web Services (AWS), you still get to enjoy almost the whole power of SQL whilst feeling the freedom that comes with schema-less databases. It's called [PartiQL](https://partiql.org/).
+But with DynamoDB, a NoSQL database engineered by Amazon's Web Services (AWS), you still get to enjoy almost the whole power of SQL whilst feeling the freedom that comes with schema-less databases. It's called [PartiQL](https://partiql.org/).
 
-We're building a bikes shop API, so our database should contain a collection of bikes. It's a mix of Strings, Numbers and even whole Objects.
+We're building a bike shop API, so our database should contain a collection of bikes. It's a mix of Strings, Numbers, and even whole Objects.
 
 Keep reading to see how we'll be shaping our API around this database.
 
@@ -303,9 +303,9 @@ Keep reading to see how we'll be shaping our API around this database.
 
 and it won't hurt to take a quick refresher on ES6 JavaScript programming.
 
-We just spent a lot of time trying to understand REST in theory, but nothing can beat learning by practice. So let's create our own API. Our theme is a bikes shop, so that's how we'll be modelling our RESTful routes.
+We just spent a lot of time trying to understand REST in theory, but nothing can beat learning by practice. So let's create our own API. Our theme is a bike shop, so that's how we'll be modelling our RESTful routes.
 
-Cyclic offers its users with a variety of starter templates, and REST APIs are included, of course. So let's begin our exciting journey by visiting [Cyclic's starters](https://docs.cyclic.sh/overview/starters) and deploying the [REST API](https://github.com/cyclic-software/starter-rest-api).
+Cyclic offers its users a variety of starter templates, and REST APIs are included, of course. So let's begin our exciting journey by visiting [Cyclic's starters](https://docs.cyclic.sh/overview/starters) and deploying the [REST API](https://github.com/cyclic-software/starter-rest-api).
 
 [![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-rest-api)
 
@@ -313,7 +313,7 @@ This will fork the aforementioned starter repository to your own GitHub account 
 
 Proceed by cloning the repository to your local machine using the `git clone` command, which you can copy from GitHub. Make sure that `git` is installed on your machine, of course.
 
-We'll be using ECMA6 import and export statement in this project, so open `package.json` and set the project's type to "module".
+We'll be using ECMA6 import and export statements in this project, so open `package.json` and set the project's type to "module".
 
 ```json
 // package.json
@@ -332,11 +332,11 @@ import db from "cyclic-dynamodb";
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/index.js)
 
-And since we're building our API around our a DynamoDB database, we need to make sure that we have read and write access to it by exporting the keys provided by Cyclic's "**Data/Storage**" dashboard to our local machine. (do this every time you launch the terminal)
+And since we're building our API around our DynamoDB database, we need to make sure that we have read and write access to it by exporting the keys provided by Cyclic's "**Data/Storage**" dashboard to our local machine. (do this every time you launch the terminal)
 
 <p align="center"><img alt="Copying database credentials to clipboard" src="/img/tutorial/rest-api/screencast1.gif" width="640" /></p>
 
-Cyclic does this automatically for us in production-mode, however. So we don't need to worry about this task when deploying our API.
+Cyclic does this automatically for us in production mode, however. So we don't need to worry about this task when deploying our API.
 
 Remember when we mentioned Node's package manager (NPM) that we used to get access to Express? Well, GitHub repositories that use NPM only contain the _names_ and _versions_ of used packages, but not the actual packages themselves.
 
@@ -346,7 +346,7 @@ Whenever we clone a GitHub repository, we must run `npm install` to actually _do
 
 <p align="center"><img alt="Bike collection containing eight fields: vendor, available for sale, total inventory, price range, title, product type, created at, description." src="/img/tutorial/rest-api/BikesDB.png" width="640" /></p>
 
-Before we get started, it's important to note that every AWS DynamoDB instance has a specific name, also known as a _table name_. It's given to us by Cyclic in its database dashboard page.
+Before we get started, it's important to note that every AWS DynamoDB instance has a specific name, also known as a _table name_. It's given to us by Cyclic on its database dashboard page.
 
 <p align="center"><img alt="Copying table name to the clipboard." src="/img/tutorial/rest-api/screencast2.gif" width="640" /></p>
 
@@ -371,7 +371,7 @@ curl http://localhost:3000/bikes/hybrid%20bike \
     -XPOST -H 'Content-Type: application/json'| jq .
 ```
 
-As you can see, _local_ servers are hosted on the [`localhost`](http://localhost) domain or [`127.0.0.1`](http://127.0.0.1) IP address. It's also common to see them running on the `3000` port, as being done in this server. (`8000`, `8080`, `5000` are also equally as common)
+As you can see, _local_ servers are hosted on the [`localhost`](http://localhost) domain or [`127.0.0.1`](http://127.0.0.1) IP address. It's also common to see them running on the `3000` port, as being done on this server. (`8000`, `8080`, and `5000` are also equally as common)
 
 [Learn more about local hosting and ports.](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server)
 
