@@ -91,7 +91,7 @@ const bikesCollection = db.collection("bikes");
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/router.js)
 
-As you can see, we're using the `cyclic-dynamodb` library to create a programmable instance of our database. That's a convenience library used to facilitate communication with our database using simple JavaScript code. We're also extracting the `CYCLIC_DB` environment variable that we set earlier using `process.env`.  
+As you can see, we're using the `cyclic-dynamodb` library to create a programmable instance of our database. That's a convenience library used to facilitate communication with our database using simple JavaScript code. We're also extracting the `CYCLIC_DB` environment variable that we set earlier using `process.env`. 
 
 Let's move back into our route handler to finally make some use of this `bikesCollection` object:
 

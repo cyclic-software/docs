@@ -11,7 +11,7 @@ This can limit some traditional server use cases:
 ### Sockets
 Socket connectivity is not available because it requires the server to continuously be connected to a potentially idle client. [Read more](/troubleshooting/websockets)
 :::note  Workaround
-Some popular socket connection libraries such as `SocketIO` have automatic fallback mechanisms to revert to polling for this scenario. Polling works for many use cases that do not require an instantaneous real-time push from the server.  
+Some popular socket connection libraries such as `SocketIO` have automatic fallback mechanisms to revert to polling for this scenario. Polling works for many use cases that do not require an instantaneous real-time push from the server. 
 
 Keep in mind that polling uses up a lot of requests and choose an appropriate polling rate for your use case that is not excessive.
 :::

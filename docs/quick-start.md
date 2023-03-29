@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # TLDR
 
-## Quick start example
+## Quickstart example
 
 Launch a pre-baked expressjs starter:
 
