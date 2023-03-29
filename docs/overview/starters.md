@@ -85,7 +85,7 @@ If you run into issues or have questions on the starters please ask in the suppo
 
 ### Telegram Bot
 
-- Telegram inline queries, commands and interactive inline keyboards
+- Telegram inline queries, commands, and interactive inline keyboards
 - Source: https://github.com/cyclic-software/starter-telegram-bot
 
 [![Deploy](/img/cyclic/deploy.svg)](https://app.cyclic.sh/api/app/deploy/cyclic-software/starter-telegram-bot)
