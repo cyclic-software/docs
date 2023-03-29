@@ -19,7 +19,7 @@ Several SPA frameworks (including React) by default include build time tools in 
  production dependencies cannot exceed 240MB. The total size of your build is ${mb} MB
 ```
 
-If you get an error in the deploy log that says `production dependencies cannot exceed 240MB`, here is how to fix.
+If you get an error in the deploy log that says `production dependencies cannot exceed 240MB`, here is how to fix it.
 
 ### Solution
 Currently, the code size is limited to 240MB. Fortunately, most projects are can to be optimized by appropriately organizing dependencies and excluding unnecessary files from the build. 
@@ -32,7 +32,7 @@ Read more about <a href="https://www.atlassian.com/git/tutorials/saving-changes/
 :::
 
 ## Build environment limit
-The build environment has 10 GB disk and 10 GB RAM available for temporary use to run installation and build `npm` scripts defined in the repos `package.json`.
+The build environment has 10 GB disk and 10 GB RAM available for temporary use to run the installation and build `npm` scripts defined in the repos `package.json`.
 ## Error message
 If your space requirements exceed these amounts, while running the installation or step you will see a `No space left on device` error.
 
