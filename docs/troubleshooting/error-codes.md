@@ -4,7 +4,7 @@
 
 # Common Error Codes
 
-No list of common error codes is exhaustive, but the following should help you quickly find an error based on type and navigate to relevant documentation which may help you resolve it.
+No list of common error codes is exhaustive, but the following should help you quickly find an error based on its type and navigate to relevant documentation which may help you resolve it.
 
 ### Build Options Errors
 
@@ -19,7 +19,7 @@ No list of common error codes is exhaustive, but the following should help you q
 
 ### Timeout Error
 
-- __Timeout error__ - We have a 30 second hard limit on requests.
+- __Timeout error__ - We have a 30-second hard limit on requests.
   - See [Background Processes](/docs/serverless/on-demand.md#background-processes)
 
 ### Database Errors
