@@ -6,7 +6,7 @@ sidebar_position: 2
 
 <p align="center"><img alt="Four HTTP GET routes: list all, get by id, get by handle, and search by title." src="/img/tutorial/rest-api/GET_Routes.png" width="640" /></p>
 
-With our database full with data, it's time to build a RESTful API that allows us to fetch that data in four different ways:
+With our database full of data, it's time to build a RESTful API that allows us to fetch that data in four different ways:
 
 1. GET all bikes
 2. GET bike by ID
@@ -72,12 +72,12 @@ router.get("/all", async (req, res) => {
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/router.js)
 
-As you can see, we're telling Express to handle the GET action on the `/all` route by running the `router.get` method. If we wished to support the POST action instead for example, we would do `router.post`, as we'll see in the next section of this guide.
+As you can see, we're telling Express to handle the GET action on the `/all` route by running the `router.get` method. If we wished to support the POST action instead, for example, we would use `router.post`, as we'll see in the next section of this guide.
 
 Route handlers also take a [callback function](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) as their second parameter; that's a function that takes two parameters itself:
 
-- **HTTP Request:** as the first parameter passed to this function (which we conveniently named `req`), it's an object that contains all kinds of information about the HTTP request including but not limited to the query strings, body data and even HTTP headers.
-- **HTTP Response:** this is the second parameter, and it's used to fill the HTTP response with some information before sending it back to the client using the `res.send` method. For now, we're simply returning an empty `Array`, but we'll soon populate it with bikes data.
+- **HTTP Request:** as the first parameter passed to this function (which we conveniently named `req`), it's an object that contains all kinds of information about the HTTP request including but not limited to the query strings, body data, and even HTTP headers.
+- **HTTP Response:** this is the second parameter, and it's used to fill the HTTP response with some information before sending it back to the client using the `res.send` method. For now, we're simply returning an empty `Array`, but we'll soon populate it with bike data.
 
 And notice how we're using an [asynchronous function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function) as the callback. While not required, it's important to note that it's well-supported with Express, and we'll be using it to wait for DynamoDB to return its data. Of course, we could also use [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) instead.
 
@@ -91,7 +91,7 @@ const bikesCollection = db.collection("bikes");
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/router.js)
 
-As you can see, we're using the `cyclic-dynamodb` library to create a programmable instance of our database. That's a convenience library used to facilitate the communication with our database using simple JavaScript code. We're also extracting the `CYCLIC_DB` environment variable that we set earlier using `process.env`. 
+As you can see, we're using the `cyclic-dynamodb` library to create a programmable instance of our database. That's a convenience library used to facilitate communication with our database using simple JavaScript code. We're also extracting the `CYCLIC_DB` environment variable that we set earlier using `process.env`.  
 
 Let's move back into our route handler to finally make some use of this `bikesCollection` object:
 
@@ -165,7 +165,7 @@ router.get("/:id", async (req, res) => {
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/router.js)
 
-As you can see, we're inserting `:id` into our URL and proceed to extract it from the `req.params` object.
+As you can see, we're inserting `:id` into our URL and proceeding to extract it from the `req.params` object.
 
 With the ID now in our hands, we can use that code snippet we just saw to extract specific data from DynamoDB:
 
@@ -286,13 +286,13 @@ curl http://localhost:3000/bikes/by-handle/<HANDLE> | jq . # replace <HANDLE> wi
 ```
 <p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/api-handle.svg" width="640" /></p>
 
-## Fetching bikes by search on title
+## Fetching bikes by searching on the title
 
-Search is one of the most important features in a website. It's how users discover new products without having to browse a list of hundreds or even thousands of items. Implementing it, however, is not so simple.
+Search is one of the most important features of a website. It's how users discover new products without having to browse a list of hundreds or even thousands of items. Implementing it, however, is not so simple.
 
 The most popular search engines have to take a plethora of things into account: ignoring pronouns and uppercase characters, handling misspelled words, etc…
 
-In fact, DynamoDB comes with full support for [ElasticSearch](https://aws.amazon.com/about-aws/whats-new/2015/08/amazon-dynamodb-elasticsearch-integration/), a powerful search engine developed  used by some of the biggest applications out there.
+In fact, DynamoDB comes with full support for [ElasticSearch](https://aws.amazon.com/about-aws/whats-new/2015/08/amazon-dynamodb-elasticsearch-integration/), a powerful search engine developed and used by some of the biggest applications out there.
 
 But for the purposes of this tutorial, we'll stick with something more simple. DynamoDB also supports scans: SQL-like querying that handles many powerful [expressions](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/scan.html).
 
@@ -313,7 +313,7 @@ router.get("/search/by-title", async (req, res) => {
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/router.js)
 
-Let's proceed now by using this search term to look-up some data. The function that we're looking for is `parallel_scan`, taking the expression `contains(title, <TERM>)`. However, we must split this expression into its three parts:
+Let's proceed now by using this search term to look up some data. The function that we're looking for is `parallel_scan`, taking the expression `contains(title, <TERM>)`. However, we must split this expression into three parts:
 
 1. **The expression itself:** `contains()`
 2. **The attribute name:** `title`

@@ -53,7 +53,7 @@ node generate-secret.js
 ```
 <p align="center"><img alt="Response to the last command." src="/img/tutorial/rest-api/gen-token.svg" width="640" /></p>
 
-Copy that token and paste it in your `.env` file with the key name: `"TOKEN_SECRET"`.
+Copy that token and paste it into your `.env` file with the key name: `"TOKEN_SECRET"`.
 
 Let's delve back into our code:
 
@@ -157,7 +157,7 @@ curl -H "Authorization: Bearer $TOKEN" -X DELETE http://localhost:3000/bikes/<ID
 
 ## Deploying our API to the web, with Cyclic
 
-We just created a full-fledged RESTful API that could be used to build an e-commerce store for bikes. Through this journey, we learnt about servers, HTTP, RESTful APIs, AWS DynamoDB and how Cyclic brings all these technologies together into one using its distinct starter templates.
+We just created a full-fledged RESTful API that could be used to build an e-commerce store for bikes. Through this journey, we learnt about servers, HTTP, RESTful APIs, AWS DynamoDB, and how Cyclic brings all these technologies together into one using its distinct starter templates.
 
 [![Deploy to Cyclic](https://deploy.cyclic.sh/button.svg)](https://deploy.cyclic.sh/cyclic-software/tutorial-bikes-api)
 

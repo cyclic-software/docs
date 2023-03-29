@@ -12,7 +12,7 @@ Our API is now given the ability to fetch data in a variety of ways, but it woul
 
 Our RESTful API should have an endpoint that accepts bike data, with *all* of its fields except for the ID and handle, which will be both automatically generated within our server.
 
-It's worth noting that POST body data can be in a variety of data-types, hinted in the [`Accept`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) HTTP header. But having declared `app.use(express.json())` in our `index.js` file (it already came with the starter), we can directly access the body data in JSON format by extracting it from the `req.body` property.
+It's worth noting that POST body data can be in a variety of data types, hinted in the [`Accept`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Accept) HTTP header. But having declared `app.use(express.json())` in our `index.js` file (it already came with the starter), we can directly access the body data in JSON format by extracting it from the `req.body` property.
 
 ```javascript
 // Post new bike
@@ -181,7 +181,7 @@ router.put("/:id", async (req, res) => {
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/router.js)
 
-What we're doing here is first checking if the bike item exists by retrieving its ID, and we're then validating the data, deleting the existing item and replacing it with a new item.
+What we're doing here is first checking if the bike item exists by retrieving its ID, and we're then validating the data, deleting the existing item, and replacing it with a new item.
 
 ```json
 // request.json (remove this line from the actual file!)

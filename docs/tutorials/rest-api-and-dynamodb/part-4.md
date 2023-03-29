@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Finishing up with routes to update and delete data
 
-<p align="center"><img alt="Two HTTP routes: delete bike and update parts of bike." src="/img/tutorial/rest-api/PATCH__DELETE_Routes.png" width="640" /></p>
+<p align="center"><img alt="Two HTTP routes: delete bike and update parts of a bike." src="/img/tutorial/rest-api/PATCH__DELETE_Routes.png" width="640" /></p>
 
 We're almost done; but we still must implement two more route handlers: PATCH and DELETE.
 
@@ -24,7 +24,7 @@ router.patch("/:id", async (req, res) => {
 
 [Link to full code.](https://github.com/cyclic-software/tutorial-bikes-api/blob/main/router.js)
 
-Next step is to check whether or not a bike item with this ID exists, before we update anything.
+The next step is to check whether or not a bike item with this ID exists before we update anything.
 
 ```javascript
 // Patch bike if it exists
@@ -84,7 +84,7 @@ curl -X PATCH -H "Content-Type: application/json" http://localhost:3000/bikes/<I
 
 It wouldn't be a big stretch to say that this is the simplest route of the bunch.
 
-First step is to get the ID from the route parameters:
+The first step is to get the ID from the route parameters:
 
 ```javascript
 // Delete bike if it exists
