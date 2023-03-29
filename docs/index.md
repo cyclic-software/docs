@@ -20,10 +20,10 @@ Even with the free tier. Apps do not have to sleep, wake up, spin up or recycle.
 
 Containers make traffic a constant concern because resources are shared across concurrent requests. 
 
-On Cyclic, serverless functions are allocated to each individual request on demand, making it possible for your apps to hyper scale.
+On Cyclic, serverless functions are allocated to each individual request on demand, making it possible for your apps to hyper-scale.
 
 
-:::danger **Hyper** scale 
+:::danger Hyper-scale 
 On the Cyclic free tier, an individual `1GB RAM` compute instance handles each separate http request. For a single request, this is about ~2x cpu/memory compared to popular container platforms. In a 10 concurrent request scenario, this comparison results in `~200x` or `100GB RAM` available system compute - _on the free tier_!
 
 :::
@@ -38,7 +38,7 @@ Apps can be launched around the world to make sure your users see the least late
 
 
 ### Right-to-Repair
-We are developers here, sometimes we want to open the box and change everything around. You are welcome to open the hood, poke around or take your apps apart. When **apps grow up**, take them with you, and integrate them into _legacy code_.
+We are developers here, and sometimes we want to open the box and change everything around. You are welcome to open the hood, poke around or take your apps apart. When **apps grow up**, take them with you, and integrate them into _legacy code_.
 :::tip  You can have your own cyclic apps and host them too
 Given a role, **Cyclic can deploy apps into your own AWS account**. This allows you to have total and complete control over your app's infrastructure. Self-hosting gives the root access to integrate, customize and set your own limits.
 :::
