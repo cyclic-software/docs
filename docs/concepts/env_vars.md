@@ -37,6 +37,8 @@ On local, there are many ways to get environment variables into your application
 
 ### Cyclic
 
+Environment variables can be set on first deployment via **Advanced** build options and then **Variables** tab.
+
 Environment variables can be set after a first deployment in an app's dashboard via the **Variables** tab.
 
 Cyclic stores environment variables securely by encrypting them at rest, they are visible only to users that have permissions to the app environment. 
@@ -80,13 +82,6 @@ Application code on the **backend** has access to variables via `process.env` du
 
 ### Build
 Environment variables that are set for the runtime are also accessible to the scripts defined in `package.json`
-
-:::caution  Support for variables in first deployment
-Support for setting environment variables before a first deployment is coming soon.
-
-Currently, as a workaround - consider modifying your build step to pass. This will allow you to use the app dashboard to add variables. Once added, revert your build scripts to their original state. Variables will be available for all subsequent builds.
-
-:::
 
 
 ## Reserved Environment Variables
