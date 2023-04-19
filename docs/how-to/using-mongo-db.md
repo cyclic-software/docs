@@ -42,9 +42,6 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000
 
-const uri = process.env.MONGO_CONNECTION_STRING;
-const client = new MongoClient(uri);
-
 app.get("/items/:my_item", async (req, res) => {
     let my_item = req.params.my_item;
     let item = await client.db("my_db")
@@ -54,13 +51,40 @@ app.get("/items/:my_item", async (req, res) => {
     return res.json(item)
 })
 
-client.connect(err => {
-    if(err){ console.error(err); return false;}
-    // connection to mongo is successful, listen for requests
-    app.listen(PORT, () => {
-        console.log("listening for requests");
-    })
-});
+/*
+In this code, we define an async function called startServer(). 
+Inside this function, we declare a variable called client, which we will use to hold our MongoDB connection. 
+We then use a try/catch block to handle any errors that may occur while connecting to MongoDB.
+
+We replace the MongoClient.connect() function call with await MongoClient.connect(), which returns a Promise that resolves to the client object. 
+If an error occurs, the catch block will handle it and log the error message to the console.
+
+If the connection is successful, we proceed with setting up our cron jobs and starting the server by calling app.listen(). 
+The await keyword is not needed here, as app.listen() does not return a Promise.
+
+Finally, we call startServer() to start the process.
+*/
+
+async function startServer() {
+  let client;
+
+  try {
+    // connect to MongoDB
+    client = await MongoClient.connect(process.env.MONGODB);
+    console.log("Connected to MongoDB");
+
+    const db = client.db();
+
+    // Start server after successful MongoDB connection
+    app.listen(port, () => {
+      console.log(` Server listening on port ${port} ...`);
+    });
+  } catch (err) {
+    console.error("Error connecting to MongoDB:", err);
+  }
+}
+
+startServer();
 
 ```
 
