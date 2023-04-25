@@ -37,6 +37,8 @@ On local, there are many ways to get environment variables into your application
 
 ### Cyclic
 
+Environment variables can be set on first deployment via **Advanced** build options and then **Variables** tab.
+
 Environment variables can be set after a first deployment in an app's dashboard via the **Variables** tab.
 
 Cyclic stores environment variables securely by encrypting them at rest, they are visible only to users that have permissions to the app environment. 
