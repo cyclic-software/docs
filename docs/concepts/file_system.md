@@ -11,7 +11,7 @@ The `fs` method is often used for reading, creating, updating, deleting, and ren
 
 Files created by the `fs` module are read-only once the project is deployed to Cyclic.sh. This results in an `EROFS: Error Read-Only File System` error. 
 
-If you are hitting the `EROFS` error in processing files, one solution is to write to a file that is located in a `/tmp` directory. However, do not use `/tmp` for perminant storage, as is it wiped frequently.
+If you are hitting the `EROFS` error in processing files, one solution is to write to a file that is located in a `/tmp` directory. However, do not use `/tmp` for permanent storage, as is it wiped frequently.
 
 A more perminant solution to this error is to use the Cyclic S3fs drop-in replacement for Node.js `fs`, which gives you acces to an AWS S3 bucket to access as file storage in place of your local file system.
 
