@@ -19,7 +19,7 @@ No list of common error codes is exhaustive, but the following should help you q
 
 ### Timeout Error
 
-- __Timeout error__ - We have a 30 second hard limit on requests.
+- __Timeout error__ - We have a 30-second hard limit on requests.
   - See [Background Processes](/docs/serverless/on-demand.md#background-processes)
 
 ### Database Errors
@@ -38,7 +38,7 @@ No list of common error codes is exhaustive, but the following should help you q
   - EX: Websockets - If you see "Cannot Find Modules 'ws'", it is in reference to WebSockets. Read more about Cyclic and [Websockets here.](/docs/troubleshooting/websockets.md)
 - __npm ERR! gyp ERR!__ - Node-gyp requires Python. Because Python is not currently supported on Cyclic, you will not be able to use this package on Cyclic, resulting in this error. Even if you are not actively using Python in your code, you will encounter this error.
 - __```ERROR```:Failed to run "npm run start"__ - Make sure your package.json is in the build folder.
-- __"Runs on local, but doesn't run on Cyclic"__ - Not an error code, persay, but a frequent concern. Here's how to troubleshoot:
-  - Check package.json has all required dependences
+- __"Runs on local, but doesn't run on Cyclic"__ - Not an error code per se, but a frequent concern. Here's how to troubleshoot:
+  - Check package.json has all dependencies
   - Check that your start script is defined and runs 
-  - Check your environment varibales are set and match your expectations
+  - Check your environment variables are set and match your expectations
