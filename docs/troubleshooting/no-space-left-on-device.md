@@ -22,7 +22,7 @@ Several SPA frameworks (including React) by default include build time tools in 
 If you get an error in the deploy log that says `production dependencies cannot exceed 240MB`, here is how to fix.
 
 ### Solution
-Currently the code size is limited to 240MB. Fortunately, most projects are can to be optimized by appropriately organizing dependencies and excluding unnecessary files from the build. 
+Currently the code size is limited to 240MB. Fortunately, most projects can be optimized by appropriately organizing dependencies and excluding unnecessary files from the build. 
 - remove any unused dependencies
 - move any dev dependencies to `devDependencies`
 - add file patterns to an `.npmignore` file to exclude them from the build
