@@ -1,0 +1,19 @@
+new web <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U FREE 2GB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="./index.html">    <button class="btn" > Back</button>    </a>
+
+
+  
+    <script src="./2gb.js"></script>
+</body>
+
+</html>
