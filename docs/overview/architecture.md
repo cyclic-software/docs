@@ -50,7 +50,7 @@ Failure will happen. When it does we should make it repeatable. The same inputs 
 
 ### Fail visibly
 
-When errors happen we should show the error message, stack trace, or known bug. This could mean we need to email the user or tell the world on on X (formerly known as Twitter).
+When errors happen we should show the error message, stack trace, or known bug. This could mean we need to email the user or tell the world on X (formerly known as Twitter).
 
 ### Right to repair
 
