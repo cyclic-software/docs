@@ -41,4 +41,4 @@ No list of common error codes is exhaustive, but the following should help you q
 - __"Runs on local, but doesn't run on Cyclic"__ - Not an error code, persay, but a frequent concern. Here's how to troubleshoot:
   - Check package.json has all required dependences
   - Check that your start script is defined and runs 
-  - Check your environment varibales are set and match your expectations
+  - Check your environment variables are set and match your expectations
