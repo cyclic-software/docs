@@ -4,6 +4,10 @@
  * work well for content-centric websites.
  */
 
+ @tailwind base;
+ @tailwind components;
+ @tailwind utilities;
+
 .search-icon {
   visibility: hidden;
 }
@@ -14,7 +18,7 @@
 
 
 /* You can override the default Infima variables here. */
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
   --ifm-color-primary: #3868E3;
@@ -56,15 +60,15 @@
 }
 .hero__title, .hero__subtitle{
   font-weight: 300;
-  letter-spacing: 2px;
-  font-family: 'Titillium Web', sans-serif;
+  /* letter-spacing: 2px; */
+  font-family: 'Figtree', sans-serif;
   word-wrap: normal;
 }
 
 h1, h2, h3, h4, h5, h6{
   font-weight: 400;
-  letter-spacing: 2px;
-  font-family: 'Titillium Web', sans-serif;
+  /* letter-spacing: 2px; */
+  font-family: 'Figtree', sans-serif;
 
 }
 
@@ -78,6 +82,7 @@ header h1 {
 
 .navbar {
   height: 75px;
+  @apply bg-neutral-900;
 }
 
 .navbar__inner{
@@ -87,14 +92,19 @@ header h1 {
   left:0;
   right:0;
   padding:5px 40px;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Figtree', sans-serif;
   font-size: 19px;
   line-height: 20px;
 }
 
 .navbar__brand {
   margin-left: 16px;
-  height: 55px;
+  height: 100%;
+}
+
+.navbar__brand img {
+  height: 40px;
+  /* background: yellow; */
 }
 
 .docusaurus-highlight-code-line {
@@ -112,7 +122,8 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   --ifm-navbar-background-color: var(--blue);
 }
 .navbar__link{
-  color: hsla(0,0%,100%,.5)
+  color: hsla(0,0%,100%,.5);
+  font-size: 14px;
 }
 .navbar__link:hover{
   color: hsla(0,0%,100%,.75)
