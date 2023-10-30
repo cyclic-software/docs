@@ -42,7 +42,11 @@
     ]
   },
   "devDependencies": {
-    "ngrok": "^4.2.2"
+    "@tailwindcss/typography": "^0.5.10",
+    "autoprefixer": "^10.4.16",
+    "ngrok": "^4.2.2",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5"
   },
   "description": "This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.",
   "main": "babel.config.js",
