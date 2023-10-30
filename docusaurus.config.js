@@ -17,6 +17,16 @@ const config = {
   projectName: 'docs', // Usually your repo name.
   trailingSlash: false, // https://docusaurus.io/docs/deployment#deploying-to-github-pages
   plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require('tailwindcss'))
+          postcssOptions.plugins.push(require('autoprefixer'))
+          return postcssOptions
+        }
+      }
+    },
     require.resolve('docusaurus-lunr-search'),
     './src/plugins/analytics/index.js',
     [
@@ -76,7 +86,7 @@ const config = {
         style: 'dark',
         logo: {
           alt: 'Cyclic Logo',
-          src: 'img/logo-light.png',
+          src: 'img/cyclic-logo.svg',
           href: 'https://app.cyclic.sh/',
           target: '_self',
         },
@@ -100,47 +110,47 @@ const config = {
 
         ],
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Cyclic',
-            items: [
-              {
-                label: 'Home - www.cyclic.sh',
-                href: 'https://www.cyclic.sh/',
-              },
-              {
-                label: 'App - app.cyclic.sh',
-                href: 'https://app.cyclic.sh/',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Discord',
-                href: 'https://discord.gg/huhcqxXCbE',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/cyclicsoftware',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'GitHub',
-                href: 'https://github.com/cyclic-software/docs',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} Cyclic Software, Inc.`,
-      },
+      // footer: {
+      //   style: 'dark',
+      //   links: [
+      //     {
+      //       title: 'Cyclic',
+      //       items: [
+      //         {
+      //           label: 'Home - www.cyclic.sh',
+      //           href: 'https://www.cyclic.sh/',
+      //         },
+      //         {
+      //           label: 'App - app.cyclic.sh',
+      //           href: 'https://app.cyclic.sh/',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'Community',
+      //       items: [
+      //         {
+      //           label: 'Discord',
+      //           href: 'https://discord.gg/huhcqxXCbE',
+      //         },
+      //         {
+      //           label: 'Twitter',
+      //           href: 'https://twitter.com/cyclicsoftware',
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       title: 'More',
+      //       items: [
+      //         {
+      //           label: 'GitHub',
+      //           href: 'https://github.com/cyclic-software/docs',
+      //         },
+      //       ],
+      //     },
+      //   ],
+      //   copyright: `Copyright © ${new Date().getFullYear()} Cyclic Software, Inc.`,
+      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
