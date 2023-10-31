@@ -13,37 +13,39 @@ const Footer = () => {
   
           <div class="flex flex-col gap-3 text-xs">
             <a
-              href="/pricing"
+              href="https://cyclic.sh/pricing"
+              target='_blank'
               class="text-sm !no-underline text-neutral-400 hover:text-white transition"
             >
               Pricing
             </a>
   
             <a
-              href="/blog"
+              href="https://cyclic.sh/blog"
+              target='_blank'
               class="text-sm !no-underline text-neutral-400 hover:text-white transition"
             >
               Blog
             </a>
   
             <a
-              href="https://docs.cyclic.sh/"
-              target="_blank"
-              rel="noopener"
+              href="/"
               class="text-sm !no-underline text-neutral-400 hover:text-white transition"
             >
               Documentation
             </a>
 
             <a
-              href="/terms-of-service"
+              href="https://cyclic.sh/terms-of-service"
+              target='_blank'
               class="text-sm !no-underline text-neutral-400 hover:text-white transition"
             >
               Terms of Service
             </a>
   
             <a
-              href="/privacy-policy"
+              href="https://cyclic.sh/privacy-policy"
+              target='_blank'
               class="text-sm !no-underline text-neutral-400 hover:text-white transition"
             >
               Privacy Policy
@@ -114,14 +116,16 @@ const Footer = () => {
   
           <div class="flex flex-col gap-3 text-xs">
             <a
-              href="/vs-heroku"
+              href="https://cyclic.sh/vs-heroku"
+              target='_blank'
               class="text-sm !no-underline text-neutral-400 hover:text-white transition"
             >
               vs Heroku
             </a>
             
             <a
-              href="/updates"
+              href="https://cyclic.sh/updates"
+              target='_blank'
               class="text-sm !no-underline text-neutral-400 hover:text-white transition"
             >
               Product Updates
