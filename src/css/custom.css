@@ -110,6 +110,10 @@ article {
   @apply mx-0 lg:mx-10;
 }
 
+.alert--success {
+  @apply border-sky-400 bg-sky-50 dark:bg-neutral-800;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
