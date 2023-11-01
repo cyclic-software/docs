@@ -106,6 +106,10 @@ header h1 {
   /* background: yellow; */
 }
 
+article {
+  @apply mx-0 lg:mx-10;
+}
+
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
   display: block;
