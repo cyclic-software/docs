@@ -88,22 +88,21 @@ header h1 {
 .navbar__inner{
   background-color:transparent !important;
   max-width: 1230px;
-  margin:0px auto;
   left:0;
   right:0;
-  padding:5px 40px;
   font-family: 'Figtree', sans-serif;
   font-size: 19px;
-  line-height: 20px;
+  /* line-height: 20px; */
+  @apply mx-auto px-4;
 }
 
 .navbar__brand {
-  margin-left: 16px;
-  height: 100%;
+  @apply flex items-center;
 }
 
 .navbar__brand img {
-  height: 40px;
+  @apply h-[40px] mt-[-4px];
+  /* height: 40px; */
   /* background: yellow; */
 }
 
