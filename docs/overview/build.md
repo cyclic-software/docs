@@ -113,7 +113,7 @@ This video will give you an example of how to deploy a static site without a bac
 
 #### **Runtime**
 Newly deployed Cyclic apps will use Node.js v18.12.1 by default. If you are using a framework or library that requires an older version of Node.js to function properly, you may adjust it here.
-<img src="/img/build-options/runtime.png" width="350px"/>
+<img src="/img/build-options/runtime.png" width="500px"/>
 
 
 
