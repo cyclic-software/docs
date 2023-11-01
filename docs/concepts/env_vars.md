@@ -56,12 +56,12 @@ All apps are preset with the following variables:
 There are two ways to set up variables:
 #### Key-Value Editor:
 
-<img src="/img/vars/kv_editor.png" width="650px"/>
+<img src="/img/vars/kv_editor.png" width="800px"/>
 
 > Add the variable name and value with *+ Add Variable*, then *Save*
 
 #### Bulk Editor:
-<img src="/img/vars/bulk_editor.png" width="650px"/>
+<img src="/img/vars/bulk_editor.png" width="800px"/>
 
 > A text editor that allows you to work on multiple variables at once in a similar syntax to `.env` files with the exceptions:
 > - Comments are not supported
