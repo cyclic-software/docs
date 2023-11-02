@@ -63,9 +63,9 @@ By default, the build process and the above lifecycle scripts:
 
 It is possible to customize this process with _Advanced Build Options_:
 - at the time of first deployment, in the _Advanced_ dropdown
-  - <img src="/img/build-options/advancedWNode.png" width="600px"/>
+  - <img src="/img/build-options/advancedWNode.png" width="350px"/>
 - in  _Environments_ tab > _Build Options_ of an app's dashboard
-  - <img src="/img/build-options/buildwithnode2.png" width="650px"/>
+  - <img src="/img/build-options/buildwithnode2.png" width="350px"/>
 
 #### **Root Path**
 The root path specifies which directory Cyclic will run build scripts. 
