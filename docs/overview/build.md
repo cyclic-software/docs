@@ -65,7 +65,7 @@ It is possible to customize this process with _Advanced Build Options_:
 - at the time of first deployment, in the _Advanced_ dropdown
   - <img src="/img/build-options/advancedWNode.png" width="350px"/>
 - in  _Environments_ tab > _Build Options_ of an app's dashboard
-  - <img src="/img/build-options/buildwithnode2.png" width="650px"/>
+  - <img src="/img/build-options/buildwithnode2.png" width="350px"/>
 
 #### **Root Path**
 The root path specifies which directory Cyclic will run build scripts. 
@@ -113,7 +113,7 @@ This video will give you an example of how to deploy a static site without a bac
 
 #### **Runtime**
 Newly deployed Cyclic apps will use Node.js v18.12.1 by default. If you are using a framework or library that requires an older version of Node.js to function properly, you may adjust it here.
-<img src="/img/build-options/runtime.png" width="350px"/>
+<img src="/img/build-options/runtime.png" width="500px"/>
 
 
 
